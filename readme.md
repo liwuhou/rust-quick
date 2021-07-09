@@ -9,6 +9,11 @@ Buy me a cup of coffee for $3
 
 本书介绍如何快学rust，采用mdbook开发构建
 
+访问以下URL，在线查看文档
+
+
+[https://rq.netroby.com/01-intro/intro.html](https://rq.netroby.com/01-intro/intro.html)
+
 许可协议 AGPL
 
 
