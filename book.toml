@@ -1,0 +1,6 @@
+[book]
+authors = ["ZhiFeng hu"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Rust 快速开始"
