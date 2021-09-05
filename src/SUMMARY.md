@@ -48,7 +48,7 @@
 - [枚举](./docs/Enums.md)
 - [Trimming strings]()
 - [Standard library]()
-- [Parsing standard input]()
+- [解析标准输入](./docs/Parsing_standard_input.md)
 - [Crates](./docs/Crates.md)
 - [Guessing game revisited]()
 - [命令行参数](./docs/Command_line_arguments.md)
