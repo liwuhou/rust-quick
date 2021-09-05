@@ -36,7 +36,7 @@
 - [Scope]()
 - [Variable mutability]()
 - [Stack and heap memory]()
-- [Strings]()
+- [字符串](./docs/Strings.md)
 - [Ownership]()
 - [Transferring ownership (data stored on STACK)]()
 - [Transferring ownership (data stored on HEAP)]()
