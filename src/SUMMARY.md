@@ -14,7 +14,7 @@
 - [Chars]()
 - [计算平均值](./docs/Computing_average.md)
 - [Arrays]()
-- [Slices]()
+- [切片](./docs/Slices.md)
 - [Slices as parameters]()
 - [Deref解构](./docs/Deref_coercion.md)
 - [Multidimensional arrays]()
