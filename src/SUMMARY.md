@@ -72,7 +72,7 @@
 - [借用检查](./docs/Borrow_checker.md)
 - [Lifetime annotation]()
 - [Multiple lifetime annotations]()
-- [Lifetime elision rules]()
+- [生命周期剥离规则](./docs/Lifetime_elision_rules.md)
 - [Struct lifetime annotations]()
 - [Static lifetimes]()
 - [枚举值](./docs/More_on_enums.md)
