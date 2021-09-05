@@ -23,7 +23,7 @@
 - [Functions]()
 - [Statements and expressions]()
 - [Function return type]()
-- [Closures]()
+- [闭包](./docs/Closures.md)
 - [Celsius to Fahrenheit converter]()
 - [Conditional execution]()
 - [Multiple conditionals (if/else if)]()
