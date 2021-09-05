@@ -89,4 +89,4 @@
 - [Guessing game revisited with error handling]()
 - [Vectors with error handling]()
 - [HashMap<K, V> data type]()
-- [Word counter]()
+- [字数统计](./docs/Word_counter.md)
