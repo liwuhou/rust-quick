@@ -49,7 +49,7 @@
 - [Trimming strings]()
 - [Standard library]()
 - [Parsing standard input]()
-- [Crates]()
+- [Crates](./docs/Crates.md)
 - [Guessing game revisited]()
 - [Command line arguments]()
 - [Reading content from file]()
