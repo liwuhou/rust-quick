@@ -29,7 +29,7 @@
 - [Multiple conditionals (if/else if)]()
 - [Loop assignment]()
 - [While loops]()
-- [For loops]()
+- [For循环](./docs/For_loops.md)
 - [Nested loops]()
 - [Guessing game]()
 - [Basic statistics]()
