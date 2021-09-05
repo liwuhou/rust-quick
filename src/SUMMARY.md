@@ -20,7 +20,7 @@
 - [Multidimensional arrays]()
 - [矢量](./docs/Vectors.md)
 - [Tuples]()
-- [Functions]()
+- [函数方法](./docs/Functions.md)
 - [Statements and expressions]()
 - [函数返回类型](./docs/Function_return_type.md)
 - [闭包](./docs/Closures.md)
