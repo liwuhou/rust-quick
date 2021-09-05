@@ -3,7 +3,7 @@
 - [前言](./01-intro/intro.md)
 - [创建一个Rust项目](./docs/create-project.md)
 - [打印输出](./docs/printing.md)
-- [Advanced numeric formatted print]()
+- [高级数字格式化打印](./docs/Advanced numeric formatted print.md)
 - [Variables]()
 - [Basic Types]()
 - [Floating point numbers]()
