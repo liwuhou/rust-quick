@@ -22,7 +22,7 @@
 - [Tuples]()
 - [Functions]()
 - [Statements and expressions]()
-- [Function return type]()
+- [函数返回类型](./docs/Function_return_type.md)
 - [闭包](./docs/Closures.md)
 - [Celsius to Fahrenheit converter]()
 - [Conditional execution]()
