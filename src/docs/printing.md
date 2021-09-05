@@ -3,15 +3,26 @@
 
 In Rust, you use what is called a [macro](https://en.wikipedia.org/wiki/Macro_(computer_science)) to print to the console. Macros in Rust have an identifier followed by an exclamation mark (!). The println! macro is very flexible:
 ```rust
-fn main() { // string interpolation println!("Adding {} and {} gives {}", 22, 33, 22 + 33);\ // positional arguments println!(
+fn main() { // string interpolation 
+println!("Adding {} and {} gives {}", 22, 33, 22 + 33);
+// positional arguments 
+println!(
         "Ypur name is {0}. Welcome to {1}. Nice to meet you {0}",
         "Goto", "Rust"
-   );\ // named arguments println!(
+   );
+    // named arguments
+     println!(
         "{language} is very popular. It was created in {year}",
         language = "Rust",
         year = 2010
-   );\ // placeholder traits (using positional argument to avoid repeat) println!("{0}, in binary: {0:b}, in hexadecimal: {0:x}", 11);\ // debug trait (very useful to print anything) // if you try to print the array directly, you will get an error
-  // because an array is not a string or number type println!("{:?}", [11, 22, 33]);}
+   );
+   // placeholder traits (using positional argument to avoid repeat) 
+   println!("{0}, in binary: {0:b}, in hexadecimal: {0:x}", 11);
+    // debug trait (very useful to print anything)
+     // if you try to print the array directly, you will get an error
+  // because an array is not a string or number type
+   println!("{:?}", [11, 22, 33]);
+  }
 ```
 To see the output, run:
 ```
