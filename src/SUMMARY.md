@@ -8,7 +8,7 @@
 - [基本数据类型](./docs/Basic_Types.md)
 - [浮点数](./docs/Floating_point_numbers.md)
 - [位操作运算](./docs/Bitwise_operations.md)
-- [Booleans and binary algebra]()
+- [布尔运算和二进制代数](./docs/Booleans_and_binary_algebra.md)
 - [Arithmetic operations]()
 - [Comparison operators]()
 - [Chars]()
