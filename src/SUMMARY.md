@@ -12,7 +12,7 @@
 - [Arithmetic operations]()
 - [Comparison operators]()
 - [Chars]()
-- [Computing average]()
+- [Computing average](./docs/Computing_average.md)
 - [Arrays]()
 - [Slices]()
 - [Slices as parameters]()
