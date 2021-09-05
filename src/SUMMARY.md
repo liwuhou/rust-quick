@@ -4,7 +4,7 @@
 - [创建一个Rust项目](./docs/create-project.md)
 - [打印输出](./docs/printing.md)
 - [高级数字格式化打印](./docs/Advanced_numeric_formatted_print.md)
-- [Variables]()
+- [变量](.docs/Variables.md)
 - [Basic Types]()
 - [Floating point numbers]()
 - [Bitwise operations]()
