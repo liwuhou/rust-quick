@@ -55,7 +55,7 @@
 - [Reading content from file]()
 - [Writing content to file]()
 - [Fruit finder]()
-- [Shape factories]()
+- [形状工厂](./docs/Shape_factories.md)
 - [Generic struct definitions]()
 - [Generic method definitions]()
 - [Generic function definitions]()
