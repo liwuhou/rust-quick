@@ -6,7 +6,7 @@
 - [高级数字格式化打印](./docs/Advanced_numeric_formatted_print.md)
 - [变量](./docs/Variables.md)
 - [基本数据类型](./docs/Basic_Types.md)
-- [Floating point numbers]()
+- [浮点数](./docs/Floating_point_numbers.md)
 - [Bitwise operations]()
 - [Booleans and binary algebra]()
 - [Arithmetic operations]()
