@@ -69,7 +69,7 @@
 - [Return types and implemented traits]()
 - [Return types and dynamic dispatching with traits]()
 - [Comparing jet planes]()
-- [Borrow checker]()
+- [Borrow checker](./docs/Borrow_checker.md)
 - [Lifetime annotation]()
 - [Multiple lifetime annotations]()
 - [Lifetime elision rules]()
