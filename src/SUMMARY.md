@@ -65,7 +65,7 @@
 - [Default trait implementation]()
 - [Derivable traits]()
 - [Trait bounds]()
-- [Multiple trait bounds and where clause]()
+- [多重特质界限和where子句](./docs/Multiple_trait_bounds_and_where_clause.md)
 - [Return types and implemented traits]()
 - [Return types and dynamic dispatching with traits]()
 - [Comparing jet planes]()
