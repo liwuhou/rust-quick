@@ -10,7 +10,7 @@
 - [位操作运算](./docs/Bitwise_operations.md)
 - [布尔运算和二进制代数](./docs/Booleans_and_binary_algebra.md)
 - [Arithmetic operations]()
-- [Comparison operators]()
+- [比较运算](./docs/Comparison_operators.md)
 - [Chars]()
 - [计算平均值](./docs/Computing_average.md)
 - [Arrays]()
