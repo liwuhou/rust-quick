@@ -87,6 +87,6 @@
 - [匹配Result<T,E>枚举错误处理](./docs/Matching_Result_enum_for_error_handling.md)
 - [Propagating errors]()
 - [Guessing game revisited with error handling]()
-- [Vectors with error handling]()
+- [矢量错误处理](./docs/Vectors_with_error_handling.md)
 - [HashMap<K, V> data type]()
 - [字数统计](./docs/Word_counter.md)
