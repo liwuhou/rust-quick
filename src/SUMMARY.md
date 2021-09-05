@@ -61,7 +61,7 @@
 - [Generic function definitions]()
 - [Box data type]()
 - [Summing boxes]()
-- [Traits]()
+- [特性](./docs/Traits.md)
 - [Default trait implementation]()
 - [Derivable traits]()
 - [Trait bounds]()
