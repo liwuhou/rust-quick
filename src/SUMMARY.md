@@ -7,7 +7,7 @@
 - [变量](./docs/Variables.md)
 - [基本数据类型](./docs/Basic_Types.md)
 - [浮点数](./docs/Floating_point_numbers.md)
-- [Bitwise operations]()
+- [位操作运算](./docs/Bitwise_operations.md)
 - [Booleans and binary algebra]()
 - [Arithmetic operations]()
 - [Comparison operators]()
