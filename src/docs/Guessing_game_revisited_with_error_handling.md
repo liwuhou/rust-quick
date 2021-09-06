@@ -1,14 +1,18 @@
 # 猜数游戏错误处理重构
 
-
+```rust
 use rand::prelude::*;
-use std::io;fn main() {
+use std::io;
+fn main() {
     guess_with_infinite_retry();
-}fn guess_with_infinite_retry() {
+}
+fn guess_with_infinite_retry() {
     let secret_number = thread_rng().gen_range(1..101);
     let mut invalid_numberretry_limit = 0;
-    println!("Guess a number between 1 and 100:"); loop {
-        let mut buffer = String::new(); let guess = match io::stdin().read_line(&mut buffer) {
+    println!("Guess a number between 1 and 100:"); 
+    loop {
+        let mut buffer = String::new();
+        let guess = match io::stdin().read_line(&mut buffer) {
             Ok(_) => match buffer.trim().parse::<u32>() {
                 Ok(number) => number,
                 Err(e) => {
@@ -24,7 +28,8 @@ use std::io;fn main() {
                 println!("Failed to read line: {}", e);
                 continue;
             }
-        }; if guess < secret_number {
+        }; 
+        if guess < secret_number {
             println!("guess too low, guess higher:");
         } else if guess > secret_number {
             println!("guess too high, guess lower:");
@@ -34,15 +39,17 @@ use std::io;fn main() {
         }
     }
 }
-
-Output
+```
+输出
+```
 
 Guess a number between 1 and 100:Failed to parse guess: cannot parse integer from empty string
 Please enter a valid number:Failed to parse guess: cannot parse integer from empty string
 Please enter a valid number:thread 'main' panicked at 'Too many invalid numbers entered', src/main.rs:19:25
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-
-Or
+```
+或者
+```
 
 Guess a number between 1 and 100:
 44
@@ -55,3 +62,4 @@ guess too high, guess lower:
 guess too high, guess lower:
 80
 you found it!
+```
