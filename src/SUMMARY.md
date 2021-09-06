@@ -38,7 +38,7 @@
 - [Stack and heap memory]()
 - [字符串](./docs/Strings.md)
 - [Ownership]()
-- [Transferring ownership (data stored on STACK)]()
+- [转让所有权（存储在STACK上的数据）](./docs/Transferring_ownership_data_stored_on_STACK.md)
 - [Transferring ownership (data stored on HEAP)]()
 - [借用](./docs/Borrowing.md)
 - [Mutating borrowed data]()
