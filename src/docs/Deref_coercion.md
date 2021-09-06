@@ -1,21 +1,21 @@
 # Deref 解构
 
-Notes:
+注意。
 
--   passing a borrowed reference to a string (&String) is not the same as passing a string slice (&str)
--   a borrowed string reference points to a string on the stack which in turn owns and points to the data on the heap
--   a slice only stores a pointer to the heap data along with length information. It does not keep track of the capacity because it does not own anything on the heap.
--   since a string reference contains all the info to function as a slice (pointer to heap data + length), Rust allows to use a string reference where a string slice is expected
--   this convenience is called deref coercion:
+- 传递一个借来的字符串引用（&String）与传递一个字符串片断（&str）是不一样的。
+- 借用的字符串引用指向堆栈中的字符串，而堆栈又拥有并指向堆中的数据
+- slice只存储一个指向堆数据的指针和长度信息。它并不跟踪容量，因为它并不拥有堆上的任何东西。
+- 由于字符串引用包含了作为一个片断的所有信息（指向堆数据的指针+长度），Rust允许在预期有字符串片断的地方使用字符串引用。
+- 这种便利被称为 deref coercion。
 ```rust
 fn main() {
     let message = String::from("lorem ipsum");
 
-    // notice that a string reference is passed as argument 
+    // 注意到一个字符串引用被作为参数传入 
     let first_word = get_first_word(&message);
     println!("first_word is \"{}\"", first_word);
 }
-// notice that the expected argument is of type string slice (&str)
+// 注意到预期的参数是字符串类型的slice (&str)。
 fn get_first_word(msg: &str) -> &str {
     let bytes: &[u8] = msg.as_bytes();
     for (index, &item) in bytes.iter().enumerate() {
@@ -27,5 +27,5 @@ fn get_first_word(msg: &str) -> &str {
 }
 ```
 
--   of course, deref coercion does not work when using a string slice where a string reference is expected (because of the missing properties)
--   when writing code, prefer using string slices in cases where ownership of the data is not required
+- 当然，当使用字符串片时，deref coercion不起作用，因为字符串引用是预期的（因为缺少属性）。
+- 当编写代码时，在不需要数据所有权的情况下，最好使用字符串片。
