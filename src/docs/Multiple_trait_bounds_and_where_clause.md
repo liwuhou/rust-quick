@@ -2,14 +2,14 @@
 
 ```rust
 use std::fmt::Display;
-// multiple trait bounds are separated by a + operator
+// 多个特质边界用+运算符隔开
 
-// PartialEq/From/Copy are part of the prelude of the std library so no import
+// PartialEq/From/Copy是std库前奏的一部分，所以没有导入。
 //
  //fn compare_and_print<T: Display + PartialEq + From<U>, U: Display + PartialEq + Copy>(a: T, b: U) {
-// the below function signature is equivalent to the above
+// 下面的函数签名与上面的函数签名是等价的
 
-// but more readable with the were clause to declare trait bounds
+// 但用were子句来声明特质的边界，更具有可读性
 fn compare_and_print<T, U>(a: T, b: U)
 where
     T: Display + PartialEq + From<U>,
@@ -19,11 +19,11 @@ where
 // 
 T::from(b) => convert b to type T
     
-// From trait allows for a type
+// From trait允许一个类型
     
-// to define how to create itself from another type.
+// 来定义如何从另一个类型创建自己。
     
-// ex: creating a string from string slice
+// 例如：从字符串片断中创建一个字符串。
     
 //      
 String::From("ttoto") if a == T::from(b) {
