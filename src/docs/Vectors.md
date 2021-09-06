@@ -3,30 +3,30 @@
 ```rust
 fn main() {
     
-// collection of elements with the same data type
+// 具有相同数据类型的元素的集合
     
-// elements are sorted in order 
-// arrays have a fixed size that must be known at compile time
+// 元素是按顺序排列的 
+// 数组有一个固定的大小，在编译时必须知道。
     
-// because array data is stored on the stack 
-// vectors can dynamically grow and shrink
+// 因为数组的数据是存储在堆栈中的 
+// 向量可以动态地增长和缩小
     
-// by adding / removing items
+// 通过添加/删除项目来实现
     
-// vector data is stored in heap memory
+// 矢量数据被存储在堆内存中
     
-// therefore you need to handle [ownership] and [borrowing]
-// vectors = mutable size arrays 
+// 因此你需要处理[所有权]和[借用]。
+// 向量 = 可变大小的数组 
 let mut letters: Vec<char> = vec!['a', 'b', 'c'];
     println!("letters are {:?}", letters); 
     let first_letter = letters[0];
     println!("first_letter is {}", first_letter); 
-// add value to vector 
+//为向量添加值 
 letters.push('d');
     letters.push('e');
     letters.push('f');
     println!("letters are {:?}", letters); 
-// remove last value 
+// 删除最后一个值 
 letters.pop();
     println!("letters are {:?}", letters); 
     let mut numbers: Vec<i32> = vec![11, 22, 44];
@@ -40,24 +40,24 @@ letters.pop();
     println!("length is {}", length); 
     let mem_size_byte = std::mem::size_of_val(&ints);
     println!("mem_size_byte is {}", mem_size_byte); 
-// slice from vector 
+// 从矢量中切出一片
 let mut slice: &[i32] = &ints;
     println!("slice is {:?}", slice); slice = &ints[2..5];
     println!("slice is {:?}", slice); 
-// iterate over vector
+// 在向量上进行迭代
  for it in ints.iter() {
         println!("it is {}", it);
     } 
-// mutate vector items while iterating 
+// 迭代时对向量项目进行变异 
 for it in ints.iter_mut() {
         
-// dereference the pointer to get and set value (*it)
+// 解除对指针的引用，以获得和设置值（*it）。
         *it *= *it;
     }
     println!("ints is {:?}", ints);
 }
 ```
-Output
+输出
 ```
 letters are ['a', 'b', 'c']
 first_letter is a
