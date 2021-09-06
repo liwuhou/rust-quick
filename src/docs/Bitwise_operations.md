@@ -2,52 +2,69 @@
 
 ```rust
 /*
-Bitwise operations: on individual bits rather than sets of bytes.
-- binary representation, a sequence of bytes
-- underscore separator allowed for legibility
-- by default binary representations are store as i32
+位操作：对单个比特而不是字节集进行操作。
+- 二进制表示，一个字节的序列
+- 为了便于阅读，允许使用下划线分隔符
+- 默认情况下，二进制表示法被存储为i32
 */
 fn main() {
-    // stored as u8 by adding suffix u8
+    //通过添加后缀u8存储为u8
 
-    let mut value = 0b1111_0101u8; // will print base 10 (decimal) representation
+    let mut value = 0b1111_0101u8; 
+    //将打印基数10（十进制）表示法
 
-    println!("value is {}", value); /*
+    println!("value is {}", value); 
+    /*
     :08b
-        0 -> display leading zeros
-        8 -> number of bits to display
-        b -> display binary representation
+        0 -> 显示前导零
+        8 -> 显示的比特数
+        b -> 显示二进制表示法
     */
-    println!("value is {:08b}", value); // bitwise NOT: invert individual bits
+    println!("value is {:08b}", value); 
+    // 比特式非：反转各个比特
 
-    value = !value; // 0000_1010
-    println!("value is {:08b}", value); // bitwise AND: used to clear the value of a specific bit value = value & 0b1111_0111; // -> 0000_0010
-    println!("value is {:08b}", value); // bitwise AND: used to check value of a specific bit
-    // if a specific bit is 0 or 1, useful to check status of registers for process state
+    value = !value; 
+    // 0000_1010
+    println!("value is {:08b}", value); 
+    // 比特式和：用于清除一个特定位的值值=值&0b1111_0111。
+    // -> 0000_0010
+    println!("value is {:08b}", value); 
+    // 比特式和：用于检查特定位的值
+    // 如果一个特定的位是0或1，对检查进程状态的寄存器的状态很有用
 
     println!("value is {:08b}", value & 0b0100_0000);
-    // -> 0000_0000 // bitwise OR: if either operand is 1, result is 1
-    // useful to set value of a specific bit
+   // --> 0000_0000 
+   // 位法OR：如果任一操作数为1，结果为1
+    // 对设置一个特定位的值很有用
 
-    value = value | 0b0100_0000; // -> 0100_0010
-    println!("value is {:08b}", value); // bitwise XOR (exclusive OR):
-   // result is 1 only when bits are different, otherwise 0
-   // useful to set if bits are different
+    value = value | 0b0100_0000; 
+    // -> 0100_0010
+    println!("value is {:08b}", value); 
+    // 按位数XOR（排他性OR）。
+   // 只有当位数不同时，结果为1，否则为0
+   // 如果有不同的位，可以设置为0
 
-   value = value ^ 0b0101_0101; // -> 0001_0111
-   println!("value is {:08b}", value); ////////////////////////////
-   // Bit Shift operators
-   //////////////////////////// // shift bit pattern left or right by a number of bits
-   // and backfill shifted bit spaces with zeros // shift left by 4 bits
+   value = value ^ 0b0101_0101; 
+   // -> 0001_0111
+   println!("value is {:08b}", value); 
+   ////////////////////////////
+   // 位移运算符
+   //////////////////////////// 
+   // 将比特模式向左或向右移动若干比特
+   // 并用零回填移位的位空间 
+   // 左移4位
 
-   value = value << 4; // -> 0111_0000
-   println!("value is {:08b}", value); // shift right by 3 bits
+   value = value << 4; 
+   // -> 0111_0000
+   println!("value is {:08b}", value); 
+   // 右移3位
 
-   value = value >> 3; // -> 0000_1110
+   value = value >> 3; 
+   // -> 0000_1110
    println!("value is {:08b}", value);
 }
 ```
-Output
+输出
 ```
 value is 245
 value is 11110101
