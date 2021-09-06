@@ -12,7 +12,7 @@ fn main() {
 }
 ```
 
-Output
+输出
 ```
 average is 53.8
 test passed.
