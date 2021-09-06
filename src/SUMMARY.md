@@ -33,7 +33,7 @@
 - [嵌套循环](./docs/Nested_loops.md)
 - [猜数游戏](./docs/Guessing_game.md)
 - [基本统计](./docs/Basic_statistics.md)
-- [Scope]()
+- [范围](./docs/Scope.md)
 - [Variable mutability]()
 - [Stack and heap memory]()
 - [字符串](./docs/Strings.md)
