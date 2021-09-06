@@ -7,12 +7,12 @@ fn main() {
     if x == 5 {
         println!("x is 5");
     } 
-    // if expressions (equivalent of ternary operator in JS/Node.js) 
+    // 如果表达式（相当于JS/Node.js中的三元运算符）。
     let x_odd = if x % 2 == 0 { "odd" } else { "even" };
     println!("x_odd is {}", x_odd);
 }
 ```
-Output
+输出
 ```
 x is 5
 x_odd is even
