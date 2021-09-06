@@ -9,7 +9,7 @@
 - [浮点数](./docs/Floating_point_numbers.md)
 - [位操作运算](./docs/Bitwise_operations.md)
 - [布尔运算和二进制代数](./docs/Booleans_and_binary_algebra.md)
-- [Arithmetic operations]()
+- [算术运算](./docs/Arithmetic_operations.md)
 - [比较运算](./docs/Comparison_operators.md)
 - [Chars]()
 - [计算平均值](./docs/Computing_average.md)
