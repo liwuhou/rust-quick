@@ -54,7 +54,7 @@
 - [命令行参数](./docs/Command_line_arguments.md)
 - [自文件中读取内容](./docs/Reading_content_from_file.md)
 - [向文件中写入内容](./docs/Writing_content_to_file.md)
-- [Fruit finder]()
+- [水果查找器](./docs/Fruit_finder.md)
 - [形状工厂](./docs/Shape_factories.md)
 - [Generic struct definitions]()
 - [Generic method definitions]()
