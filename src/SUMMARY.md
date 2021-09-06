@@ -59,7 +59,7 @@
 - [泛型数据结构体定义](./docs/Generic_struct_definitions.md)
 - [泛型方法定义](./docs/Generic_method_definitions.md)
 - [泛型函数定义](./docs/Generic_function_definitions.md)
-- [Box data type]()
+- [封箱数据类型](./docs/Box_data_type.md)
 - [Summing boxes]()
 - [特性](./docs/Traits.md)
 - [Default trait implementation]()
