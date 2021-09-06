@@ -1,14 +1,14 @@
 # 借用检查
 
 ```rust
-// borrow checker
-// compares scopes to determine whether all borrows are valid
-// lifetime (how long it is alive) of variables annotated like " 'a "
+// 借用检查器
+// 比较作用域以确定所有借用是否有效
+// 注释为"'a'"的变量的寿命（它的存活时间）。
 
-// the lifetime of a variable is related to its scope
-// Rust analyses the scope / lifetime of the values referenced by a variable
+// 变量的寿命与它的作用域有关
+// Rust会分析变量所引用的值的范围/寿命。
 
-// using the borrow checker
+// 使用借用检查器
 fn main() {
     let fuel; 
 // ========= START lifetime ('a) of fuel ========== 
@@ -22,7 +22,7 @@ fn main() {
 } 
 // ========= END lifetime of fuel ================
 ```
-Error detected by the borrow checker:
+借用检查器检测到的错误。
 
 ```rust
 fn main() {
@@ -37,27 +37,28 @@ fn main() {
 // ========= END 'b ================
 
     
-// fuel stores a borrowed reference to gasoil
+// fuel存储了一个借来的对gasoil的引用。
     
-// gasoil lifetime is done
+// gasoil的生命周期已经结束
     
-// fuel contains a dangling reference, the program will not compile 
+// fuel包含一个悬空的引用，程序将无法编译 
     println!("fuel is {}", fuel);
 } 
 // ========= END 'a ================
 ```
-Fixing the lifetime error by extending the lifetime of gasoil:
+通过延长gasoil的使用寿命来修复寿命错误。
 ```rust
 fn main() {
     let fuel; 
 // ========= START 'a ================ 
-let gasoil = String::from("gasoil"); 
+    let gasoil = String::from("gasoil"); 
 // ======= START 'b ======== 
-{
+    {
         fuel = &gasoil;
     }
 
-    println!("fuel is {}", fuel);} 
+    println!("fuel is {}", fuel);
+} 
 // ========= END 'a and 'b ================
 
 ```
