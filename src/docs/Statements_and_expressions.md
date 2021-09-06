@@ -2,17 +2,17 @@
 
 ```rust
 fn main() {
-    // Statement performs an action without returning a value 
-    // statements end with a semicolon: a = 6;
-     // an expression evaluates to a resulting value 
-     // expressions do NOT end with a semicolon: 3 + 4 which evaluates to 7
-      // adding a semicolon to an expressions transforms it into an statement 
-      // expressions are used as parts of statements: let total = r + c;\n\t{}\n\t{}",
-       // where "r + c" is an expression and "let total = r + c;" is a statement 
+    // 语句执行一个动作而不返回一个值 
+    // 语句以分号结尾：a = 6。
+     // 表达式评估为一个结果值 
+     // 表达式不以分号结束。3 + 4，评估结果为7
+      // 在表达式中加入分号可以将其转化为一个语句。
+      // 表达式可以作为语句的一部分使用： let total = r + c;\n\t{}\n\t{}"。
+       // 其中 "r + c "是一个表达式，"let total = r + c; "是一个语句。
        println!("expression 4 + 5 evaluates to: {}", 4 + 5);
 }
 ```
-Output
+输出
 ```
 expression 4 + 5 evaluates to: 9
 ```
