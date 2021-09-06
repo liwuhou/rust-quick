@@ -3,9 +3,9 @@
 ```rust
 fn main() {
     
-// create an empty vector
- let mut presidents: Vec<String> = Vec::new(); 
- presidents.push(String::from("Chirac"));
+    // 新建一个空向量
+    let mut presidents: Vec<String> = Vec::new(); 
+    presidents.push(String::from("Chirac"));
     presidents.push(String::from("Sarkozy"));
     presidents.push(String::from("Hollande"));
     presidents.push(String::from("Macron")); 
@@ -19,14 +19,15 @@ fn main() {
         Some(president) => president,
         None => "not found",
     };
-     println!("fourth president is {}", fourth); 
-// creating a vector with the vec![] macro 
-let countdown = vec![4, 3, 2, 1];
- println!("countdown is {:?}", countdown);
+    println!("fourth president is {}", fourth); 
+    // 基于 vec![] 宏建立一个新向量 
+    let countdown = vec![4, 3, 2, 1];
+    println!("countdown is {:?}", countdown);
 }
 ```
 
-Output
+输出
+
 ```
 presidents are ["Chirac", "Sarkozy", "Hollande", "Macron"]
 last is Macron
