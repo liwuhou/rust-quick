@@ -42,7 +42,7 @@
 - [Transferring ownership (data stored on HEAP)]()
 - [借用](./docs/Borrowing.md)
 - [Mutating borrowed data]()
-- [Restriction on borrowed data]()
+- [借用的数据限制](./docs/Restriction_on_borrowed_data.md)
 - [Dangling references]()
 - [Structs]()
 - [枚举](./docs/Enums.md)
