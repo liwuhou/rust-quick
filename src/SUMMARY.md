@@ -47,7 +47,7 @@
 - [数据结构](./docs/Structs.md)
 - [枚举](./docs/Enums.md)
 - [裁剪字符串](./docs/Trimming_strings.md)
-- [Standard library]()
+- [标准库](./docs/Standard_library.md)
 - [解析标准输入](./docs/Parsing_standard_input.md)
 - [Crates](./docs/Crates.md)
 - [Guessing game revisited]()
