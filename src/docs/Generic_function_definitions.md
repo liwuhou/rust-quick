@@ -3,13 +3,13 @@
 ```rust
 
 
-// restrict the generic type
+//限制通用类型
 
-// to types that implement the Trait for values that can be compared for a sort-order (PartialOrd)
+//限于那些实现了特质的类型，这些类型的值可以进行排序比较（PartialOrd）。
 
-// PartialOrd trait is included in the std crate prelude (no need for full path)
+// PartialOrd特性包含在std crate prelude中（不需要全路径）。
 
-// otherwise, how would the compiler know if the concrete types can be compared using > ?
+// 否则，编译器怎么会知道具体类型是否可以使用>进行比较？
 fn get_biggest<T: PartialOrd>(n1: T, n2: T) -> T {
     if n1 > n2 {
         n1
