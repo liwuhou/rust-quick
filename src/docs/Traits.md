@@ -1,29 +1,30 @@
 # 特性
 ```rust
 
-// trait;
+// 特质。
 
-// abstract way to define capabilities for functionality of specific data types
-// collection of methods
+// 用于定义特定数据类型功能的抽象方法
+// 方法的集合
 
-// representing a set of behaviors necessary to accomplish some task
-// data types can implement a trait:
+// 代表完成某些任务所需的一组行为
+// 数据类型可以实现一个特征。
 
-// the type implements those specific methods so they'll be available for use with it
-// generics use traits to specify the capabilities of unknown data types:
+// 该类型实现了这些特定的方法，因此这些方法可以在它身上使用。
+// 泛型使用特质来指定未知数据类型的能力。
 
-// the trait act as a bound for which concrete types will be accepted
+// 特质作为一种约束，可以接受哪些具体类型。
 
-// as long as these concrete types implement the set of methods
-// similar to interfaces in TypeScript and other languages supporting classical OOP
-// Rust comes with default common traits (see the std::prelude)
-// you can define your custom traits
+// 只要这些具体类型实现了这组方法
+// 与TypeScript和其他支持经典OOP的语言中的接口相似。
+// Rust带有默认的通用特征（参见std::prelude）。
+// 你可以定义你的自定义特征
 struct Car {
     model: String,
     brand: String,
     velocity: u16, 
 // km/h
-}struct Plane {
+}
+struct Plane {
     name: String,
     nick_name: String,
     velocity: u16, 
@@ -32,24 +33,24 @@ struct Car {
     passengers: u16,
     ceiling: u32,
 }
-// custom trait
+// 自定义特质 
 trait Serialization {
     
-// method signatures
+// 方法签名
     fn describe(&self) -> String;
 }
-// implementing trait for a specific type
+// 实现一个特定的特性
 impl Serialization for Car {
     fn describe(&self) -> String {
         
-// format! macro returns formatted string 
-format!(
+// format! 宏返回格式化的字符串 
+    format!(
             "{} from {} going at {} km/h.",
             self.model, self.brand, self.velocity
         )
     }
 }
-// implementing trait for another type
+// 为其他类型实现特性
 impl Serialization for Plane {
     fn describe(&self) -> String {
         format!(
