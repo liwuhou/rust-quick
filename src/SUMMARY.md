@@ -75,7 +75,7 @@
 - [生命周期剥离规则](./docs/Lifetime_elision_rules.md)
 - [结构体生命周期注解](./docs/Struct_lifetime_annotations.md)
 - [静态生命周期](./docs/Static_lifetimes.md)
-- [枚举值](./docs/More_on_enums.md)
+- [更多枚举值](./docs/More_on_enums.md)
 - [扩展匹配模式](./docs/Match_with_wildcard_pattern.md)
 - [枚举方法](./docs/Enum_methods.md)
 - [可选枚举](./docs/Option_enum.md)
