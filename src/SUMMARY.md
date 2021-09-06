@@ -63,7 +63,7 @@
 - [Summing boxes]()
 - [特性](./docs/Traits.md)
 - [Default trait implementation]()
-- [Derivable traits]()
+- [可衍生的特性](./docs/Derivable_traits.md)
 - [Trait bounds]()
 - [多重特质界限和where子句](./docs/Multiple_trait_bounds_and_where_clause.md)
 - [Return types and implemented traits]()
