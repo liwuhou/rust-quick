@@ -3,7 +3,7 @@
 ```rust
 
 /*
-can only compare values of same type
+ * 只能比较相同类型的变量
 */
 fn main() {
     let a = 11;
@@ -26,7 +26,7 @@ fn main() {
     println!("c LESS THAN OR EQUAL TO d is {}", c <= d);
 }
 ```
-Output
+输出
 ```
 a is 11
 b is 88
