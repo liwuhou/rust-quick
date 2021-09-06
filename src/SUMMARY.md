@@ -62,7 +62,7 @@
 - [封箱数据类型](./docs/Box_data_type.md)
 - [封箱求和](./docs/Summing_boxes.md)
 - [特性](./docs/Traits.md)
-- [Default trait implementation]()
+- [默认特性实现](./docs/Default_trait_implementation.md)
 - [可衍生的特性](./docs/Derivable_traits.md)
 - [Trait bounds]()
 - [多重特质界限和where子句](./docs/Multiple_trait_bounds_and_where_clause.md)
