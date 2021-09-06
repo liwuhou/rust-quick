@@ -52,7 +52,7 @@
 - [Crates](./docs/Crates.md)
 - [猜数游戏重构版](./docs/Guessing_game_revisited.md)
 - [命令行参数](./docs/Command_line_arguments.md)
-- [Reading content from file]()
+- [自文件中读取内容](./docs/Reading_content_from_file.md)
 - [向文件中写入内容](./docs/Writing_content_to_file.md)
 - [Fruit finder]()
 - [形状工厂](./docs/Shape_factories.md)
