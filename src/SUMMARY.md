@@ -58,7 +58,7 @@
 - [形状工厂](./docs/Shape_factories.md)
 - [Generic struct definitions]()
 - [Generic method definitions]()
-- [Generic function definitions]()
+- [泛型函数定义](./docs/Generic_function_definitions.md)
 - [Box data type]()
 - [Summing boxes]()
 - [特性](./docs/Traits.md)
