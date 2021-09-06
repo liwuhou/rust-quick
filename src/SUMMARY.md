@@ -30,7 +30,7 @@
 - [循环赋值](./docs/Loop_assignment.md)
 - [While循环](./docs/While_loops.md)
 - [For循环](./docs/For_loops.md)
-- [Nested loops]()
+- [嵌套循环](./docs/Nested_loops.md)
 - [Guessing game]()
 - [基本统计](./docs/Basic_statistics.md)
 - [Scope]()
