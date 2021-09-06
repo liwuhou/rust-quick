@@ -11,7 +11,7 @@
 - [布尔运算和二进制代数](./docs/Booleans_and_binary_algebra.md)
 - [算术运算](./docs/Arithmetic_operations.md)
 - [比较运算](./docs/Comparison_operators.md)
-- [Chars]()
+- [字符](./docs/Chars.md)
 - [计算平均值](./docs/Computing_average.md)
 - [Arrays]()
 - [切片](./docs/Slices.md)
