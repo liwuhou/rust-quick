@@ -46,7 +46,7 @@ fn main() {
     }
 }
 ```
-Output
+输出
 ```
 Up button pushed.
 Left button pushed.

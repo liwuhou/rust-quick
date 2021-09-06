@@ -16,7 +16,7 @@ fn process_fuel(propellant: String) {
     // propellant takes ownership of the String data stored on the heap println!("Processing propellant {}", propellant);
 }
 ```
-Output
+输出
 ```
 Processing propellant MU-RF
 ```

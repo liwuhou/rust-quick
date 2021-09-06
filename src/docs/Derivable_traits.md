@@ -46,7 +46,7 @@ fn main() {
     ); // allowed because of derived Debug trait println!("{:?}", gle_class);
 }
 ```
-Output
+输出
 ```
 Are the cars equal: false
 Is the coupe greater then the SUV: true

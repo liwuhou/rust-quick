@@ -43,7 +43,7 @@ fn func2() {
     println!("push variable arr = {:?} onto the stack", arr);
 }
 ```
-Output
+输出
 ```
 === STACK ====- 
 values stored in sequential order of insertion

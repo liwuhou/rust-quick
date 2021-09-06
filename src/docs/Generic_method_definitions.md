@@ -45,7 +45,7 @@ struct Shape<T, U> {
     // otherwise this method would be not be found println!("rect perimter is {:?}", rect.get_perimeter());
 }
 ```
-Output
+输出
 ```
 rect is Rectangle { width: 1.2, height: 3.4 }
 rect is Rectangle { width: 5, height: 11 }

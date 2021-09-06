@@ -28,7 +28,7 @@ fn main() {
   println!("random_number is {}", random_number);
 }
 ```
-Output
+输出
 ```
 random_number is 97
 ```

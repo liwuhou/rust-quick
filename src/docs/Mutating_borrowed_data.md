@@ -9,7 +9,7 @@ fn main() {
     length
 }
 ```
-Output
+输出
 ```
 Processing propellant MU-RF
 rocket_fuel is MU-RF333, lenght: 8

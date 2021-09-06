@@ -9,7 +9,7 @@ use std::fmt::Display;// the return value must implement the Display traitfn get
 }
 ```
 
-Output
+输出
 ```
 Display: 1
 ```

@@ -24,7 +24,7 @@
 }
 ```
 
-Output
+输出
 ```
 result is Deep Space 9
 ```

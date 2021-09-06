@@ -18,7 +18,7 @@ fn main() {
     assert_eq!(mean, 12.5); println!("Test passed!");
 }
 ```
-Output
+输出
 ```
 Test passed!
 ```

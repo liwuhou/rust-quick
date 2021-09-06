@@ -11,7 +11,7 @@ fn main() {
     // because the data will have been dropped from memory because not owned anymore by a variable &new_thing
 }
 ```
-Output
+输出
 
 program will not compile because of dangling reference. The solution is to the created string instead of a reference to it:
 ```rust
@@ -24,7 +24,7 @@ fn main() {
 }
 ```
 
-Output
+输出
 ```
 everything is new in town
 ```

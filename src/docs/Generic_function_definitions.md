@@ -23,7 +23,7 @@ fn main() {
     println!("biggest is {}", get_biggest(123.45, 1.21));
 }
 ```
-Output
+输出
 ```
 biggest is 121
 biggest is 12345

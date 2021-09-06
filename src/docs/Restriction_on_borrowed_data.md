@@ -34,7 +34,7 @@ println!("It's only {}", the_one_and_only_ref);
     }
 }
 ```
-Output
+输出
 ```
 ("a thing", "a thing", "a thing")
 It's only another thing

@@ -12,7 +12,7 @@ fn main() {
 }
 ```
 
-Output
+输出
 ```
 planet is Jupiter
 planet is Dunya

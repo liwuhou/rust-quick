@@ -41,7 +41,7 @@ for (index, &item) in message.iter().enumerate() {
     }
 }
 ```
-Output
+输出
 ```
 current item is m
 current item is e

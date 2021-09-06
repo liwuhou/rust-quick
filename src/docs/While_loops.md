@@ -9,7 +9,7 @@ fn main() {
     }// contrary to loop expressions, the break statement in while loop cannot return a value
 }
 ```
-Output
+输出
 ```
 letter[0] is a
 letter[1] is b

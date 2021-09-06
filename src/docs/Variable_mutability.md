@@ -13,7 +13,7 @@ fn main() {
     println!("car is a {}", car);
 }
 ```
-Output
+输出
 ```
 car is a Mitsubishi
 car is a 1

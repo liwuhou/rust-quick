@@ -59,7 +59,7 @@ fn main() {
 // no blank space found, input is a single word
 }
 ```
-Output
+输出
 ```
 first_word is Hi
 ```

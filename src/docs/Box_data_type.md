@@ -41,7 +41,7 @@ struct Team {
     );
 }
 ```
-Output
+输出
 ```
 lions is Team { name: "The lions", size: 7, capacity: 11.5, domain: "Authentication" }
 lions size is on stack 64 bytes

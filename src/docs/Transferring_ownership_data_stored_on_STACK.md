@@ -17,7 +17,7 @@ fn process_fuel(mut propellant: i32) {
     println!("Processing propellant {}", propellant);
 }
 ```
-Output
+输出
 ```
 Processing propellant 3
 rocket_fuel is 1

@@ -62,7 +62,7 @@ s.push('T');
   println!("s capacity is  now {} bytes", s.capacity());
 }
 ```
-Output
+输出
 ```
 message is Jupiter
 message is Jupiter is smoke and mirrors

@@ -34,7 +34,7 @@ struct Rectangle {
 }
 ```
 
-Output
+输出
 ```
 Test passed!
 ```

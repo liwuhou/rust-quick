@@ -19,7 +19,7 @@ fn main() {
 }
 ```
 
-Output
+输出
 ```
 > cargo run toto "titi.txt" --flag -targument 0 is target/debug/command_line_args
 argument 1 is toto

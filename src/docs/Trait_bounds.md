@@ -13,7 +13,7 @@ use std::any;// To be able to print an item it must implement the Display trait
     print_type([12, 34]);
 }
 ```
-Output
+输出
 ```
 1 is a i32
 1.2 is a f64

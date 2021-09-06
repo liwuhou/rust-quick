@@ -12,7 +12,7 @@ fn main() {
     }
 }
 ```
-Output
+输出
 ```
 x is less than y
 ```

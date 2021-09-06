@@ -25,7 +25,7 @@ use std::ops::Add;// restrict generic type T to concrete types that implement th
     assert_eq!(*sum_box, 55u16); println!("tests passed!");
 }
 ```
-Output
+输出
 ```
 test passed!
 ```

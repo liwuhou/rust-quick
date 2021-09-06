@@ -27,7 +27,7 @@ struct Spaceship<'a> {
     println!("test_msg is {}", test_msg);
 }
 
-Output
+输出
 
 Transmitting message: All aboard!
 sender is TR95

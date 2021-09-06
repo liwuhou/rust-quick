@@ -22,6 +22,6 @@
     } // END 'bprintln!("result is {}", result);
 } // END 'a
 
-Output
+输出
 
 result is Deep Space 9

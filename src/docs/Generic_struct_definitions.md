@@ -28,7 +28,7 @@ struct Shape<T, U> {
     }; println!("rect is {:?}", rect);
 }
 ```
-Output
+输出
 ```
 rect is Rectangle { width: 1.2, height: 3.4 }
 rect is Rectangle { width: 5, height: 11 }

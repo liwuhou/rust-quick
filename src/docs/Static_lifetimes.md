@@ -1,5 +1,5 @@
 # 静态生命周期
-
+```rust
 // 'static lifetime
 // indicates references available for the entire duration of the program// example: a string literal is stored in the program binary
 // so it never goes away
@@ -15,7 +15,8 @@
   let toto: &'static str = get_toto();
   println!("toto is {}", toto);
 }
+```
 
-Output
+输出
 
 toto is toto here

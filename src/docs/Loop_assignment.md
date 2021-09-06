@@ -25,7 +25,7 @@ fn main() {
 }
 ```
 
-Output
+输出
 ```
 count is 1
 count is 2

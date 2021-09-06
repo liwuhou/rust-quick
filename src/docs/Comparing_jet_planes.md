@@ -28,7 +28,7 @@ use std::fmt;struct Jet {
     }; println!("G6 jet is {}", g6); println!("Does G6 velocity equal to G7's: {}", g6.eq(&g7)); println!("Is G6 faster than G7: {}", g6.gt(&g7));
 }
 ```
-Output
+输出
 ```
 G6 jet is Gulfstream G650, flying at 956 km/h
 Does G6 velocity equal to G7's: false

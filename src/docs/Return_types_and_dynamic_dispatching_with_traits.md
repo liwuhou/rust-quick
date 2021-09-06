@@ -24,7 +24,7 @@ fn main() {
     println!("Display: {}", get_dynamic_displayable(false));
 }
 ```
-Output
+输出
 ```
 Display: one
 ```

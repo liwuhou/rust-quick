@@ -25,7 +25,7 @@ use std::path::Path;fn main() {
                                .expect("Failed to read file."); println!("\ncontents is: {:?}", contents);
 }
 ```
-Output
+输出
 ```
 contents is: apple
 avocado

@@ -47,7 +47,7 @@ use std::path::Path;fn main() {
         .expect("Failed to write to file."); println!("{} was added to fruit list", search_name);
 }
 ```
-Output
+输出
 ```
 > cat fruits.txt
 apple

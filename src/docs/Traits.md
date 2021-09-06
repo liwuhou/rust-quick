@@ -77,7 +77,7 @@ fn main() {
 }
 ```
 
-Output
+输出
 
 ```
 GLE-Class Coupe from Mercedes-Benz going at 280 km/h.

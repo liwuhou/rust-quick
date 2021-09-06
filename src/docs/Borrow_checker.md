@@ -61,7 +61,7 @@ let gasoil = String::from("gasoil");
 // ========= END 'a and 'b ================
 
 ```
-Output
+输出
 ```
 fuel is gasoil
 ```

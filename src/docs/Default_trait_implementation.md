@@ -42,7 +42,7 @@ struct Car {
     println!("{}", g6.describe());
 }
 ```
-Output
+输出
 ```
 GLE-Class Coupe from Mercedes-Benz going at 280 km/h.
 some kind of vehicle.

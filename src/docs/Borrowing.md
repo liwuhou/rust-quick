@@ -32,7 +32,7 @@ println!("Processing propellant {}", propellant);
 // the string data is still on the heap because it remains owned by the original variable (rocket_fuel) 
     }
 ```
-Output
+输出
 ```
 
 Processing propellant MU-RF

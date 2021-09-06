@@ -56,7 +56,7 @@ fn main() {
     println!("outer_planet_position is {}", outer_planet_position);
 }
 ```
-Output
+输出
 ```
 inner_planet is Mercury
 inner_galaxy is Milky Way
@@ -95,9 +95,9 @@ fn main() {
 }
 ```
 
-Output
+输出
 ```
-Output
+输出
 arr_1 is [33, 66]
 arr_1 is now [1, 2]
 arr_2 is [33, 66]

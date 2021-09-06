@@ -37,7 +37,7 @@ fn main() {
     compare_and_print(2.2, 2.2);
 }
 ```
-Output
+输出
 ```
 22 is not equal to 55
 2.2 is equal to 2.2
