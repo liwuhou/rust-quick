@@ -9,23 +9,24 @@ fn main() {
     println!("a AND b is {}", a & b);
     println!("a OR b is {}", a | b);
     println!("a XOR b is {}", a ^ b); 
-    // boolean casted to integer begets 0 or 1 println!("a XOR b is {}", (a ^ b) as i32); 
+    // 布尔值转为整数后会产生0或1。
+    println!("a XOR b is {}", (a ^ b) as i32); 
     // 1 
     let c = (a ^ b) | (a & b);
     println!("c is {}", c); 
-    // short-circuiting logical operations:
-    // right operand not evaluated 
+    // 短路的逻辑操作。
+    // 右边的操作数没有被评估 
     let d = true || (a & b);
-    println!("d is {}", d); 
-    // the panic macro is not evaluated,
-    // so the process ends with status 0 (OK, no error)
-    // panics exit the program immediately (like throwing error in Node.js)
+    println!("d is {}", d);    
+     // panic宏没有被评估。
+    // 所以进程以状态0结束（OK，无错误）。
+    // panic会立即退出程序（就像在Node.js中抛出错误）。
     let e = false && panic!();
     println!("e is {}", e);
 }
 ```
 
-Output
+输出
 
 ```
 a is true
