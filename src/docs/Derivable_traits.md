@@ -1,24 +1,30 @@
 # 可衍生的特性
 ```rust
-// by default new structs do not implement any trait
-// you as the programmer give it the traits it needs
-// derivable traits provide default implementations for common traits
-// gives access to basic functionalities
-// instead of having to implement custom traits// when deriving traits,
-// the compiler generates default code for the required methods// derivable traits are (subject to change as the language evolves):// Eq
+// 默认情况下，新结构不实现任何特质
+// 你作为程序员给它提供它所需要的特质
+// 可派生特质为常见特质提供了默认的实现方式
+//提供了对基本功能的访问
+// 而不需要实现自定义特征
+//当派生特性时，编译器会生成默认代码。
+// 编译器会生成所需方法的默认代码。
+// 可派生特质是（随着语言的发展会有变化）。
+// Eq
 // PartialEq
 // Ord
 // PartialOrd
 // Clone
 // Copy
 // Hash
-// Default - create empty instance of a data type
-// Debug - provide formatted debug string// to derivve traits:  #[ derive( trait_a, trait_b, ..) ]// default implementation of PartialEq requires all fields of both structs to be equal to return true
-// (check documentation  std::cmp::PartialEq)// default implementation of PartialOrd compares the values of the fields,
-// parses the fields in order of definition and
-// once found a field that can be compared,
-// will return result of comparison
-// and not look at other fields (check documentation  std::cmp::PartialOrd)
+// Default - 创建一个数据类型的新实例 
+// Debug - 提供一个格式化的debug字符串 
+// 衍生性状。 #[ derive( trait_a, trait_b, ...) ] 。
+// PartialEq的默认实现要求两个结构的所有字段都相等，以返回true
+// (检查文档 std::cmp::PartialEq)
+// PartialOrd的默认实现是对字段的值进行比较。
+// 按照定义的顺序解析字段，并且
+// 一旦找到可以比较的字段。
+// 将返回比较的结果
+// 而不去看其他字段（查看文档 std::cmp::PartialOrd）。
 #[derive(PartialEq, PartialOrd, Debug)]
 struct Car {
     model: String,
@@ -36,14 +42,16 @@ fn main() {
         brand: String::from("Mercedes-Benz"),
         velocity: 218,
     };
-     // allowed because of derived PartialEq trait 
+     //由于派生的PartialEq特性而被允许。
      println!("Are the cars equal: {}", gle_class_coupe == gle_class);
-      // allowed because of derived PartialOrd trait
-    // here the name field is compared to assert which one is greater
+      //由于派生的PartialOrd特性而被允许。
+    //在这里，名称字段被比较以断定哪一个更大
      println!(
         "Is the coupe greater then the SUV: {}",
         gle_class_coupe > gle_class
-    ); // allowed because of derived Debug trait println!("{:?}", gle_class);
+    );
+     //因为派生的Debug特性而被允许 
+     println!("{:?}", gle_class);
 }
 ```
 输出
