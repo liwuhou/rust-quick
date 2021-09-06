@@ -37,7 +37,7 @@
 - [变量可变性](./docs/Variable_mutability.md)
 - [堆内存和栈内存](./docs/Stack_and_heap_memory.md)
 - [字符串](./docs/Strings.md)
-- [Ownership]()
+- [所有权](./docs/Ownership.md)
 - [转让所有权（存储在STACK上的数据）](./docs/Transferring_ownership_data_stored_on_STACK.md)
 - [Transferring ownership (data stored on HEAP)]()
 - [借用](./docs/Borrowing.md)
