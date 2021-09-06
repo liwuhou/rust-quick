@@ -1,21 +1,28 @@
 # 生命周期注解
 
 ```rust
-// defining a generic lifetime 'a// explicitly defining a generic lifetime for parameters
-// is called lifetime annotation
-// must begin with apostrophe ('x)// convention is to use a single lowercase letter ('a, 'b, 'c)
-// but you are free to name it whatever ('a_lifetime, 'toto)// pay attention to the lifetime annotation
-// which follows the borrow operator followed by a space then the type// in this example, by annotating the return type,
-// we tell the compiler that the returned value has the same lifetime as the params
-// in case there are different lifetimes,
-// the compiler will take the smallest// by annotating the lifetime of the parameters,
-// we give the borrow checker the info to validate the returned referencefn get_longest_name<'a>(x: &'a str, y: &'a str) -> &'a str {
+// 定义一个通用的寿命 'a
+// 明确地定义参数的通用寿命
+//被称为生命周期注解
+// 必须以撇号（'x'）开头。
+//惯例是使用单个小写字母（'a, 'b, 'c)
+// 但你可以自由地命名它（'a_lifetime, 'toto)
+// 注意寿命注释
+//在借贷操作符后面有一个空格，然后是类型。
+// 在这个例子中，通过对返回类型的注解。
+// 我们告诉编译器，返回的值与参数的寿命相同。
+// 如果有不同的生存期，编译器将选择最小的生存期。
+// 编译器将选择最小的 通过注释参数的寿命，
+//我们告诉编译器返回的值与参数的寿命相同。
+// 我们给借贷检查器提供信息来验证返回的引用。
+fn get_longest_name<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() {
         x
     } else {
         y
     }
-}fn main() {
+}
+fn main() {
     let result;
     let name1 = String::from("Deep Space 9");
     let name2 = String::from("Voyager");
