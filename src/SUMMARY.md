@@ -39,7 +39,7 @@
 - [字符串](./docs/Strings.md)
 - [所有权](./docs/Ownership.md)
 - [转让所有权（存储在STACK上的数据）](./docs/Transferring_ownership_data_stored_on_STACK.md)
-- [Transferring ownership (data stored on HEAP)]()
+- [转让所有权（存储在堆上的数据)](./docs/Transferring_ownership_data_stored_on_HEAP.md)
 - [借用](./docs/Borrowing.md)
 - [Mutating borrowed data]()
 - [借用的数据限制](./docs/Restriction_on_borrowed_data.md)
