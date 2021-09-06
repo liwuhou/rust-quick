@@ -67,7 +67,7 @@
 - [Trait bounds]()
 - [多重特质界限和where子句](./docs/Multiple_trait_bounds_and_where_clause.md)
 - [Return types and implemented traits]()
-- [Return types and dynamic dispatching with traits]()
+- [返回类型和特质的动态分派](./docs/Return_types_and_dynamic_dispatching_with_traits.md)
 - [Comparing jet planes]()
 - [借用检查](./docs/Borrow_checker.md)
 - [Lifetime annotation]()
