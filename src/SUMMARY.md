@@ -32,7 +32,7 @@
 - [For循环](./docs/For_loops.md)
 - [Nested loops]()
 - [Guessing game]()
-- [Basic statistics]()
+- [基本统计](./docs/Basic_statistics.md)
 - [Scope]()
 - [Variable mutability]()
 - [Stack and heap memory]()
