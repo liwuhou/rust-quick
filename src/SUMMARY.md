@@ -46,7 +46,7 @@
 - [未知引用](./docs/Dangling_references.md)
 - [数据结构](./docs/Structs.md)
 - [枚举](./docs/Enums.md)
-- [Trimming strings]()
+- [裁剪字符串](./docs/Trimming_strings.md)
 - [Standard library]()
 - [解析标准输入](./docs/Parsing_standard_input.md)
 - [Crates](./docs/Crates.md)
