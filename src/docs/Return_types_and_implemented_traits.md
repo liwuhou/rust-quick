@@ -2,9 +2,12 @@
 
 ```rust
 
-use std::fmt::Display;// the return value must implement the Display traitfn get_displayable() -> impl Display {
+use std::fmt::Display;
+// 返回值必须实现 "Display "特质。
+fn get_displayable() -> impl Display {
     1
-}fn main() {
+}
+fn main() {
     println!("Display: {}", get_displayable());
 }
 ```
