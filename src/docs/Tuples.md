@@ -3,17 +3,18 @@
 ```rust
 
 fn main() {
-    // used to group related items of mixed data types
-    // can have max 12 mixed type values
-    // adding more values and it will no longer be a tuple type 
+    //用于分组混合数据类型的相关项目
+    //最多可以有12个混合类型的值
+    // 如果增加更多的值，它将不再是一个元组类型。
     let a_tuple: (&str, u8, char) = ("ok", 0, 'd');
     let first_item = a_tuple.0;
     println!("first_item is {}", first_item); 
-    // mutate a tuple let mut b_tuple = ("ok", 0);
+    // 使元组可变 
+    let mut b_tuple = ("ok", 0);
     b_tuple.0 = "ko";
     b_tuple.1 += 1;
     println!("b_tuple.1 is {}", b_tuple.1);
-     // destructure a tuple 
+     // 解构一个元组 
      let c_tuple = ("en", "US", 1);
     let (language, country, code) = c_tuple;
     println!(
@@ -22,7 +23,7 @@ fn main() {
     )
 }
 ```
-Output
+输出
 ```
 first_item is ok
 b_tuple.1 is 1
