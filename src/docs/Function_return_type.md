@@ -8,37 +8,37 @@ fn main() {
     let (input, result1) = result_tuple;
     println!("result_tuple is {:?}", result_tuple);
     
-// {:?} ==> debug formatting 
+// {:?} ==> debug 格式化 
 println!("input {} evaluates to {}", input, result1); 
 let nothing: () = does_not_return();
     println!("nothing (union data type) is {:?}", nothing)
 }
 fn square(number: i32) -> i32 {
     println!("processing square({})", number); 
-// expression returning a value number * number
+// 返回一个数值的表达式 number * number
     
-// " return  number * number;" is also valid syntax
+// "return number * number; "也是有效的语法。
 }
-// multiple returns with tuples
+// 用元组实现多返回
 fn triple(number: i32) -> (i32, i32) {
     println!("tripling the number: {}", number);
     let input = number;
     let result = number * 3;
     (input, result)
 }
-// union data type
+// 联盟数据类型
 
-// used when no meaningful values returned by a fn
+// 当fn返回的值没有意义时使用
 
-// represented by empty ()
+// 用空()表示
 
-// it is optional
+// 它是可选的
 fn does_not_return() -> () {
     println!("ain't returning nuthing!")
 }
 ```
 
-Output
+输出
 ```
 processing square(3)
 result is 9
