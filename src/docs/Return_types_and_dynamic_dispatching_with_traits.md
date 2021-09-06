@@ -2,15 +2,13 @@
 
 ```rust
 use std::fmt::Display;
-// [dynamic dispatch](https:
-//doc.rust-lang.org/stable/rust-by-example/trait/dyn.html)
-// when the retun type cannot be known until runtime
+// [动态调度](https://doc.rust-lang.org/stable/rust-by-example/trait/dyn.html)
+// 当运行时才知道retun的类型时
 
-// notice the [dyn](https:
-//doc.rust-lang.org/std/keyword.dyn.html)  keyword and the use of a Box pointers
-// Returns a value that implements the Display trait,
+// 注意 [dyn](https://doc.rust-lang.org/std/keyword.dyn.html) 关键字和盒式指针的使用
+// 返回一个实现了显示特性的值。
 
-// but we do not know which one at compile time.
+// 但我们在编译时不知道是哪一个。
 fn get_dynamic_displayable(a: bool) -> Box<dyn Display> {
     if a {
         
