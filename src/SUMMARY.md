@@ -53,7 +53,7 @@
 - [Guessing game revisited]()
 - [命令行参数](./docs/Command_line_arguments.md)
 - [Reading content from file]()
-- [Writing content to file]()
+- [向文件中写入内容](./docs/Writing_content_to_file.md)
 - [Fruit finder]()
 - [形状工厂](./docs/Shape_factories.md)
 - [Generic struct definitions]()
