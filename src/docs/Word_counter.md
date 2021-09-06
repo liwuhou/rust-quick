@@ -1,12 +1,12 @@
 # 字数统计
 
-Create a file named "lorem.txt" with the following content:
+创建一个名为 "lorem.txt "的文件，内容如下。
 
 ```text
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta velit quis mattis bibendum. Fusce sed nulla eget arcu lacinia placerat ac eget dui. Nam a ante tellus. Aliquam varius tincidunt nisi a efficitur. Donec non malesuada odio. Donec vitae arcu eu magna efficitur pulvinar. Proin feugiat, erat et congue aliquet, ipsum turpis volutpat ante, a ullamcorper magna elit nec libero. Maecenas lacus magna, gravida id tristique at, lobortis sit amet libero.Donec vel nunc ac sapien tempus vehicula. Aenean vulputate quam eget felis elementum suscipit. Aliquam vehicula odio dui, id varius lectus gravida consequat. Maecenas sit amet dolor erat. Duis rhoncus mollis nulla. Etiam pellentesque arcu sed pretium fermentum. Phasellus metus velit, dapibus eu pellentesque eu, pulvinar eu nunc. In posuere massa non elementum varius. Donec et vehicula urna, id dignissim ex.Nunc vitae sem volutpat, malesuada odio vel, ornare arcu. Nunc dictum tincidunt turpis, sed tristique tellus hendrerit at. In ac tempor lacus. Pellentesque tempus velit eu pharetra consectetur. Integer ultricies sem sem, a tincidunt urna tempus quis. Nullam porttitor turpis ut lacus mollis dignissim nec vel ipsum. Integer volutpat quam et enim pellentesque, ut imperdiet nibh faucibus. Vestibulum varius, libero eget porta congue, enim risus porttitor lacus, at pretium mauris ligula sit amet ligula.Donec at pharetra elit. Sed nulla dui, consectetur sollicitudin magna a, consequat maximus erat. Maecenas ultricies libero orci, a cursus justo blandit non. Vivamus non fringilla ante. In cursus finibus elit quis cursus. Maecenas at arcu id ex consectetur eleifend. Aenean nec purus eget odio commodo ullamcorper. Integer maximus quis turpis id finibus. Etiam mi nunc, fringilla eget diam non, gravida blandit nisl. Curabitur finibus bibendum consequat. Nunc eleifend aliquam risus a iaculis.Nullam id lacus sem. Suspendisse a nunc facilisis, rutrum purus aliquet, pulvinar libero. Etiam ornare, enim at egestas varius, mi justo feugiat purus, eget congue nisi nibh vitae mauris. Integer malesuada, diam et placerat mollis, purus nulla molestie lacus, in egestas nisl lacus et odio. Fusce feugiat odio eget justo lacinia placerat. In rutrum et quam sed gravida. Vivamus vel blandit metus, sed imperdiet turpis. Sed facilisis ipsum ipsum, egestas mattis dolor tempus at. Morbi eu scelerisque ante.
 ```
 
-Source code
+源代码
 
 ```rust
 use std::collections::HashMap;
@@ -90,19 +90,19 @@ fn main() {
     }
 }
 ```
-Output
+输出
 ```bash
 $ cargo run lorem.txt
 "eget" is the most common word with 8 occurrences
 ```
 
-Alternative implementation
+替代实现
 
 ```rust
 use std::env;
 use std::fs;
 use std::collections::HashMap;fn main() {
-    // read file and build vector of individual words
+    // 读取文件并建立单个单词的向量
     let contents = match env::args().nth(1) {
         Some(f) => match fs::read_to_string(f) {
             Ok(s) => s.to_lowercase(),
@@ -116,12 +116,12 @@ use std::collections::HashMap;fn main() {
             std::process::exit(2);
         }
     }; let all_words = contents.split_whitespace().collect::<Vec<&str>>(); 
-    // count how many times each unique word occurs 
+    // 计算每个独特的词出现了多少次 
     let mut word_counts: HashMap<&str, u32> = HashMap::new(); for word in all_words.iter() {
         *word_counts.entry(word).or_insert(1) += 1;
     }
 
-    // determine the most commonly used word(s)
+    // 确定最常使用的单词
      let mut top_count = 0u32; 
      let mut top_words: Vec<&str> = Vec::new(); 
      for (&key, &val) in word_counts.iter() {
@@ -133,7 +133,7 @@ use std::collections::HashMap;fn main() {
             top_words.push(key);
         }
     } 
-    // display results
+    // 显示结果
      println!("Top word(s) occurred {} times:", top_count);
       for word in top_words.iter() {
         println!("{}", word);
