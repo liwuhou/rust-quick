@@ -56,7 +56,7 @@
 - [向文件中写入内容](./docs/Writing_content_to_file.md)
 - [水果查找器](./docs/Fruit_finder.md)
 - [形状工厂](./docs/Shape_factories.md)
-- [Generic struct definitions]()
+- [泛型数据结构体定义](./docs/Generic_struct_definitions.md)
 - [Generic method definitions]()
 - [泛型函数定义](./docs/Generic_function_definitions.md)
 - [Box data type]()
