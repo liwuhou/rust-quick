@@ -27,7 +27,7 @@
 - [摄氏度转换为华氏度](./docs/Celsius_to_Fahrenheit_converter.md)
 - [条件执行](./docs/Conditional_execution.md)
 - [多条件判断if-else-if](./docs/Multiple_conditionals_if_else_if.md)
-- [Loop assignment]()
+- [循环赋值](./docs/Loop_assignment.md)
 - [While循环](./docs/While_loops.md)
 - [For循环](./docs/For_loops.md)
 - [Nested loops]()
