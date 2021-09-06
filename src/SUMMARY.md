@@ -44,7 +44,7 @@
 - [改变借用数据](./docs/Mutating_borrowed_data.md)
 - [借用的数据限制](./docs/Restriction_on_borrowed_data.md)
 - [未知引用](./docs/Dangling_references.md)
-- [Structs]()
+- [数据结构](./docs/Structs.md)
 - [枚举](./docs/Enums.md)
 - [Trimming strings]()
 - [Standard library]()
