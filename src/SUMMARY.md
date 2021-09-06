@@ -34,7 +34,7 @@
 - [猜数游戏](./docs/Guessing_game.md)
 - [基本统计](./docs/Basic_statistics.md)
 - [范围](./docs/Scope.md)
-- [Variable mutability]()
+- [变量可变性](./docs/Variable_mutability.md)
 - [Stack and heap memory]()
 - [字符串](./docs/Strings.md)
 - [Ownership]()
