@@ -15,7 +15,7 @@
 - [计算平均值](./docs/Computing_average.md)
 - [数组](./docs/Arrays.md)
 - [切片](./docs/Slices.md)
-- [Slices as parameters]()
+- [切片为参数](./docs/Slices_as_parameters.md)
 - [Deref解构](./docs/Deref_coercion.md)
 - [Multidimensional arrays]()
 - [矢量](./docs/Vectors.md)
