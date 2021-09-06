@@ -70,7 +70,7 @@
 - [返回类型和特质的动态分派](./docs/Return_types_and_dynamic_dispatching_with_traits.md)
 - [对比飞机](./docs/Comparing_jet_planes.md)
 - [借用检查](./docs/Borrow_checker.md)
-- [Lifetime annotation]()
+- [生命周期注解](./docs/Lifetime_annotation.md)
 - [Multiple lifetime annotations]()
 - [生命周期剥离规则](./docs/Lifetime_elision_rules.md)
 - [Struct lifetime annotations]()
