@@ -4,20 +4,21 @@
 
 fn main() {
     be_polite(); 
-// inferred types for y and z are the ones used as parameters of add()
+// y和z的推断类型是作为add()的参数使用的类型。
     
-// to be clear, if you do not declare a specific type for variables, these variables will assume the type of the arguments of the function where first used 
-// remember, by the default inferred type is i32 for integers 
-let y = 12;
+// 如果你没有声明变量的具体类型，那么这些变量将假定为第一次使用的函数的参数类型。
+// 记住，默认的推断类型是整数的i32。
+    let y = 12;
     let z = 34; 
-// now y and z are considered u8 type because this is how they are first used as function arguments 
-add(y, z); 
-// passing later y and z to another fn with different param types will panic
+// 现在y和z被认为是u8类型，因为这就是它们第一次作为函数参数使用的方式 
+    add(y, z); 
+// 稍后将y和z传给另一个参数类型不同的fn，会引起panic
     
 guess_number(z) 
-// -> expects a i32 not a u8
+// --> 希望是一个i32而不是一个u8
     
-// need for explicit cast: guess_number(y as i32)
+// 需要明确的转换。
+guess_number(y as i32)
 }
 fn be_polite() {
     println!("Greetings, pleased to meet you.");
@@ -31,7 +32,7 @@ fn add(a: u8, b: u8) {
     println!("sum is {}", sum)
 }
 ```
-Output
+输出
 ```
 
 Greetings, pleased to meet you.
