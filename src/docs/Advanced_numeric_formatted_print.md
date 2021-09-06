@@ -7,23 +7,19 @@ fn main() {
     let z = x / y;
 
     // print line macro with 3 decimal point precision
-
+    // 打印浮点数，带有小数点后3位精度
     println!("z is {:.3}", z);
 
-    // 9: total character space the number to occupy
-    // (adds pre padding if necessary)
-
+    // 共9位数，前置用空格补位
     println!("z is {:9.3}", z);
 
-    // 0: placeholder number for padding characters
-
+    //用0补位
     println!("z is {:09.3}", z);
     println!("z is {:09.3}\nx is {}", z, x);
-
-    // print macro without new line
-
-    print!("y is {:09.3}\n x is {}\n", y, x); // positional parameters
-
+ 
+    // 换行
+    print!("y is {:09.3}\n x is {}\n", y, x); 
+    // 位置占位 
     println!("z is {0:05.1} and x is {1:.2}. \nx is also {1}", z, x)
 }
 ```
