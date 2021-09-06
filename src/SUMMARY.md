@@ -66,7 +66,7 @@
 - [可衍生的特性](./docs/Derivable_traits.md)
 - [特性界限](./docs/Trait_bounds.md)
 - [多重特质界限和where子句](./docs/Multiple_trait_bounds_and_where_clause.md)
-- [Return types and implemented traits]()
+- [返回类型和特性实现](./docs/Return_types_and_implemented_traits.md)
 - [返回类型和特质的动态分派](./docs/Return_types_and_dynamic_dispatching_with_traits.md)
 - [Comparing jet planes]()
 - [借用检查](./docs/Borrow_checker.md)
