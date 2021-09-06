@@ -57,7 +57,7 @@
 - [水果查找器](./docs/Fruit_finder.md)
 - [形状工厂](./docs/Shape_factories.md)
 - [泛型数据结构体定义](./docs/Generic_struct_definitions.md)
-- [Generic method definitions]()
+- [泛型方法定义](./docs/Generic_method_definitions.md)
 - [泛型函数定义](./docs/Generic_function_definitions.md)
 - [Box data type]()
 - [Summing boxes]()
