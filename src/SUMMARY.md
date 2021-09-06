@@ -13,7 +13,7 @@
 - [比较运算](./docs/Comparison_operators.md)
 - [字符](./docs/Chars.md)
 - [计算平均值](./docs/Computing_average.md)
-- [Arrays]()
+- [数组](./docs/Arrays.md)
 - [切片](./docs/Slices.md)
 - [Slices as parameters]()
 - [Deref解构](./docs/Deref_coercion.md)
