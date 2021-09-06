@@ -50,7 +50,7 @@
 - [标准库](./docs/Standard_library.md)
 - [解析标准输入](./docs/Parsing_standard_input.md)
 - [Crates](./docs/Crates.md)
-- [Guessing game revisited]()
+- [猜数游戏重构版](./docs/Guessing_game_revisited.md)
 - [命令行参数](./docs/Command_line_arguments.md)
 - [Reading content from file]()
 - [向文件中写入内容](./docs/Writing_content_to_file.md)
