@@ -1,11 +1,14 @@
 # 定位枚举
 
-
-use std::fmt;enum Location {
+```rust
+use std::fmt;
+enum Location {
     Unknown,
     Anonymous,
-    Known(f64, f64), // latitude, longitude
-}impl fmt::Display for Location {
+    Known(f64, f64), 
+    // 纬度、经度
+}
+impl fmt::Display for Location {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
             Location::Anonymous => write!(f, "Location is anonymous"),
@@ -15,15 +18,20 @@ use std::fmt;enum Location {
             }
         }
     }
-}fn main() {
+}
+fn main() {
     let address = Location::Anonymous;
-    println!("address is {}", address); let address = Location::Unknown;
-    println!("address is {}", address); let address = Location::Known(123.4, 456.7);
+    println!("address is {}", address);
+    let address = Location::Unknown;
+    println!("address is {}", address);
+    let address = Location::Known(123.4, 456.7);
     println!("address is {}", address);
 }
-
-Output
+```
+输出
+```
 
 address is Location is anonymous
 address is Location is unknown
 address is latitude: 123.4 longitude: 456.7
+```
