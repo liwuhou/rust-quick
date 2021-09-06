@@ -11,7 +11,7 @@ fn main() {
     println!("value d3[3][11][35] is {}", d3[3][11][35])
 }
 ```
-Output
+输出
 ```
 value is 6
 value d3[3][11][35] is ok
