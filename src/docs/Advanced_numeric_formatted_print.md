@@ -24,7 +24,7 @@ fn main() {
 }
 ```
 
-Output
+输出
 ```
 z is 10.001
 z is    10.001

@@ -3,33 +3,35 @@
 ```rust
 
 fn main() {
-    // fixed length and single typed
-    // stored in contiguous memory locations
-    // Contiguous means that elements are laid out so that every element is the same distance from its neighbors. 
+    // 固定长度和单一类型的
+    //存储在连续的内存位置
+    // 毗连是指元素的排列方式，使每个元素与相邻元素有相同的距离。
     let letters = ['a', 'b', 'c'];
-     // type: [char; 3]
+     // 类型: [char; 3]
     let first_letter = letters[0];
-    println!("first_letter is {}", first_letter); // to modify elements in array, it must be mutable 
+    println!("first_letter is {}", first_letter); 
+    // 要修改一个元素，必须设置为可变 
     let mut numbers = [11, 22, 44]; 
-    // type is [i32; 3]
+    // 类型：[i32; 3]
     numbers[2] = 33;
     println!("numbers is {}", numbers[2]);
-     // empty array declaration (memory allocated)
-      let words: [&str; 2];
+     // 空数组定义 （分配内存)
+    let words: [&str; 2];
     words = ["ok"; 2]; 
-    // repeat expression, equivalent to ["ok", "ok"]
-    println!("words is {:?}", words); /*
-    length of usize is based on number of bytes needed to reference memory in your target architecture:
-    - for 32 bit compilation target -> usize is 4 bytes
-    - for 64 bit compilation target -> usize is 8 bytes
+    // 重复表达式，相当于 ["ok", "ok"]
+    println!("words is {:?}", words); 
+    /*
+    usize的长度是基于你的目标架构中引用内存所需的字节数。
+    - 对于32位的编译目标 -> usize是4字节
+    - 对于64位的编译目标 -> usize是8字节。
     */ 
     let ints = [22; 5];
     let length: usize = ints.len();
-    println!("length is {}", length);
-     // get size in memory (mem module of the std crate) 
+    println!("length is {}", length);    
+     //获得内存中的大小（std crate的mem模块）。
      let mem_size_byte = std::mem::size_of_val(&ints);
     println!("mem_size_byte is {}", mem_size_byte); 
-    // get slice from array
+    //从数组中获取切片
     let mut slice: &[i32] = &ints;
     println!("slice is {:?}", slice);
 
@@ -38,7 +40,7 @@ fn main() {
 }
 ```
 
-Output
+输出
 ```
 first_letter is a
 numbers is 33
