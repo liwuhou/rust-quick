@@ -1,12 +1,11 @@
 # if let 匹配
 ```rust
  
-// if let syntax
-
-// use when matching only one variant
+// if let 格式
+// 用于只匹配一个值
 fn main() {
     let number = Some(1); 
-// notice the syntax:
+// 注意这个写法：
     
 // if let PATTERN = VALUE {} 
     if let Some(1) = number {
@@ -15,7 +14,7 @@ fn main() {
 }
 ```
 
-Output
+输出
 
 ```
 
