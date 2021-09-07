@@ -2,23 +2,32 @@
 
 ```rust
 fn main() {
-    let everything = create_something(); // "everything" is a stale reference pointing to nothing
-    // the program will not compile println!("everything is {}", everything);
-}// notice the return typefn create_something() -> &String {
-    let new_thing = String::from("new in town"); // this is a dangling reference because:
-    // new_thing goes out of scope at the end of the function
-    // returning a reference to that variable does not make sense
-    // because the data will have been dropped from memory because not owned anymore by a variable &new_thing
+    let everything = create_something(); 
+    // "everything "是一个陈旧的引用，指向什么都没有。
+    // 程序将无法编译 
+    println!("everything is {}", everything);
+}
+// notice the return type
+fn create_something() -> &String {
+    let new_thing = String::from("new in town"); 
+    // 这是一个悬空的引用，因为。
+    因为: // new_thing在函数结束时已经超出了范围。
+    // 返回对该变量的引用是没有意义的
+    // 因为数据已经从内存中删除了，因为它不再属于一个变量了。
+    &new_thing
 }
 ```
 输出
+```
+程序将无法编译，因为存在悬空引用。解决办法是对创建的字符串而不是对它的引用。
+```
 
-program will not compile because of dangling reference. The solution is to the created string instead of a reference to it:
 ```rust
 fn main() {
     let everything = create_something();
     println!("everything is {}", everything);
-}fn create_something() -> String {
+}
+fn create_something() -> String {
     let new_thing = String::from("new in town");
     new_thing
 }
