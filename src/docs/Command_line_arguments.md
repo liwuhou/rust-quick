@@ -2,19 +2,19 @@
 ```rust
 use std::env;
 fn main() {
-    // check for required number of arguments
+    // 检查所需的参数数量
      if env::args().len() <= 2 {
         println!("this program requires at least two arguments");
         return;
     }
-     // args() returns an iterator over arguments passed to the program executable binary file
-    // use enumerate() to get input args and their index
-    // first argument is the executable path (but not always) 
+     // args()返回传递给程序可执行二进制文件的参数的迭代器
+    // 使用enumerate()来获取输入参数和它们的索引
+    // 第一个参数是可执行路径（但不一定）。
     for (index, arg) in env::args().enumerate() {
         println!("argument {} is {}", index, arg);
     }
-     // get argument at specific index 
-     let arg2 = env::args().nth(2).unwrap();
+     //获得特定索引的参数 
+    let arg2 = env::args().nth(2).unwrap();
     println!("\narg2 is {}", arg2);
 }
 ```
