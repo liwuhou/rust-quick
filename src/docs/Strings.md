@@ -6,59 +6,59 @@ Rust has two kinds of string types.
 
 fn main() {
     
-// Two types of string representation:
+// 两种类型的字符串表示。
 
     
-// - string literals: hard coded into the executable.
+// - 字符串：硬编码到可执行文件中。
     
-// these are immutable and must be known before compilation
+// 这些是不可改变的，在编译前必须知道。
 
     
-// - String type: allocated data on the heap, \n\tmutable and dynamically generated at runtime 
-// string literal stored on heap 
-// String::from() creates a String type from a string literal 
-// the sequence [m,a,r,s] will get stored on the heap 
-// to access the string stored on heap, program holds a pointer to it on the stack (message variable) 
-// that pointer on the stack includes first char memory address, length of string and the capacity so you know how much memory s allocated for it on the heap 
+// - 字符串类型：在堆上分配的数据，\n/tmutable，在运行时动态生成。
+// 存储在堆上的字符串字面意义 
+// String::from() 从一个字符串字面内容中创建一个字符串类型。
+//序列[m,a,r,s]将被存储在堆中。
+// 为了访问存储在堆中的字符串，程序在堆中持有一个指针（消息变量）。
+// 栈上的指针包括第一个字符的内存地址、字符串的长度和容量，这样你就知道在堆上为它分配了多少内存。
 let mut message = String::from("Jupiter");
     println!("message is {}", message); 
-// append string to original 
-// if more memory need than capacity, pointer address updated as well as length and capacity to reflect new location in memory
+//将字符串附加到原始的字符串上 
+// 如果需要的内存大于容量，指针地址以及长度和容量就会更新，以反映内存中的新位置。
  message.push_str(" is smoke and mirrors");
     println!("message is {}", message); 
-// pushing a char
+// 推送一个字符
     message.push('!');
     println!("message is {}", message); 
-// get length
+// 获取长度
    println!("message lenght is {}", message.len()); 
-// get capacity in bytes
+// 获得以字节为单位的容量
    println!("message capacity is {}", message.capacity()); 
-// check if empty
+// 检查是否为空
   println!("Is empty: {}", message.is_empty()); 
-// substring search
+// 字符串搜索
   println!("Contains smoke: {}", message.contains("smoke")); 
-// replace substring
+// 替换字符串
   println!("message is {}", message.replace("smoke","gaz")); 
-// loop over words in string (split by white space)
+// 循环处理字符串中的单词（用空白处分割）。
   for word in message.split_whitespace() {
     println!("word is {}", word);
   } 
-// create string with capacity
+//创建有容量的字符串
  let mut s = String::with_capacity(4); 
-// 4 bytes capacity
+// 4个字节的容量
   println!("s capacity is  {} bytes", s.capacity()); 
-// 1 byte consumed
+// 消耗的是1个字节
   
-// Latin alphabet letters usually have 1 byte size
+// 拉丁字母通常有1个字节的大小
   
-// remember Unicode supports 4-byte characters
+// 记住Unicode支持4字节的字符
   s.push('Q'); s.push('W'); 
-// 1 byte consumed
+// 消耗了1个字节
   s.push_str("er"); 
-// 2 bytes consumed 
-// exceeding string capacity (automagically increased and reallocation in memory) 
+// 消耗了2个字节 
+//超过了字符串的容量（自动增加并在内存中重新分配）。
 s.push('T'); 
-// 1 byte consumed
+// 消耗1个字节
   println!("s capacity is  now {} bytes", s.capacity());
 }
 ```
