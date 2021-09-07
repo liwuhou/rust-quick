@@ -3,29 +3,29 @@
 ```rust
 fn main() {
     let message = ['m', 'e', 's', 's', 'a', 'g', 'e']; 
-    /* Iterator
-    - implements logic to iterate over each item in a collection
-    - next() method returns the next item in a sequence
+    /* 迭代器
+    - 实现了对一个集合中的每个项目进行迭代的逻辑。
+    - next()方法返回一个序列中的下一个项目。
       */
     for item in message.iter() {
         println!("current item is {}", item);
     } 
     println!(""); 
-// To also get the indexes when iterating
+// 迭代时也要获得索引
     
-// enumerate() returns a tuple with index/item_reference pair
+// enumerate()返回一个带有索引/项目_引用对的元组。
     
-// To get the item use &item
+// 要获得项目，使用&item
     
-// because the iterator gives back a reference (&<NAME>)
+// 因为迭代器会返回一个引用（&<NAME>）。
     
-// Adding the & (borrow operator) allows you to
+// 添加&（借用操作符）可以让你
     
-// borrow the variable without
+// 借用该变量而不
     
-// taking ownership (see borrowing section)
+// 取得所有权（参见借用部分）。
     
-// - then when you use the variable in the for loop scope, you access the value 
+// 然后当你在for循环范围内使用该变量时，你就可以访问该值了 
 for (index, &item) in message.iter().enumerate() {
         println!("item {} is {}", index, item);
         if item == 'e' {
@@ -33,9 +33,9 @@ for (index, &item) in message.iter().enumerate() {
         }
     }
      println!(""); 
-// iterating over a range of numbers
+// 在一个数字范围上进行迭代
     
-// excludes the end value of the range
+// 排除该范围的终值
  for number in 0..5 {
         println!("number is {}", number);
     }
