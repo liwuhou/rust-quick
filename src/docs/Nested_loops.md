@@ -4,7 +4,7 @@
 
 fn main() {
     let mut matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]; 
-    // reading from matrix 
+    // 从矩阵中读取 
     for row in matrix.iter() {
         for number in row.iter() {
             print!("{}\t", number);
@@ -12,11 +12,11 @@ fn main() {
         println!("");
     } 
     println!("======================="); 
-    // modifying values from mutable matrix
-    // iter_mut() returns mutable references 
+    // 修改可变矩阵的值
+    // iter_mut()返回可变的引用 
     for row in matrix.iter_mut() {
         for number in row.iter_mut() {
-            // dereference with asterisk to get the value itself 
+            //用星号解除引用，以获得值本身 
             *number += 20;
             print!("{}\t", number);
         }
