@@ -4,32 +4,32 @@ All this stuff about ownership is great but what if you don't need to transfer o
 ```rust
 fn main() {
     
-// BORROWING: access data without taking ownership 
-// create a reference to the variable you want to borrow
+// 借用：在不取得所有权的情况下访问数据 
+//创建一个你想借用的变量的引用
     
-// using borrow operator "&" 
+// 使用借用操作符"&"。
 let rocket_fuel = String::from("MU-RF"); 
-// notice the borrow operator to create a reference
+// 注意借用操作符来创建一个引用
     
-// the function expects a reference, not a value 
+// 该函数期望的是一个引用，而不是一个值 
 let length = process_fuel(&rocket_fuel); 
 println!("rocket_fuel is {}, length: {}", rocket_fuel,length);
 }
-// notice the borrow operator in parameter type
+// 注意参数类型中的借用操作符
 
-// we expect propellant to be a reference to a string,
+// 我们希望propellant是对一个字符串的引用。
 
-// not a string value (/pointer to it...)
+// 而不是一个字符串值(/pointer to it...)
 fn process_fuel(propellant: &String) -> usize {
     
-// propellant is a reference to the variable that points to the string data, to borrow the data 
-// again, NO SHALLOW COPY here because propellant borrows the pointer, it does contain the pointer itself (let's say that it's a pointer to another pointer...) 
+// propellant是指向字符串数据的变量的一个引用，用来借用数据。
+// 再说一遍，这里没有SHALLOW COPY，因为propellant借用了指针，它确实包含了指针本身（假设它是一个指向另一个指针的指针...）。
 println!("Processing propellant {}", propellant);
     let length = propellant.len();
     length 
-// when the propellant variable goes out of scope at the end of the function,
+//当推进剂变量在函数结束时超出范围。
     
-// the string data is still on the heap because it remains owned by the original variable (rocket_fuel) 
+// 字符串数据仍然在堆中，因为它仍然属于原始变量（火箭燃料）。
     }
 ```
 输出
