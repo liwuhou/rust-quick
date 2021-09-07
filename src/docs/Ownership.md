@@ -71,7 +71,7 @@ outer_planet_position is 1
 fn main() {
     let mut arr_1: [u8; 2] = [33, 66]; 
     // ////////////////
-    // fixed-length types (stored on the stack) are COPIED
+    // 固定长度的类型（存储在堆栈中）被COPIED。
     // //////////////// 
     let arr_2 = arr_1;
     println!("arr_1 is {:?}", arr_1);
@@ -79,18 +79,18 @@ fn main() {
     println!("arr_1 is now {:?}", arr_1);
     println!("arr_2 is {:?}", arr_2); 
     // ////////////////
-    // mutable-length type values move the ownership to new variable
+    // 可变长度类型的值将所有权转移到新的变量上
     // //////////////// 
     let vec_1 = vec![3, 4];
     let vec_2 = vec_1; 
-    // can no longer use the variable which ownership has been "moved" 
+    //不能再使用所有权已被 "转移 "的变量了 
     // 
     println!("vec_1 is {:?}", vec_1); 
-    // => wll panic println!("vec_2 is {:?}", vec_2); 
-    // to borrow value owned by a variable without moving ownership,
-    // use a reference to that value 
+    // => wll panic println! ("vec_2 is {:?}", vec_2); 
+    // 借用一个变量所拥有的值而不移动所有权。
+    // 使用对该值的引用 
     let vec_4 = vec![5, 6, 7]; 
-    // borrowing value using a reference (&<NAME>) 
+    //用一个引用来借取值（&<NAME>）。
     let vec_5 = &vec_4;
     println!("vec_4 is {:?}", vec_4);
     println!("vec_5 is {:?}", vec_5);
