@@ -1,22 +1,27 @@
 # 数据结构
 
--   used to group multiple related items of mixed data types
--   elements are named (unlike tuples where they are ordered)
--   two kinds of structs (regular struct and tuple struct)
+- 用来分组混合数据类型的多个相关项目
+- 元素被命名（与图元不同，图元是有顺序的
+- 两种结构（常规结构和元组结构
 
 ```rust
-// tuple struct// used to store a collection of mixed data without named fields
-// used to be distinguished as a specific type
-// (not just a regular tuple)struct Signal(u8, bool, String);
-// regular struct// struct names are capitalized
-// like classes in JavaScript and OOP generallystruct Car {
-    // fields of the struct
+// tuple结构
+// 用于存储没有命名字段的混合数据集合
+// 用于区分为特定的类型
+// （不是普通的元组）结构 Signal(u8, bool, String)。
+// 常规结构
+// 结构名称被大写
+//像JavaScript和OOP中的类一样
+struct Car {
+    // 结构中的字段
     model: String,
     year: String,
     used: bool,
-}// method: functions/subroutines associated to a struct
-// methods are defined within the context of a struct
-// the first parameter of a method is the reference to a struct instanceimpl Car {
+}
+// 方法：与结构相关的函数/子程序
+// 方法是在结构的上下文中定义的。
+// 方法的第一个参数是对一个结构实例的引用
+impl Car {
     // construct car
     fn new(m: &str, y: &str) -> Car {
         Car {
@@ -24,47 +29,63 @@
             year: y.to_string(),
             used: false,
         }
-    } // self is equivalent to "this" is JavaScript
+    } 
+    // self等同于JavaScript中的 "this"。
     fn serialize(&self) -> String {
         format!(
             "model: {} - year: {} - used: {}",
             self.model, self.year, self.used
         )
-    } // mutate state
+    } 
+    // 变更状态
     fn marked_used(&mut self) {
         self.used = true;
     }
-}struct Position {
+}
+struct Position {
   latitude: f64,
   longitude: f64
-}fn print_signal(s: &Signal) {
+}
+fn print_signal(s: &Signal) {
     println!("s1 is {}, {}, {}", s.0, s.1, s.2);
-}fn main() {
+}
+fn main() {
     let mut pos_1 = Position {
         latitude: 27.299112,
         longitude: 95.387110,
-    }; println!(
+    }; 
+    println!(
       "pos_1 is {:.3}, {:.3}",
       pos_1.latitude,
       pos_1.longitude
-    ); pos_1.latitude = 23.1111;
+    ); 
+    pos_1.latitude = 23.1111;
     println!(
       "pos_1 is now {:.3}, {:.3}",
       pos_1.latitude,
       pos_1.longitude
-    ); let mut s1 = Signal(0, true, String::from("ok")); // fields of a tuple struct are accessed like regular tuples values
-    // using their index
-    // remember tuple structs do not have named fields print_signal(&s1); s1.0 = 23;
+    ); 
+    let mut s1 = Signal(0, true, String::from("ok")); 
+    // 元组结构的字段可以像普通元组的值一样被访问。
+    // 使用它们的索引
+    // 记住元组结构没有命名的字段 
+    print_signal(&s1); 
+    s1.0 = 23;
     s1.1 = false;
-    s1.2 = String::from("NETERR"); println!("s1 is now {}, {}, {}", s1.0, s1.1, s1.2); let car_1 = Car::new("QBC", "2133");
-    println!("car_1 is a {} of {}", car_1.model, car_1.year); let is_used = if car_1.used == true {
+    s1.2 = String::from("NETERR"); 
+    println!("s1 is now {}, {}, {}", s1.0, s1.1, s1.2); 
+    let car_1 = Car::new("QBC", "2133");
+    println!("car_1 is a {} of {}", car_1.model, car_1.year); 
+    let is_used = if car_1.used == true {
         "used"
     } else {
         "brand new"
     };
     println!("car_1 is {}", is_used);
-    println!("car_1 is {}", car_1.serialize()); let mut car_2 = Car::new("ZZ7", "2042");
-    println!("car_2 is a {}", car_2.serialize()); car_2.marked_used();
+    println!("car_1 is {}", car_1.serialize()); 
+    let mut car_2 = Car::new("ZZ7", "2042");
+    println!("car_2 is a {}", car_2.serialize()); 
+    car_2.marked_used();
     println!("car_2 is now {}", car_2.serialize());
 }
 ```
@@ -82,68 +103,101 @@ car_2 is a model: ZZ7 - year: 2042 - used: false
 car_2 is now model: ZZ7 - year: 2042 - used: true
 ```
 
-More on structs:
+更多结构的示例：
 ```rust
-// need to use debug and clone traits
-// to be able to print the struct instance with debug operator
-// to be able to clone an instance of the struct
-// more on traits later#[derive(Debug, Clone)]
+// 需要使用debug和clone traits
+// 能够用调试运算符打印结构体的实例
+// 能够克隆该结构的一个实例。
+// 以后会有更多关于特质的内容
+#[derive(Debug, Clone)]
 struct Spaceship {
     name: String,
     crew: u8,
     propellant: f64,
-}// methods are defined within a impl blockimpl Spaceship {
+}
+// methods are defined within a impl block
+impl Spaceship {
     fn get_name(&self) -> &str {
-      // transform string to string slice with borrow operator &self.name
-    } fn add_fuel(&mut self, gallons: f64) {
+      //用借贷运算符将字符串转换为字符串片断 
+      &self.name
+    } 
+    fn add_fuel(&mut self, gallons: f64) {
         self.propellant += gallons;
-    } // this is an associated function
-    // associated to the struct data type
-    // similar to method but no &self reference
-    // used for functions related to the struct in general,
-    // not a specific instance
-    // (like class static methods in Object orientation)
-    // commonly used to construct instances of struct fn new(name: &str) -> Spaceship {
+    } 
+    // 这是一个关联函数
+    // 与结构数据类型相关联
+    // 与方法类似，但没有&self引用
+    // 用于与该结构相关的一般函数。
+    // 而不是一个特定的实例
+    //（就像面向对象中的类静态方法）。
+    // 通常用于构建结构体的实例 
+    fn new(name: &str) -> Spaceship {
       Spaceship {
         name: String::from(name),
-        crew: 11,          // default value for all instances
-        propellant: 0.0    // default value for all instances
+        crew: 11,          // 默认值，所有实例都一样
+        propellant: 0.0    // 默认值，所有实例都一样
       }
     }
-}fn main() {
+}
+fn main() {
     let mut spaceship1 = Spaceship {
         name: String::from("spaceship1"),
         crew: 123,
         propellant: 1234567.654,
-    }; // accessing field value println!("spaceship1 has {} members.", spaceship1.crew); spaceship1.crew = 99; println!(
+    }; 
+    //访问字段值 
+    println!("spaceship1 has {} members.", spaceship1.crew); 
+    spaceship1.crew = 99; 
+    println!(
         "After attack, spaceship1 has now {} members.",
         spaceship1.crew
-    ); println!("spaceship1 is {:?}", spaceship1); // by default struct data is stored on the STACK
-    // if struct contains HEAP-stored data (like a string),
-    // the pointer is stored on the STACK and the data on the HEAP // create struct instance from fields of other instance
-    //  (like spread operator in JS but two dots instead of three)
-    // it is called struct update syntax
-    // it allows to create new instances
-    //  by copying the values of fields of an existing instance
-    // (except for fields explicitly set in new instance) let spaceship2 = Spaceship {
+    ); 
+    println!("spaceship1 is {:?}", spaceship1); 
+    // 默认情况下，结构数据被存储在 STACK 上。
+    // 如果结构包含HEAP存储的数据（如字符串）。
+    // 指针存储在STACK上，数据存储在HEAP上。
+    // 从其他实例的字段中创建结构实例
+    //（就像JS中的spread operator，但是是两个点而不是三个点）。
+    // 这就是所谓的结构更新语法
+    // 它允许创建新的实例
+    // 通过复制现有实例的字段值来创建新实例
+    //（除了在新实例中明确设置的字段）。
+    let spaceship2 = Spaceship {
         name: String::from("Galactos"),
         ..spaceship1
-    }; println!("spaceship2 is {:?} members.", spaceship2); // when modifying the copied struct instance
-    // it will not affect new instances after the copy
-    // (unlike JavaScript references that are kept,
-    // when spreading objects with arrays...) spaceship1.name = String::from("Battlestar"); spaceship1.crew = 78; assert_eq!(spaceship2.crew, 99); println!("spaceship1 is {:?}", spaceship1); println!("spaceship2 is {:?}", spaceship2); // to copy all fields, even the heap based ones,
-    // you need to create a copy of the struct instance
-    // otherwise when using struct update syntax it moves ownership of heap-based data
-    // meaning that you could no longer use the associated fields from the copied instance let mut spaceship3 = Spaceship {
-        // need to manually implement the clone trait
-        // on the struct definition (see above) ..spaceship1.clone()
-    }; println!("spaceship3 is {:?}", spaceship3); let name = spaceship3.get_name(); println!("name is {}", name); println!("spaceship3 propellant is {}", spaceship3.propellant);
+    }; 
+    println!("spaceship2 is {:?} members.", spaceship2); 
+    // 在修改复制的结构实例时
+    // 不会影响复制后的新实例。
+    //（与保留的JavaScript引用不同。
+    // 当用数组传播对象时......) 
+    spaceship1.name = String::from("Battlestar"); 
+    spaceship1.crew = 78; 
+    assert_eq!(spaceship2.crew, 99); 
+    println!("spaceship1 is {:?}", spaceship1); 
+    println!("spaceship2 is {:?}", spaceship2); 
+    // 要复制所有字段，甚至是基于堆的字段。
+    // 你需要创建一个结构实例的副本。
+    // 否则，当使用结构更新语法时，会转移基于堆的数据的所有权
+    // 这意味着你不能再使用复制的实例中的相关字段。
+    let mut spaceship3 = Spaceship {
+        //需要手动实现克隆特性
+        //在结构定义中（见上文）。
+        ..spaceship1.clone()
+    }; 
+    println!("spaceship3 is {:?}", spaceship3); 
+    let name = spaceship3.get_name(); 
+    println!("name is {}", name); 
+    println!("spaceship3 propellant is {}", spaceship3.propellant);
 
     spaceship3.add_fuel(4567.113);
 
     println!(
       "After going to space refuel station, spaceship3 propellant is now {}",
       spaceship3.propellant
-    ); // to call an assocaited function, use the path operator (::) let spaceship4 = Spaceship::new("Serenity"); assert_eq!(spaceship4.crew, 11);
+    ); 
+    //要调用一个指定的函数，请使用路径操作符（::）。
+    let spaceship4 = Spaceship::new("Serenity"); 
+    assert_eq!(spaceship4.crew, 11);
 }
 ```
