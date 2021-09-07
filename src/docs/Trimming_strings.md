@@ -12,41 +12,55 @@ fn main() {
     assert_eq!(trim_space(&test6), ""); let test7 = "    😸   ";
     assert_eq!(trim_space(&test7), "😸"); let test8 = "     😸😸 test8.   ";
     assert_eq!(trim_space(&test8), "😸😸 test8."); let test9 = "     😸😸 test9. 😸😸   ";
-    assert_eq!(trim_space(&test9), "😸😸 test9. 😸😸"); // note: strings in Rust have a trim() method let test10 = " 😸This is the last test😸.😸      ";
+    assert_eq!(trim_space(&test9), "😸😸 test9. 😸😸"); 
+    // 注意：Rust中的字符串有一个trim()方法 
+    let test10 = " 😸This is the last test😸.😸      ";
     let trimmed_message = test10.trim();
     assert_eq!(trimmed_message, "😸This is the last test😸.😸");
-}fn trim_space(s: &str) -> &str {
+}
+fn trim_space(s: &str) -> &str {
     let bytes = s.as_bytes();
-    let mut result = ""; // trim leading spaces by finding first non-space character // iterate over byte representation of the string slice
-    // we do this because, we use am intermediary string slice for (index, &item) in bytes.iter().enumerate() {
+    let mut result = ""; 
+    //通过寻找第一个非空格字符来修剪前面的空格 
+    // 遍历字符串片段的字节表示法
+    // 我们这样做是因为我们使用了中间的字符串片断 
+    for (index, &item) in bytes.iter().enumerate() {
         if item != b' ' {
             result = &s[index..];
             break;
         }
-    } let bytes = result.as_bytes(); // trim trailing spaces by finding last non-pace character for t in bytes.iter().enumerate() {
+    } 
+    let bytes = result.as_bytes(); 
+    //通过查找最后一个非空格字符来修剪尾部的空格 
+    for t in bytes.iter().enumerate() {
         let index = t.0;
         let reverse_index = result.len() - index;
         if bytes[reverse_index - 1] != b' ' {
             result = &result[..reverse_index];
             break;
         }
-    } result
+    } 
+    result
 }
 ```
-Other possible solution:
+其他解决方案:
 ```rust
 fn trim_space(s: &str) -> &str {
     let mut start = 0;
-    let mut end = 0; // iterate over the characters of the string slice for (index, character) in s.chars().enumerate() {
+    let mut end = 0; 
+    // 遍历字符串片断的字符 
+    for (index, character) in s.chars().enumerate() {
         if character != ' ' {
             start = index;
             break;
         }
-    } for (index, character) in s.chars().rev().enumerate() {
+    } 
+    for (index, character) in s.chars().rev().enumerate() {
         if character != ' ' {
             end = s.len() - index;
             break;
         }
-    } &s[start..end]
+    } 
+    &s[start..end]
 }
 ```

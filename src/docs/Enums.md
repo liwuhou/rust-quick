@@ -1,7 +1,7 @@
 # 枚举
 ```rust
 
-// defines a data type with multiple possible variants
+//定义了一个具有多种可能变体的数据类型
 enum Controller {
     Turbo,
     Up,
@@ -15,7 +15,7 @@ enum Controller {
 }
 fn push_button_notify(c: &Controller) {
     
-// pattern matching (equivalent to switch in JavaScript)
+// 模式匹配（相当于JavaScript中的switch）。
     match c {
         Controller::Turbo => println!("Turbo button pushed."),
         Controller::Up => println!("Up button pushed."),
