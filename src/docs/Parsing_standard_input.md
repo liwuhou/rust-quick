@@ -2,40 +2,40 @@
 
 ```rust
 
-// read command line inputsuse 
+// 读取命令行的输入值
 std::io;
 fn main() {
   let mut buffer = String::new();
   println!("Enter your name:"); 
-// ===== access the stdin stream ===== 
-// the read_line() function will update the buffer with the input string
+// ===== 访问stdin流 ===== 
+// read_line()函数将用输入的字符串更新缓冲区。
   
-// read_line() blocks the execution of the program until something is entered at the command line 
-let read_line_result = io::stdin().read_line(&mut buffer);
+// read_line()函数阻止程序的执行，直到有人在命令行上输入东西为止 
+  let read_line_result = io::stdin().read_line(&mut buffer);
   println!("read_line_result is {:?}", read_line_result); 
   println!("Welcome to Rust, {}", buffer); 
-// ===== parse input string ======== 
-// clear buffer from previous input
+// ===== 解析输入字符串 ======== 
+// 清除之前输入的缓冲区
   buffer.clear(); 
   println!("Enter the year when you started learning Rust:"); 
   let read_line_result = io::stdin().read_line(&mut buffer);
   println!("read_line_result is {:?}", read_line_result); 
-// need to trim the input string because contains a newline at the end
+// 需要对输入的字符串进行修剪，因为在结尾处包含一个换行。
   
-// notice the turbofish operator (::<i32>) to indicate the type of data to parse from the input string (here an i32 integer) 
-// parse() returns a Result enum
+// 注意Turbofish操作符（::<i32>）表示要从输入字符串中解析的数据类型（这里是一个i32整数）。
+// parse()返回一个结果枚举。
   
-// Result enum allow to handle errors (more on this later)
+// 结果枚举允许处理错误（后面会有更多介绍
   
-// use the unwrap function to extract the value 
-let start_year = buffer.trim().parse::<i32>().unwrap();
+// 使用unwrap函数来提取值 
+  let start_year = buffer.trim().parse::<i32>().unwrap();
   println!("You started your Rust journey in {}", start_year); 
-// without using the  turbofish operator, indicate the destination type as the variable type 
-let start_year: i32 = buffer.trim().parse().unwrap();
+//不使用turbofish操作符，将目标类型表示为变量类型 
+  let start_year: i32 = buffer.trim().parse().unwrap();
   println!("You will be an expert in {}", start_year + 5);
 }
 ```
-Output (> marks command line inputs)
+输出 (> 后面表示命令行输入)
 ```
 Enter your name:
 > Florian
