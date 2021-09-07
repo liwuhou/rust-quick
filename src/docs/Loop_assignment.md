@@ -3,7 +3,7 @@
 ```rust
 fn main() {
     let mut count = 0;
-     // infinite loop 
+     // 无限循环 
      loop {
         if count == 10 {
             break;
@@ -12,10 +12,10 @@ fn main() {
         println!("count is {}", count);
     }
      println!("\nAfter first loop.\n");
-     // returning a value from loop expression 
+     //从循环表达式中返回一个值 
      let result = loop {
         if count == 15 {
-            // returning a value with break statement 
+            // 用break语句返回一个值 
             break count * 20;
         }
         count += 1;
