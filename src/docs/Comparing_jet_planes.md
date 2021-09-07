@@ -1,9 +1,9 @@
 # 对比飞机
 
 ```rust
-
 use std::cmp::*;
-use std::fmt;struct Jet {
+use std::fmt;
+struct Jet {
     name: String,
     velocity: f64, 
     // km/h
