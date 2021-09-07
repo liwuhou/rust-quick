@@ -7,12 +7,12 @@ fn main() {
     println!("rocket_fuel is {}", rocket_fuel);
 }
 /*
-    - because propellant is i32 so lives on the stack,
-    the value passed as argument is COPIED jn fn scope
-    - to be able to modify the copy inside the function scope, use the mut keyword
+    - 因为推进剂是i32的，所以住在堆栈上。
+    作为参数传递的值在fn范围内被复制。
+    - 为了能够修改函数范围内的拷贝，请使用mut关键字
 */
 fn process_fuel(mut propellant: i32) {
-    // the copy is modified 
+    //副本被修改 
     propellant += 2;
     println!("Processing propellant {}", propellant);
 }
