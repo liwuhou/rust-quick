@@ -47,7 +47,7 @@ fn main() {
     let mut new_fruit = search_name.clone(); 
     let fruits_bytes = fruits.as_bytes();
     if fruits_bytes[fruits_bytes.len() - 1] != b'\n' {
-        // insert newline at start of string
+        // 在字符串的开头插入换行
         new_fruit.insert(0, '\n');
     }
     new_fruit.push('\n'); 
