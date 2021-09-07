@@ -3,10 +3,12 @@
 ```rust
 fn main() {
     let mut count = 0;
-    let letters: [char; 5] = ['a', 'b', 'c', 'd', 'e']; while count < letters.len() {
+    let letters: [char; 5] = ['a', 'b', 'c', 'd', 'e']; 
+    while count < letters.len() {
         println!("letter[{}] is {}", count, letters[count]);
         count += 1;
-    }// contrary to loop expressions, the break statement in while loop cannot return a value
+    }
+    // 与循环表达式相反，while循环中的break语句不能返回一个值。
 }
 ```
 输出
