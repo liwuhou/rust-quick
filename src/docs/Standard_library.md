@@ -1,15 +1,23 @@
 # 标准库
 
--   documentation: <https://doc.rust-lang.org/std/>
+-   文档: <https://doc.rust-lang.org/std/>
 
 ```rust
 
-// the use statement is used to import crates/libraries
-// it brings a module path into the scope of a program// some modules of the standard library are not part of the Rust language itself
-// (meaning, you need to import them - like the "fs" module in Node.js - otherwise the compiler will not know what they mean)// the standard library is available to all programs by default// the [prelude](https://doc.rust-lang.org/std/prelude/index.html)  is a list of things that are automatically imported into every Rust program
-// it does not import the entire std library (only the most common standard modules)// if a module is not included into the prelude, you need to manually import ituse std::thread;fn main() {
+// 使用声明是用来导入模块/库的。
+// 它把一个模块的路径带入程序的范围内
+// 标准库中的一些模块并不是Rust语言本身的一部分。
+// 意思是说，你需要导入它们--比如Node.js中的 "fs "模块--否则编译器将不知道它们是什么。
+// 否则编译器将不知道它们的含义)
+// 所有程序都默认使用标准库
+// [prelude](https://doc.rust-lang.org/std/prelude/index.html)是每个Rust程序都会自动导入的东西的列表。
+// 它并没有导入整个标准库（只有最常见的标准模块）。
+// 如果一个模块没有被包含在预演中，你需要手动将其导入。
+import ituse std::thread;
+fn main() {
     let child = thread::spawn(move || 2 + 2);
-    let res = child.join(); println!("res is {}", res.unwrap());
+    let res = child.join(); 
+    println!("res is {}", res.unwrap());
 }
 ```
 
