@@ -37,18 +37,19 @@ fn main() {
     if env::args().len() != 2 {
         println!("this program requires one argument");
         return;
-    } let filepath = match env::args().nth(1) {
+    } 
+    let filepath = match env::args().nth(1) {
         Some(text) => text,
         None => panic!("Failed to get file path"),
     }; 
-     println!("filepath is {}", filepath);
+    println!("filepath is {}", filepath);
       let file_content = match fs::read_to_string(filepath) {
         Ok(content) => content,
         Err(e) => panic!("Err: {}", e),
     }; 
-     println!("file_content is:\n {}", file_content);
-      let mut word_count: HashMap<String, u32> = HashMap::new();
-       for word in file_content.split_whitespace() {
+    println!("file_content is:\n {}", file_content);
+    let mut word_count: HashMap<String, u32> = HashMap::new();
+    for word in file_content.split_whitespace() {
         let lowercase_word = word.to_lowercase(); 
         match word_count.get(&lowercase_word) {
             Some(count) => {
@@ -60,7 +61,7 @@ fn main() {
             }
         };
     }
-     let mut most_common = MostCommonWord::new("", 0);
+    let mut most_common = MostCommonWord::new("", 0);
     let mut most_common_words = vec![]; 
     for (word, count) in &word_count {
         if most_common.occurrence < *count {
@@ -69,7 +70,7 @@ fn main() {
         }
     } 
     most_common_words.push(most_common);
-     for (word, count) in &word_count {
+    for (word, count) in &word_count {
         if most_common_words[0].value != word.to_string()
             && most_common_words[0].occurrence == *count
         {
@@ -77,7 +78,7 @@ fn main() {
             most_common_words.push(other_most_common);
         }
     }
-     if most_common_words.len() > 1 {
+    if most_common_words.len() > 1 {
         println!("The most common words in the text are;");
         for most_common in most_common_words {
             println!(
@@ -115,9 +116,11 @@ use std::collections::HashMap;fn main() {
             eprintln!("Program requires an argument: <file path>");
             std::process::exit(2);
         }
-    }; let all_words = contents.split_whitespace().collect::<Vec<&str>>(); 
+    }; 
+    let all_words = contents.split_whitespace().collect::<Vec<&str>>(); 
     // 计算每个独特的词出现了多少次 
-    let mut word_counts: HashMap<&str, u32> = HashMap::new(); for word in all_words.iter() {
+    let mut word_counts: HashMap<&str, u32> = HashMap::new(); 
+    for word in all_words.iter() {
         *word_counts.entry(word).or_insert(1) += 1;
     }
 
@@ -134,8 +137,8 @@ use std::collections::HashMap;fn main() {
         }
     } 
     // 显示结果
-     println!("Top word(s) occurred {} times:", top_count);
-      for word in top_words.iter() {
+    println!("Top word(s) occurred {} times:", top_count);
+    for word in top_words.iter() {
         println!("{}", word);
     }
 }
