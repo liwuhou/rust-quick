@@ -51,3 +51,12 @@ Buy me a cup of coffee for $3
 
 
 [https://rq.netroby.com/01-intro/intro.html](https://rq.netroby.com/01-intro/intro.html)
+
+
+
+不管你是否有Rust编程基础，这份指南，都能帮助你快速学习Rust。
+
+
+如果有问题，可以到github 仓库提交问题报告。
+
+[https://github.com/cnmade/rust-quick](https://github.com/cnmade/rust-quick)
