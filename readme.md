@@ -7,7 +7,14 @@ Buy me a cup of coffee for $3
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M54KKIF)
 
-本书介绍如何快学rust，采用mdbook开发构建
+本书介绍如何快学rust，采用mdbook开发构建.
+
+不管你是否有Rust编程基础，这份指南，都能帮助你快速学习Rust。
+
+
+如果有问题，可以到github 仓库提交问题报告。
+
+[https://github.com/cnmade/rust-quick](https://github.com/cnmade/rust-quick)
 
 访问以下URL，在线查看文档
 
