@@ -6,3 +6,6 @@ src = "src"
 title = "Rust 快学"
 [build]
 build-dir = "docs"
+[output.html.fold]
+enable = true
+level = 3
