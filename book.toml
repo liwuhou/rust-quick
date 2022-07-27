@@ -4,3 +4,5 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Rust 快学"
+[build]
+build-dir = "docs"

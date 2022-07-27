@@ -1,0 +1,4214 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Rust 快学</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-intro/intro.html"><strong aria-hidden="true">1.</strong> 前言</a></li><li class="chapter-item expanded "><a href="docs/index.html"><strong aria-hidden="true">2.</strong> Rust语言教程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="docs/create-project.html"><strong aria-hidden="true">2.1.</strong> 创建一个Rust项目</a></li><li class="chapter-item expanded "><a href="docs/printing.html"><strong aria-hidden="true">2.2.</strong> 打印输出</a></li><li class="chapter-item expanded "><a href="docs/Advanced_numeric_formatted_print.html"><strong aria-hidden="true">2.3.</strong> 高级数字格式化打印</a></li><li class="chapter-item expanded "><a href="docs/Variables.html"><strong aria-hidden="true">2.4.</strong> 变量</a></li><li class="chapter-item expanded "><a href="docs/Basic_Types.html"><strong aria-hidden="true">2.5.</strong> 基本数据类型</a></li><li class="chapter-item expanded "><a href="docs/Floating_point_numbers.html"><strong aria-hidden="true">2.6.</strong> 浮点数</a></li><li class="chapter-item expanded "><a href="docs/Bitwise_operations.html"><strong aria-hidden="true">2.7.</strong> 位操作运算</a></li><li class="chapter-item expanded "><a href="docs/Booleans_and_binary_algebra.html"><strong aria-hidden="true">2.8.</strong> 布尔运算和二进制代数</a></li><li class="chapter-item expanded "><a href="docs/Arithmetic_operations.html"><strong aria-hidden="true">2.9.</strong> 算术运算</a></li><li class="chapter-item expanded "><a href="docs/Comparison_operators.html"><strong aria-hidden="true">2.10.</strong> 比较运算</a></li><li class="chapter-item expanded "><a href="docs/Chars.html"><strong aria-hidden="true">2.11.</strong> 字符</a></li><li class="chapter-item expanded "><a href="docs/Computing_average.html"><strong aria-hidden="true">2.12.</strong> 计算平均值</a></li><li class="chapter-item expanded "><a href="docs/Arrays.html"><strong aria-hidden="true">2.13.</strong> 数组</a></li><li class="chapter-item expanded "><a href="docs/Slices.html"><strong aria-hidden="true">2.14.</strong> 切片</a></li><li class="chapter-item expanded "><a href="docs/Slices_as_parameters.html"><strong aria-hidden="true">2.15.</strong> 切片为参数</a></li><li class="chapter-item expanded "><a href="docs/Deref_coercion.html"><strong aria-hidden="true">2.16.</strong> Deref解构</a></li><li class="chapter-item expanded "><a href="docs/Multidimensional_arrays.html"><strong aria-hidden="true">2.17.</strong> 多维数组</a></li><li class="chapter-item expanded "><a href="docs/Vectors.html"><strong aria-hidden="true">2.18.</strong> 矢量</a></li><li class="chapter-item expanded "><a href="docs/Tuples.html"><strong aria-hidden="true">2.19.</strong> 元组</a></li><li class="chapter-item expanded "><a href="docs/Functions.html"><strong aria-hidden="true">2.20.</strong> 函数方法</a></li><li class="chapter-item expanded "><a href="docs/Statements_and_expressions.html"><strong aria-hidden="true">2.21.</strong> 语句和表达式</a></li><li class="chapter-item expanded "><a href="docs/Function_return_type.html"><strong aria-hidden="true">2.22.</strong> 函数返回类型</a></li><li class="chapter-item expanded "><a href="docs/Closures.html"><strong aria-hidden="true">2.23.</strong> 闭包</a></li><li class="chapter-item expanded "><a href="docs/Celsius_to_Fahrenheit_converter.html"><strong aria-hidden="true">2.24.</strong> 摄氏度转换为华氏度</a></li><li class="chapter-item expanded "><a href="docs/Conditional_execution.html"><strong aria-hidden="true">2.25.</strong> 条件执行</a></li><li class="chapter-item expanded "><a href="docs/Multiple_conditionals_if_else_if.html"><strong aria-hidden="true">2.26.</strong> 多条件判断if-else-if</a></li><li class="chapter-item expanded "><a href="docs/Loop_assignment.html"><strong aria-hidden="true">2.27.</strong> 循环赋值</a></li><li class="chapter-item expanded "><a href="docs/While_loops.html"><strong aria-hidden="true">2.28.</strong> While循环</a></li><li class="chapter-item expanded "><a href="docs/For_loops.html"><strong aria-hidden="true">2.29.</strong> For循环</a></li><li class="chapter-item expanded "><a href="docs/Nested_loops.html"><strong aria-hidden="true">2.30.</strong> 嵌套循环</a></li><li class="chapter-item expanded "><a href="docs/Guessing_game.html"><strong aria-hidden="true">2.31.</strong> 猜数游戏</a></li><li class="chapter-item expanded "><a href="docs/Basic_statistics.html"><strong aria-hidden="true">2.32.</strong> 基本统计</a></li><li class="chapter-item expanded "><a href="docs/Scope.html"><strong aria-hidden="true">2.33.</strong> 范围</a></li><li class="chapter-item expanded "><a href="docs/Variable_mutability.html"><strong aria-hidden="true">2.34.</strong> 变量可变性</a></li><li class="chapter-item expanded "><a href="docs/Stack_and_heap_memory.html"><strong aria-hidden="true">2.35.</strong> 堆内存和栈内存</a></li><li class="chapter-item expanded "><a href="docs/Strings.html"><strong aria-hidden="true">2.36.</strong> 字符串</a></li><li class="chapter-item expanded "><a href="docs/Ownership.html"><strong aria-hidden="true">2.37.</strong> 所有权</a></li><li class="chapter-item expanded "><a href="docs/Transferring_ownership_data_stored_on_STACK.html"><strong aria-hidden="true">2.38.</strong> 转让所有权（存储在STACK上的数据）</a></li><li class="chapter-item expanded "><a href="docs/Transferring_ownership_data_stored_on_HEAP.html"><strong aria-hidden="true">2.39.</strong> 转让所有权（存储在堆上的数据)</a></li><li class="chapter-item expanded "><a href="docs/Borrowing.html"><strong aria-hidden="true">2.40.</strong> 借用</a></li><li class="chapter-item expanded "><a href="docs/Mutating_borrowed_data.html"><strong aria-hidden="true">2.41.</strong> 改变借用数据</a></li><li class="chapter-item expanded "><a href="docs/Restriction_on_borrowed_data.html"><strong aria-hidden="true">2.42.</strong> 借用的数据限制</a></li><li class="chapter-item expanded "><a href="docs/Dangling_references.html"><strong aria-hidden="true">2.43.</strong> 未知引用</a></li><li class="chapter-item expanded "><a href="docs/Structs.html"><strong aria-hidden="true">2.44.</strong> 数据结构</a></li><li class="chapter-item expanded "><a href="docs/Enums.html"><strong aria-hidden="true">2.45.</strong> 枚举</a></li><li class="chapter-item expanded "><a href="docs/Trimming_strings.html"><strong aria-hidden="true">2.46.</strong> 裁剪字符串</a></li><li class="chapter-item expanded "><a href="docs/Standard_library.html"><strong aria-hidden="true">2.47.</strong> 标准库</a></li><li class="chapter-item expanded "><a href="docs/Parsing_standard_input.html"><strong aria-hidden="true">2.48.</strong> 解析标准输入</a></li><li class="chapter-item expanded "><a href="docs/Crates.html"><strong aria-hidden="true">2.49.</strong> Crates</a></li><li class="chapter-item expanded "><a href="docs/Guessing_game_revisited.html"><strong aria-hidden="true">2.50.</strong> 猜数游戏重构版</a></li><li class="chapter-item expanded "><a href="docs/Command_line_arguments.html"><strong aria-hidden="true">2.51.</strong> 命令行参数</a></li><li class="chapter-item expanded "><a href="docs/Reading_content_from_file.html"><strong aria-hidden="true">2.52.</strong> 自文件中读取内容</a></li><li class="chapter-item expanded "><a href="docs/Writing_content_to_file.html"><strong aria-hidden="true">2.53.</strong> 向文件中写入内容</a></li><li class="chapter-item expanded "><a href="docs/Fruit_finder.html"><strong aria-hidden="true">2.54.</strong> 水果查找器</a></li><li class="chapter-item expanded "><a href="docs/Shape_factories.html"><strong aria-hidden="true">2.55.</strong> 形状工厂</a></li><li class="chapter-item expanded "><a href="docs/Generic_struct_definitions.html"><strong aria-hidden="true">2.56.</strong> 泛型数据结构体定义</a></li><li class="chapter-item expanded "><a href="docs/Generic_method_definitions.html"><strong aria-hidden="true">2.57.</strong> 泛型方法定义</a></li><li class="chapter-item expanded "><a href="docs/Generic_function_definitions.html"><strong aria-hidden="true">2.58.</strong> 泛型函数定义</a></li><li class="chapter-item expanded "><a href="docs/Box_data_type.html"><strong aria-hidden="true">2.59.</strong> 封箱数据类型</a></li><li class="chapter-item expanded "><a href="docs/Summing_boxes.html"><strong aria-hidden="true">2.60.</strong> 封箱求和</a></li><li class="chapter-item expanded "><a href="docs/Traits.html"><strong aria-hidden="true">2.61.</strong> 特性</a></li><li class="chapter-item expanded "><a href="docs/Default_trait_implementation.html"><strong aria-hidden="true">2.62.</strong> 默认特性实现</a></li><li class="chapter-item expanded "><a href="docs/Derivable_traits.html"><strong aria-hidden="true">2.63.</strong> 可衍生的特性</a></li><li class="chapter-item expanded "><a href="docs/Trait_bounds.html"><strong aria-hidden="true">2.64.</strong> 特性界限</a></li><li class="chapter-item expanded "><a href="docs/Multiple_trait_bounds_and_where_clause.html"><strong aria-hidden="true">2.65.</strong> 多重特质界限和where子句</a></li><li class="chapter-item expanded "><a href="docs/Return_types_and_implemented_traits.html"><strong aria-hidden="true">2.66.</strong> 返回类型和特性实现</a></li><li class="chapter-item expanded "><a href="docs/Return_types_and_dynamic_dispatching_with_traits.html"><strong aria-hidden="true">2.67.</strong> 返回类型和特质的动态分派</a></li><li class="chapter-item expanded "><a href="docs/Comparing_jet_planes.html"><strong aria-hidden="true">2.68.</strong> 对比飞机</a></li><li class="chapter-item expanded "><a href="docs/Borrow_checker.html"><strong aria-hidden="true">2.69.</strong> 借用检查</a></li><li class="chapter-item expanded "><a href="docs/Lifetime_annotation.html"><strong aria-hidden="true">2.70.</strong> 生命周期注解</a></li><li class="chapter-item expanded "><a href="docs/Multiple_lifetime_annotations.html"><strong aria-hidden="true">2.71.</strong> 多生命周期注解</a></li><li class="chapter-item expanded "><a href="docs/Lifetime_elision_rules.html"><strong aria-hidden="true">2.72.</strong> 生命周期剥离规则</a></li><li class="chapter-item expanded "><a href="docs/Struct_lifetime_annotations.html"><strong aria-hidden="true">2.73.</strong> 结构体生命周期注解</a></li><li class="chapter-item expanded "><a href="docs/Static_lifetimes.html"><strong aria-hidden="true">2.74.</strong> 静态生命周期</a></li><li class="chapter-item expanded "><a href="docs/More_on_enums.html"><strong aria-hidden="true">2.75.</strong> 更多枚举值</a></li><li class="chapter-item expanded "><a href="docs/Match_with_wildcard_pattern.html"><strong aria-hidden="true">2.76.</strong> 扩展匹配模式</a></li><li class="chapter-item expanded "><a href="docs/Enum_methods.html"><strong aria-hidden="true">2.77.</strong> 枚举方法</a></li><li class="chapter-item expanded "><a href="docs/Option_enum.html"><strong aria-hidden="true">2.78.</strong> 可选枚举</a></li><li class="chapter-item expanded "><a href="docs/Matching_Option.html"><strong aria-hidden="true">2.79.</strong> 匹配选项</a></li><li class="chapter-item expanded "><a href="docs/If_let_matching.html"><strong aria-hidden="true">2.80.</strong> If let 匹配</a></li><li class="chapter-item expanded "><a href="docs/Location_enum.html"><strong aria-hidden="true">2.81.</strong> 定位枚举</a></li><li class="chapter-item expanded "><a href="docs/Unrecoverable_errors.html"><strong aria-hidden="true">2.82.</strong> 不能恢复的错误</a></li><li class="chapter-item expanded "><a href="docs/Recoverable_errors.html"><strong aria-hidden="true">2.83.</strong> 可恢复的错误</a></li><li class="chapter-item expanded "><a href="docs/Matching_Result_enum_for_error_handling.html"><strong aria-hidden="true">2.84.</strong> 匹配Result&lt;T,E&gt;枚举错误处理</a></li><li class="chapter-item expanded "><a href="docs/Propagating_errors.html"><strong aria-hidden="true">2.85.</strong> 传播的错误</a></li><li class="chapter-item expanded "><a href="docs/Guessing_game_revisited_with_error_handling.html"><strong aria-hidden="true">2.86.</strong> 猜数游戏错误处理重构</a></li><li class="chapter-item expanded "><a href="docs/Vectors_with_error_handling.html"><strong aria-hidden="true">2.87.</strong> 矢量错误处理</a></li><li class="chapter-item expanded "><a href="docs/HashMap_K_V_data_type.html"><strong aria-hidden="true">2.88.</strong> 哈希表数据结构</a></li><li class="chapter-item expanded "><a href="docs/Word_counter.html"><strong aria-hidden="true">2.89.</strong> 字数统计</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Rust 快学</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="前言"><a class="header" href="#前言">前言</a></h1>
+<p>本教程，是为了快速让你上手Rust 编程，所以我们主要是快速过一下Rust 语言的各种特性</p>
+<p>代码采用AGPL-3.0 发布。</p>
+<p>欢迎Fork, 欢迎贡献。欢迎勘误，欢迎报告问题。</p>
+<p>如果你要修改，欢迎提交PR。本文档代码一直开源。不会用于商业价值。</p>
+<p>感谢原作者提供的教程。</p>
+<pre><code> Rust Quick
+    Copyright (C) &lt;2000-2022&gt;  cnmade
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
+</code></pre>
+<p>喜欢的可以买一杯咖啡给作者</p>
+<p>Buy me a cup of coffee for $3</p>
+<p><a href="https://ko-fi.com/M4M54KKIF"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi" /></a></p>
+<p>本书介绍如何快学rust，采用mdbook开发构建</p>
+<p>访问以下URL，在线查看文档</p>
+<p><a href="https://rq.netroby.com/01-intro/intro.html">https://rq.netroby.com/01-intro/intro.html</a></p>
+<p>不管你是否有Rust编程基础，这份指南，都能帮助你快速学习Rust。</p>
+<p>如果有问题，可以到github 仓库提交问题报告。</p>
+<p><a href="https://github.com/cnmade/rust-quick">https://github.com/cnmade/rust-quick</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rust语言教程"><a class="header" href="#rust语言教程">Rust语言教程</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="创建一个rust项目"><a class="header" href="#创建一个rust项目">创建一个Rust项目</a></h1>
+<p>你可以用<a href="https://play.rust-lang.org/?version=nightly&amp;mode=debug&amp;edition=2018">Rust playground</a>在线运行本文中的所有代码（当然，除了文件访问等本地的东西）。</p>
+<p>安装完Rust后，用Cargo（Rust软件包管理器）创建一个新项目。</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>cargo new &lt;PROJECT_NAME&gt;。
+<span class="boring">}
+</span></code></pre></pre>
+<p>这将在你的当前目录下创建一个新的文件夹。</p>
+<p>或者，让你的当前目录成为项目文件夹。</p>
+<pre><code>cargo init
+</code></pre>
+<p>源文件位于src/文件夹中。当然，进入点是main.rs文件及其主函数（fn关键字）。</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    println! (&quot;Hello, world!&quot;);
+}
+</code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="打印输出"><a class="header" href="#打印输出">打印输出</a></h1>
+<p>在Rust中，你使用所谓的<a href="https://en.wikipedia.org/wiki/Macro_(computer_science)">宏</a>来打印到控制台。Rust中的宏有一个标识符，后面是一个感叹号（！）。println！宏是非常灵活的。</p>
+<pre><pre class="playground"><code class="language-rust">fn main() { 
+   // 字符串内插
+   println!(&quot;Adding {} and {} gives {}&quot;, 22, 33, 22 + 33);
+   // 位置参数 
+   println!(
+        &quot;Ypur name is {0}. Welcome to {1}. Nice to meet you {0}&quot;,
+        &quot;Goto&quot;, &quot;Rust&quot;
+   );
+    // 变量命名
+     println!(
+        &quot;{language} is very popular. It was created in {year}&quot;,
+        language = &quot;Rust&quot;,
+        year = 2010
+   );
+   // 占位符特征（使用位置参数以避免重复）。
+   println!(&quot;{0}, in binary: {0:b}, in hexadecimal: {0:x}&quot;, 11);
+    // 调试特性（对打印任何东西都非常有用）。
+     // 如果你试图直接打印数组，你会得到一个错误。
+  // 因为数组不是一个字符串或数字类型。
+   println!(&quot;{:?}&quot;, [11, 22, 33]);
+  }
+</code></pre></pre>
+<p>运行命令查看输出结果：</p>
+<pre><code>cargo run
+</code></pre>
+<p>你会看到（连同代码的编译信息---Rust是一种编译的语言）。</p>
+<pre><code>Adding 22 and 33 gives 55
+Ypur name is Goto. Welcome to Rust. Nice to meet you Goto
+Rust is very popular. It was created in 2010
+Decimal: 11      Binary: 1011    Hexadecimal: b
+[11, 22, 33]
+</code></pre>
+<p>在Rust中，你必须在行尾使用分号（;），除非它是一个返回东西的函数的最后一行（后面会详细介绍）。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="高级数字格式化打印"><a class="header" href="#高级数字格式化打印">高级数字格式化打印</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let x = 246.92385;
+    let y = 24.69;
+    let z = x / y;
+
+    // print line macro with 3 decimal point precision
+    // 打印浮点数，带有小数点后3位精度
+    println!(&quot;z is {:.3}&quot;, z);
+
+    // 共9位数，前置用空格补位
+    println!(&quot;z is {:9.3}&quot;, z);
+
+    //用0补位
+    println!(&quot;z is {:09.3}&quot;, z);
+    println!(&quot;z is {:09.3}\nx is {}&quot;, z, x);
+ 
+    // 换行
+    print!(&quot;y is {:09.3}\n x is {}\n&quot;, y, x); 
+    // 位置占位 
+    println!(&quot;z is {0:05.1} and x is {1:.2}. \nx is also {1}&quot;, z, x)
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>z is 10.001
+z is    10.001
+z is 00010.001
+z is 00010.001
+x is 246.92385
+y is 00024.690
+ x is 246.92385
+z is 010.0 and x is 246.92.
+x is also 246.92385
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="变量"><a class="header" href="#变量">变量</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    // 变量在默认情况下是不可变的
+    //存储在堆上（后面会有更多的介绍）。
+    let pc = &quot;Inspirion XYZ&quot;;
+    println!(&quot;pc is {}&quot;, pc); 
+    // 可变的变量
+    let mut age = 1;
+    println!(&quot;age is {}&quot;, age);
+    age = 2;
+    println!(&quot;age is {}&quot;, age); 
+    // 常量（必须是大写字母和明确的类型定义）。
+     const BRAND: &amp;str = &quot;Dell&quot;;
+    println!(&quot;brand is {}&quot;, BRAND); 
+    // 多重赋值（元组解构）。
+    // 在文章后面有更多关于元组的内容
+     let (status, code) = (&quot;OK&quot;, 200);
+    println!(&quot;status: {}, code: {}&quot;, status, code);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>pc is Inspirion XYZ
+age is 1
+age is 2
+brand is Dell
+status: OK, code: 200
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="基本数据类型"><a class="header" href="#基本数据类型">基本数据类型</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    // 默认整数的精度数据类型是32位: i32 
+    let num1 = 123;
+    println!(&quot;{} - type: {}&quot;, num1, get_type(&amp;num1)); 
+    // 默认浮点数的精度为64位： f64
+    let num2 = 1.23;
+    println!(&quot;{} - type: {}&quot;, num2, get_type(&amp;num2)); 
+    // 显示声明 类型 
+    let num3: i8 = 23;
+    println!(&quot;{} - type: {}&quot;, num3, get_type(&amp;num3)); 
+    // 最大值
+     // std是标准库/rate。
+    // 它提供了丰富的功能。
+    // 这里我们使用类型模块（i32、i16等）和属性。
+    let max_i32 = i32::MAX;
+    let max_i16 = i16::MAX;
+    println!(&quot;max value for i32 is {}&quot;, max_i32);
+    println!(&quot;max value for i16 is {}&quot;, max_i16); 
+    // 布尔值 
+    let is_rust_fun: bool = true;
+    println!(
+        &quot;is_rust_fun is {} - type: {}&quot;,
+        is_rust_fun,
+        get_type(&amp;is_rust_fun)
+    );
+    let is_greater = 23 &gt; 5;
+    println!(
+        &quot;is_greater is {} - type: {}&quot;,
+        is_greater,
+        get_type(&amp;is_greater)
+    );
+     //字符（unicode - 最多四个字节的长度）。
+    let smiley = '😈';
+    println!(&quot;smiley is {} - type: {}&quot;, smiley, get_type(&amp;smiley));
+}
+// 用于打印类型的辅助函数
+fn get_type&lt;T&gt;(_: &amp;T) -&gt; &amp;str {
+    std::any::type_name::&lt;T&gt;()
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>123 - type: i32
+1.23 - type: f64
+23 - type: i8
+max value for i32 is 2147483647
+max value for i16 is 32767
+is_rust_fun is true - type: bool
+is_greater is true - type: bool
+smiley is 😈 - type: char
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="浮点数"><a class="header" href="#浮点数">浮点数</a></h1>
+<ul>
+<li>f32 (32位长度的浮点数)</li>
+<li>f64 (64位长度的浮点数)</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+
+    // 默认情况下，小数值存储在f64中
+
+    let my_float = 12.345677890123456789012345;
+
+    println!(&quot;my_float is: {}&quot;, my_float); 
+    let a_float: f32 = 9.9438535983578493758;
+
+    println!(&quot;a_float is: {}&quot;, a_float); 
+    let min_f32 = f32::MIN;
+
+    println!(&quot;min_f32 is: {}\n&quot;, min_f32); 
+    let max_f32 = f32::MAX;
+
+    println!(&quot;max_f32 is: {}\n&quot;, max_f32); 
+    let min_f64 = f64::MIN;
+
+    println!(&quot;min_f64 is: {}\n&quot;, min_f64);
+     let max_f64 = f64::MAX;
+
+    println!(&quot;max_f64 is: {}\n&quot;, max_f64);
+
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+my_float is: 12.345677890123456
+
+a_float is: 9.943853
+
+min_f32 is: -340282350000000000000000000000000000000
+max_f32 is: 340282350000000000000000000000000000000
+min_f64 is: -179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+max_f64 is: 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="位操作运算"><a class="header" href="#位操作运算">位操作运算</a></h1>
+<pre><pre class="playground"><code class="language-rust">/*
+位操作：对单个比特而不是字节集进行操作。
+- 二进制表示，一个字节的序列
+- 为了便于阅读，允许使用下划线分隔符
+- 默认情况下，二进制表示法被存储为i32
+*/
+fn main() {
+    //通过添加后缀u8存储为u8
+
+    let mut value = 0b1111_0101u8; 
+    //将打印基数10（十进制）表示法
+
+    println!(&quot;value is {}&quot;, value); 
+    /*
+    :08b
+        0 -&gt; 显示前导零
+        8 -&gt; 显示的比特数
+        b -&gt; 显示二进制表示法
+    */
+    println!(&quot;value is {:08b}&quot;, value); 
+    // 比特式非：反转各个比特
+
+    value = !value; 
+    // 0000_1010
+    println!(&quot;value is {:08b}&quot;, value); 
+    // 比特式和：用于清除一个特定位的值值=值&amp;0b1111_0111。
+    // -&gt; 0000_0010
+    println!(&quot;value is {:08b}&quot;, value); 
+    // 比特式和：用于检查特定位的值
+    // 如果一个特定的位是0或1，对检查进程状态的寄存器的状态很有用
+
+    println!(&quot;value is {:08b}&quot;, value &amp; 0b0100_0000);
+   // --&gt; 0000_0000 
+   // 位法OR：如果任一操作数为1，结果为1
+    // 对设置一个特定位的值很有用
+
+    value = value | 0b0100_0000; 
+    // -&gt; 0100_0010
+    println!(&quot;value is {:08b}&quot;, value); 
+    // 按位数XOR（排他性OR）。
+   // 只有当位数不同时，结果为1，否则为0
+   // 如果有不同的位，可以设置为0
+
+   value = value ^ 0b0101_0101; 
+   // -&gt; 0001_0111
+   println!(&quot;value is {:08b}&quot;, value); 
+   ////////////////////////////
+   // 位移运算符
+   //////////////////////////// 
+   // 将比特模式向左或向右移动若干比特
+   // 并用零回填移位的位空间 
+   // 左移4位
+
+   value = value &lt;&lt; 4; 
+   // -&gt; 0111_0000
+   println!(&quot;value is {:08b}&quot;, value); 
+   // 右移3位
+
+   value = value &gt;&gt; 3; 
+   // -&gt; 0000_1110
+   println!(&quot;value is {:08b}&quot;, value);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>value is 245
+value is 11110101
+value is 00001010
+value is 00000010
+value is 00000000
+value is 01000010
+value is 00010111
+value is 01110000
+value is 00001110
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="布尔运算和二进制代数"><a class="header" href="#布尔运算和二进制代数">布尔运算和二进制代数</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let a = true;
+    let b = false;
+    println!(&quot;a is {}\nb is {}&quot;, a, b); 
+    println!(&quot;NOT a is {}&quot;, !a);
+    println!(&quot;a AND b is {}&quot;, a &amp; b);
+    println!(&quot;a OR b is {}&quot;, a | b);
+    println!(&quot;a XOR b is {}&quot;, a ^ b); 
+    // 布尔值转为整数后会产生0或1。
+    println!(&quot;a XOR b is {}&quot;, (a ^ b) as i32); 
+    // 1 
+    let c = (a ^ b) | (a &amp; b);
+    println!(&quot;c is {}&quot;, c); 
+    // 短路的逻辑操作。
+    // 右边的操作数没有被评估 
+    let d = true || (a &amp; b);
+    println!(&quot;d is {}&quot;, d);    
+     // panic宏没有被评估。
+    // 所以进程以状态0结束（OK，无错误）。
+    // panic会立即退出程序（就像在Node.js中抛出错误）。
+    let e = false &amp;&amp; panic!();
+    println!(&quot;e is {}&quot;, e);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>a is true
+b is false
+NOT a is false
+a AND b is false
+a OR b is true
+a XOR b is true
+a XOR b is 1
+c is true
+d is true
+e is false
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="算术运算"><a class="header" href="#算术运算">算术运算</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    // 相同的数据类型才能运算
+    let a = 11;
+    let b = 33;
+    let c = a + b;
+    println!(&quot;c is {}&quot;, c);
+     let d = c - b;
+    println!(&quot;d is {}&quot;, d);
+     let e = a * d;
+    println!(&quot;e is {}&quot;, e); 
+    // 先转换成相同的数据类型再运算，记得可能会有精度损失  
+    let f = c as f32 / 4.5;
+    println!(&quot;f is {}&quot;, f);
+
+     // 操作优先权控制
+
+    let g = 43.5432 % (a as f64 * e as f64);
+    println!(&quot;g is {}&quot;, g);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>c is 44
+d is 11
+e is 121
+f is 9.777778
+g is 43.5432
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="比较运算"><a class="header" href="#比较运算">比较运算</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+/*
+ * 只能比较相同类型的变量
+*/
+fn main() {
+    let a = 11;
+    let b = 88; 
+    println!(&quot;a is {}\nb is {}&quot;, a, b); 
+    println!(&quot;a EQUAL TO b is {}&quot;, a == b);
+     println!(&quot;a NOT EQUAL TO b is {}&quot;, a != b);
+      println!(&quot;a GREATER THAN b is {}&quot;, a &gt; b); 
+      println!(&quot;a GREATER THAN OR EQUAL TO b is {}&quot;, a &gt;= b); 
+      println!(&quot;a LESS THAN b is {}&quot;, a &lt; b); 
+      println!(&quot;a LESS THAN OR EQUAL TO b is {}&quot;, a &lt;= b);
+       let c = true;
+    let d = false; 
+    println!(&quot;\nc is {}\nd is {}&quot;, c, d);
+    println!(&quot;c EQUAL TO d is {}&quot;, c == d);
+    println!(&quot;c NOT EQUAL TO d is {}&quot;, c != d);
+    println!(&quot;c GREATER THAN d is {}&quot;, c &gt; d);
+    println!(&quot;c GREATER THAN OR EQUAL TO d is {}&quot;, c &gt;= d);
+    println!(&quot;c LESS THAN d is {}&quot;, c &lt; d);
+    println!(&quot;c LESS THAN OR EQUAL TO d is {}&quot;, c &lt;= d);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>a is 11
+b is 88
+a EQUAL TO b is false
+a NOT EQUAL TO b is true
+a GREATER THAN b is false
+a GREATER THAN OR EQUAL TO b is false
+a LESS THAN b is true
+a LESS THAN OR EQUAL TO b is truec is true
+d is false
+c EQUAL TO d is false
+c NOT EQUAL TO d is true
+c GREATER THAN d is true
+c GREATER THAN OR EQUAL TO d is true
+c LESS THAN d is false
+c LESS THAN OR EQUAL TO d is false
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="字符"><a class="header" href="#字符">字符</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+  //Unicode标量值使用4个字节（32位）存储。
+    // 与C语言相反，C语言将其存储在1个字节中
+    let letter: char = 'z';
+    let number_char = '9';
+    let finger = '\u{261D}'; println!(&quot;letter is {}&quot;, letter);
+    println!(&quot;number_char is {}&quot;, number_char);
+    println!(&quot;finger is {}&quot;, finger);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>letter is z
+number_char is 9
+finger is ☝
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="计算平均值"><a class="header" href="#计算平均值">计算平均值</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let a = 33;
+    let b = 4.9;
+    let c: f32 = 123.5;
+    let average = (a as f32 + b as f32 + c) / 3.0;
+    println!(&quot;average is {}&quot;, average);
+    assert_eq!(average, 53.8);
+    println!(&quot;test passed.&quot;);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>average is 53.8
+test passed.
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="数组"><a class="header" href="#数组">数组</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+fn main() {
+    // 固定长度和单一类型的
+    //存储在连续的内存位置
+    // 毗连是指元素的排列方式，使每个元素与相邻元素有相同的距离。
+    let letters = ['a', 'b', 'c'];
+     // 类型: [char; 3]
+    let first_letter = letters[0];
+    println!(&quot;first_letter is {}&quot;, first_letter); 
+    // 要修改一个元素，必须设置为可变 
+    let mut numbers = [11, 22, 44]; 
+    // 类型：[i32; 3]
+    numbers[2] = 33;
+    println!(&quot;numbers is {}&quot;, numbers[2]);
+     // 空数组定义 （分配内存)
+    let words: [&amp;str; 2];
+    words = [&quot;ok&quot;; 2]; 
+    // 重复表达式，相当于 [&quot;ok&quot;, &quot;ok&quot;]
+    println!(&quot;words is {:?}&quot;, words); 
+    /*
+    usize的长度是基于你的目标架构中引用内存所需的字节数。
+    - 对于32位的编译目标 -&gt; usize是4字节
+    - 对于64位的编译目标 -&gt; usize是8字节。
+    */ 
+    let ints = [22; 5];
+    let length: usize = ints.len();
+    println!(&quot;length is {}&quot;, length);    
+     //获得内存中的大小（std crate的mem模块）。
+     let mem_size_byte = std::mem::size_of_val(&amp;ints);
+    println!(&quot;mem_size_byte is {}&quot;, mem_size_byte); 
+    //从数组中获取切片
+    let mut slice: &amp;[i32] = &amp;ints;
+    println!(&quot;slice is {:?}&quot;, slice);
+
+    slice = &amp;ints[3..5];
+    println!(&quot;slice is {:?}&quot;, slice);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>first_letter is a
+numbers is 33
+words is [&quot;ok&quot;, &quot;ok&quot;]
+length is 5
+mem_size_byte is 20
+slice is [22, 22, 22, 22, 22]
+slice is [22, 22]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="切片"><a class="header" href="#切片">切片</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+fn main() {
+// 切片：用于引用一个集合（array等）的连续部分（子集），而不占用这些元素的所有权。
+// 常用的有：字符串分片 dt type : &amp;str
+    
+// 字符串是一个片断
+    
+// 数据在可执行的二进制文件中是硬编码的，程序使用一个字符串片断来访问它 
+// 从字符串数据中创建一个字符串片断 
+// 句子变量也有一个指向内存中字符串数据开头的指针，作为其长度和容量的信息。
+ let sentence = String::from(&quot;This is a sequence of words.&quot;);
+    println!(&quot;sentence is {}&quot;, sentence); 
+// last_word变量有一个指向字符串数据部分的偏移量/起始索引的指针，以及分片的长度
+    
+// 像往常一样，切片的结束索引被排除在结果之外（在大多数编程语言中，在对集合进行切片时很常见）。
+let last_word = &amp;sentence[22..22 + 5];          
+// [start..end_excluded]
+    println!(&quot;last_word is \&quot;{}\&quot;&quot;, last_word); 
+//从偏移索引到集合结束的切片（这里是字符串数据）。
+let last_part: &amp;str = &amp;sentence[22..];
+    println!(&quot;last_part is \&quot;{}\&quot;&quot;, last_part); 
+//从集合的开始到结束的索引进行切片 
+let without_last_word = &amp;sentence[..22];
+    println!(&quot;without_last_word is \&quot;{}\&quot;&quot;, without_last_word); 
+// 字符串片的长度是以字节数为单位的（usize数据类型）。
+    
+// 不是以字符数为单位 
+let slice_length: usize = last_part.len();
+    println!(&quot;slice_length is {} bytes&quot;, slice_length); 
+// 当创建一个字符串片断时，范围索引必须出现在有效的UTF-8字符边界上。
+    
+// 记住，UTF-8字符可以占用多个字节。
+    
+// 这就是说，分片范围索引必须是字符的边界。
+    
+// 如果你的索引在一个字符的中间，程序会惊慌失措。
+    
+// 所以当从带有特殊字符或表情符号的字符串中创建字符串片断时要小心。
+// 是的，这是一些低级别的东西，我们通常不会在日常的Node.js中处理。
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>sentence is This is a sequence of words.
+last_word is &quot;words&quot;
+last_part is &quot;words.&quot;
+without_last_word is &quot;This is a sequence of &quot;
+slice_length is 6 bytes
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="切片为参数"><a class="header" href="#切片为参数">切片为参数</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+fn main() {
+    let message = String::from(&quot;lorem ipsum&quot;); 
+    let first_word = get_first_word(&amp;message);
+    println!(&quot;first_word is \&quot;{}\&quot;&quot;, first_word); 
+    let first_word_too = get_first_word_too(&amp;message[6..]);
+    println!(&quot;first_word_too is \&quot;{}\&quot;&quot;, first_word_too);
+}
+// ======= 将整个字符串作为输入传递 ===========
+fn get_first_word(msg: &amp;String) -&gt; &amp;str {
+    //从字符串数据中创建一个字节片（&amp;[u8] 数据类型）。
+    let bytes: &amp;[u8] = msg.as_bytes(); 
+    // 在字节序列中一个一个地迭代。
+    // 迭代时使用enumerate()来获取索引
+     for (index, &amp;item) in bytes.iter().enumerate() {
+        // 找到第一个空格，并将之前的所有内容作为一个字符串片断返回
+         // b''是一个空格的字节表示。
+        // 记住，我们是在迭代一个字节序列，而不是字符。
+       // 我们这样做是因为字符串片断的索引是以字节为单位的。
+       if item == b' ' {
+            return &amp;msg[..index];
+       }
+    } 
+    // 没有发现空白处，返回整个信息 &amp;msg
+}
+// ======= 传递一个字符串片断作为输入 ===========
+fn get_first_word_too(msg: &amp;str) -&gt; &amp;str {
+    let bytes: &amp;[u8] = msg.as_bytes(); 
+    for (index, &amp;item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &amp;msg[..index];
+        }
+    } 
+    &amp;msg
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>first_word is &quot;lorem&quot;
+first_word_too is &quot;ipsum&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deref-解构"><a class="header" href="#deref-解构">Deref 解构</a></h1>
+<p>注意。</p>
+<ul>
+<li>传递一个借来的字符串引用（&amp;String）与传递一个字符串片断（&amp;str）是不一样的。</li>
+<li>借用的字符串引用指向堆栈中的字符串，而堆栈又拥有并指向堆中的数据</li>
+<li>slice只存储一个指向堆数据的指针和长度信息。它并不跟踪容量，因为它并不拥有堆上的任何东西。</li>
+<li>由于字符串引用包含了作为一个片断的所有信息（指向堆数据的指针+长度），Rust允许在预期有字符串片断的地方使用字符串引用。</li>
+<li>这种便利被称为 deref coercion。</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let message = String::from(&quot;lorem ipsum&quot;);
+
+    // 注意到一个字符串引用被作为参数传入 
+    let first_word = get_first_word(&amp;message);
+    println!(&quot;first_word is \&quot;{}\&quot;&quot;, first_word);
+}
+// 注意到预期的参数是字符串类型的slice (&amp;str)。
+fn get_first_word(msg: &amp;str) -&gt; &amp;str {
+    let bytes: &amp;[u8] = msg.as_bytes();
+    for (index, &amp;item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &amp;msg[..index];
+        }
+    }
+    &amp;msg
+}
+</code></pre></pre>
+<ul>
+<li>当然，当使用字符串片时，deref coercion不起作用，因为字符串引用是预期的（因为缺少属性）。</li>
+<li>当编写代码时，在不需要数据所有权的情况下，最好使用字符串片。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="多维数组"><a class="header" href="#多维数组">多维数组</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let d2: [[i32; 3]; 3] = [[9, 8, 7], [6, 5, 4], [3, 2, 1]];
+    let value = d2[1][0];
+    println!(&quot;value is {}&quot;, value); 
+    // 变更一个元组
+    let d3: [[[&amp;str; 100]; 20]; 5];
+    d3 = [[[&quot;ok&quot;; 100]; 20]; 5];
+    println!(&quot;value d3[3][11][35] is {}&quot;, d3[3][11][35])
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>value is 6
+value d3[3][11][35] is ok
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="矢量"><a class="header" href="#矢量">矢量</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    
+// 具有相同数据类型的元素的集合
+    
+// 元素是按顺序排列的 
+// 数组有一个固定的大小，在编译时必须知道。
+    
+// 因为数组的数据是存储在堆栈中的 
+// 向量可以动态地增长和缩小
+    
+// 通过添加/删除项目来实现
+    
+// 矢量数据被存储在堆内存中
+    
+// 因此你需要处理[所有权]和[借用]。
+// 向量 = 可变大小的数组 
+let mut letters: Vec&lt;char&gt; = vec!['a', 'b', 'c'];
+    println!(&quot;letters are {:?}&quot;, letters); 
+    let first_letter = letters[0];
+    println!(&quot;first_letter is {}&quot;, first_letter); 
+//为向量添加值 
+letters.push('d');
+    letters.push('e');
+    letters.push('f');
+    println!(&quot;letters are {:?}&quot;, letters); 
+// 删除最后一个值 
+letters.pop();
+    println!(&quot;letters are {:?}&quot;, letters); 
+    let mut numbers: Vec&lt;i32&gt; = vec![11, 22, 44];
+    numbers[2] = 33;
+    println!(&quot;numbers is {}&quot;, numbers[2]); 
+    let words: Vec&lt;&amp;str&gt;;
+    words = vec![&quot;ok&quot;; 2]; 
+    println!(&quot;words are {:?}&quot;, words); 
+    let mut ints = vec![22, 33, 44, 55, 66, 77];
+    let length: usize = ints.len();
+    println!(&quot;length is {}&quot;, length); 
+    let mem_size_byte = std::mem::size_of_val(&amp;ints);
+    println!(&quot;mem_size_byte is {}&quot;, mem_size_byte); 
+// 从矢量中切出一片
+let mut slice: &amp;[i32] = &amp;ints;
+    println!(&quot;slice is {:?}&quot;, slice); slice = &amp;ints[2..5];
+    println!(&quot;slice is {:?}&quot;, slice); 
+// 在向量上进行迭代
+ for it in ints.iter() {
+        println!(&quot;it is {}&quot;, it);
+    } 
+// 迭代时对向量项目进行变异 
+for it in ints.iter_mut() {
+        
+// 解除对指针的引用，以获得和设置值（*it）。
+        *it *= *it;
+    }
+    println!(&quot;ints is {:?}&quot;, ints);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>letters are ['a', 'b', 'c']
+first_letter is a
+letters are ['a', 'b', 'c', 'd', 'e', 'f']
+letters are ['a', 'b', 'c', 'd', 'e']
+numbers is 33
+words is [&quot;ok&quot;, &quot;ok&quot;]
+length is 6
+mem_size_byte is 24
+slice is [22, 33, 44, 55, 66, 77]
+slice is [44, 55, 66]
+it is 22
+it is 33
+it is 44
+it is 55
+it is 66
+it is 77
+ints is [484, 1089, 1936, 3025, 4356, 5929]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="元组"><a class="header" href="#元组">元组</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+fn main() {
+    //用于分组混合数据类型的相关项目
+    //最多可以有12个混合类型的值
+    // 如果增加更多的值，它将不再是一个元组类型。
+    let a_tuple: (&amp;str, u8, char) = (&quot;ok&quot;, 0, 'd');
+    let first_item = a_tuple.0;
+    println!(&quot;first_item is {}&quot;, first_item); 
+    // 使元组可变 
+    let mut b_tuple = (&quot;ok&quot;, 0);
+    b_tuple.0 = &quot;ko&quot;;
+    b_tuple.1 += 1;
+    println!(&quot;b_tuple.1 is {}&quot;, b_tuple.1);
+     // 解构一个元组 
+     let c_tuple = (&quot;en&quot;, &quot;US&quot;, 1);
+    let (language, country, code) = c_tuple;
+    println!(
+        &quot;language is: {}\ncountry is: {}\ncode is: {}&quot;,
+        language, country, code
+    )
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>first_item is ok
+b_tuple.1 is 1
+language is: en
+country is: US
+code is: 1
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="函数方法"><a class="header" href="#函数方法">函数方法</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+fn main() {
+    be_polite(); 
+// y和z的推断类型是作为add()的参数使用的类型。
+    
+// 如果你没有声明变量的具体类型，那么这些变量将假定为第一次使用的函数的参数类型。
+// 记住，默认的推断类型是整数的i32。
+    let y = 12;
+    let z = 34; 
+// 现在y和z被认为是u8类型，因为这就是它们第一次作为函数参数使用的方式 
+    add(y, z); 
+// 稍后将y和z传给另一个参数类型不同的fn，会引起panic
+    
+guess_number(z) 
+// --&gt; 希望是一个i32而不是一个u8
+    
+// 需要明确的转换。
+guess_number(y as i32)
+}
+fn be_polite() {
+    println!(&quot;Greetings, pleased to meet you.&quot;);
+    guess_number(25)
+}
+fn guess_number(number: i32) {
+    println!(&quot;Indeed, {} is the correct answer&quot;, number)
+}
+fn add(a: u8, b: u8) {
+    let sum = a + b;
+    println!(&quot;sum is {}&quot;, sum)
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+Greetings, pleased to meet you.
+Indeed, 25 is the correct answer
+sum is 46
+Indeed, 12 is the correct answer
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="语句和表达式"><a class="header" href="#语句和表达式">语句和表达式</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    // 语句执行一个动作而不返回一个值 
+    // 语句以分号结尾：a = 6。
+     // 表达式评估为一个结果值 
+     // 表达式不以分号结束。3 + 4，评估结果为7
+      // 在表达式中加入分号可以将其转化为一个语句。
+      // 表达式可以作为语句的一部分使用： let total = r + c;\n\t{}\n\t{}&quot;。
+       // 其中 &quot;r + c &quot;是一个表达式，&quot;let total = r + c; &quot;是一个语句。
+       println!(&quot;expression 4 + 5 evaluates to: {}&quot;, 4 + 5);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>expression 4 + 5 evaluates to: 9
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="函数返回类型"><a class="header" href="#函数返回类型">函数返回类型</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let result = square(3);
+    println!(&quot;result is {}&quot;, result); 
+    let result_tuple = triple(33);
+    let (input, result1) = result_tuple;
+    println!(&quot;result_tuple is {:?}&quot;, result_tuple);
+    
+// {:?} ==&gt; debug 格式化 
+println!(&quot;input {} evaluates to {}&quot;, input, result1); 
+let nothing: () = does_not_return();
+    println!(&quot;nothing (union data type) is {:?}&quot;, nothing)
+}
+fn square(number: i32) -&gt; i32 {
+    println!(&quot;processing square({})&quot;, number); 
+// 返回一个数值的表达式 number * number
+    
+// &quot;return number * number; &quot;也是有效的语法。
+}
+// 用元组实现多返回
+fn triple(number: i32) -&gt; (i32, i32) {
+    println!(&quot;tripling the number: {}&quot;, number);
+    let input = number;
+    let result = number * 3;
+    (input, result)
+}
+// 联盟数据类型
+
+// 当fn返回的值没有意义时使用
+
+// 用空()表示
+
+// 它是可选的
+fn does_not_return() -&gt; () {
+    println!(&quot;ain't returning nuthing!&quot;)
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>processing square(3)
+result is 9
+tripling the number: 33
+result_tuple is (33, 99)
+input 33 evaluates to 99
+ain't returning nuthing!
+nothing (union data type) is ()
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="闭包"><a class="header" href="#闭包">闭包</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    
+    // 闭包是匿名函数，可以访问包围范围内的变量。
+    // 长形式
+    let double = |n1: u8| -&gt; u8 { n1 * 2 }; 
+    // 短形式
+    let triple = |n1| n1 * 3; 
+    const DAYS_IN_YEAR: u16 = 365; 
+    //从封闭的作用域引用变量
+    let quadruple_than_add_number_days_in_year = |n1: i32| n1 * 4 + (DAYS_IN_YEAR as i32);
+    const FACTOR: i32 = 22;
+    let multiple_by_22 = |x| FACTOR * x; 
+    println!(&quot;{}&quot;, double(11));
+    println!(&quot;{}&quot;, triple(99));
+    println!(&quot;{}&quot;, quadruple_than_add_number_days_in_year(44));
+    println!(&quot;{}&quot;, multiple_by_22(5));
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>22
+297
+541
+110
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="摄氏度转换为华氏度"><a class="header" href="#摄氏度转换为华氏度">摄氏度转换为华氏度</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let (celsius, farenheit) = to_farenheit(40.0);
+    println!(&quot;{} celsius is {} farenheit&quot;, celsius, farenheit);
+    assert_eq!(farenheit, 104.0); 
+    // 如果断言失败，将不执行
+    println!(&quot;test passed&quot;);
+}
+fn to_farenheit(celsius: f32) -&gt; (f32, f32) {
+    let farenheit = (1.8 * celsius) + 32.0; 
+    // 返回语句（没有分号）
+    (celsius, farenheit)
+}
+</code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="条件执行"><a class="header" href="#条件执行">条件执行</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+fn main() {
+    let x = 5;
+    if x == 5 {
+        println!(&quot;x is 5&quot;);
+    } 
+    // 如果表达式（相当于JS/Node.js中的三元运算符）。
+    let x_odd = if x % 2 == 0 { &quot;odd&quot; } else { &quot;even&quot; };
+    println!(&quot;x_odd is {}&quot;, x_odd);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>x is 5
+x_odd is even
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="多条件判断if-else-if"><a class="header" href="#多条件判断if-else-if">多条件判断If else if</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let x = 2;
+    let y = 5; if x &gt; y {
+        println!(&quot;x is greater than  y&quot;);
+    } else if x &lt; y {
+        println!(&quot;x is less than y&quot;);
+    } else {
+        println!(&quot;x is equal to y&quot;);
+    }
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>x is less than y
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="循环赋值"><a class="header" href="#循环赋值">循环赋值</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let mut count = 0;
+     // 无限循环 
+     loop {
+        if count == 10 {
+            break;
+        }
+        count += 1;
+        println!(&quot;count is {}&quot;, count);
+    }
+     println!(&quot;\nAfter first loop.\n&quot;);
+     //从循环表达式中返回一个值 
+     let result = loop {
+        if count == 15 {
+            // 用break语句返回一个值 
+            break count * 20;
+        }
+        count += 1;
+        println!(&quot;count is {}&quot;, count);
+    }; 
+    println!(&quot;\nAfter second loop, result is {}&quot;, result);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>count is 1
+count is 2
+count is 3
+count is 4
+count is 5
+count is 6
+count is 7
+count is 8
+count is 9
+count is 10After first loop.count is 11
+count is 12
+count is 13
+count is 14
+count is 15After second loop, result is 300
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="while-循环"><a class="header" href="#while-循环">While 循环</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let mut count = 0;
+    let letters: [char; 5] = ['a', 'b', 'c', 'd', 'e']; 
+    while count &lt; letters.len() {
+        println!(&quot;letter[{}] is {}&quot;, count, letters[count]);
+        count += 1;
+    }
+    // 与循环表达式相反，while循环中的break语句不能返回一个值。
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>letter[0] is a
+letter[1] is b
+letter[2] is c
+letter[3] is d
+letter[4] is e
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="for循环"><a class="header" href="#for循环">For循环</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let message = ['m', 'e', 's', 's', 'a', 'g', 'e']; 
+    /* 迭代器
+    - 实现了对一个集合中的每个项目进行迭代的逻辑。
+    - next()方法返回一个序列中的下一个项目。
+      */
+    for item in message.iter() {
+        println!(&quot;current item is {}&quot;, item);
+    } 
+    println!(&quot;&quot;); 
+// 迭代时也要获得索引
+    
+// enumerate()返回一个带有索引/项目_引用对的元组。
+    
+// 要获得项目，使用&amp;item
+    
+// 因为迭代器会返回一个引用（&amp;&lt;NAME&gt;）。
+    
+// 添加&amp;（借用操作符）可以让你
+    
+// 借用该变量而不
+    
+// 取得所有权（参见借用部分）。
+    
+// 然后当你在for循环范围内使用该变量时，你就可以访问该值了 
+for (index, &amp;item) in message.iter().enumerate() {
+        println!(&quot;item {} is {}&quot;, index, item);
+        if item == 'e' {
+            break;
+        }
+    }
+     println!(&quot;&quot;); 
+// 在一个数字范围上进行迭代
+    
+// 排除该范围的终值
+ for number in 0..5 {
+        println!(&quot;number is {}&quot;, number);
+    }
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>current item is m
+current item is e
+current item is s
+current item is s
+current item is a
+current item is g
+current item is eitem 0 is m
+item 1 is enumber is 0
+number is 1
+number is 2
+number is 3
+number is 4
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="嵌套循环"><a class="header" href="#嵌套循环">嵌套循环</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+fn main() {
+    let mut matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]; 
+    // 从矩阵中读取 
+    for row in matrix.iter() {
+        for number in row.iter() {
+            print!(&quot;{}\t&quot;, number);
+        }
+        println!(&quot;&quot;);
+    } 
+    println!(&quot;=======================&quot;); 
+    // 修改可变矩阵的值
+    // iter_mut()返回可变的引用 
+    for row in matrix.iter_mut() {
+        for number in row.iter_mut() {
+            //用星号解除引用，以获得值本身 
+            *number += 20;
+            print!(&quot;{}\t&quot;, number);
+        }
+        println!(&quot;&quot;);
+    }
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>1 2 3
+4 5 6
+7 8 9
+=======================
+21 22 23
+24 25 26
+27 28 29
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="猜数游戏"><a class="header" href="#猜数游戏">猜数游戏</a></h1>
+<pre><pre class="playground"><code class="language-rust">use rand::Rng;
+use std::io;
+fn main() {
+    println!(&quot;Guess a number&quot;);
+    println!(&quot;Please enter your guess:&quot;); 
+    let secret_number = rand::thread_rng().gen_range(1, 101);
+    println!(&quot;The secret number is {}&quot;, secret_number); 
+    // &quot;:: &quot;用于给定类型的关联函数（相当于OOP中的静态方法--以后会有更多的介绍）。
+    // String::new() 创建一个String类型的空字符串（可增长的UTF-8编码文本）。
+    let mut guess = String::new(); 
+    /*
+        std::io::stdin，如果你不使用文件顶部的导入的话
+        std::io::stdin() 返回一个std::io::stdin类型的实例
+    */ 
+    io::stdin()
+        .read_line(&amp;mut guess)
+        .expect(&quot;Failed to read line&quot;); 
+        println!(&quot;You guess: {}&quot;, guess);
+}
+</code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="基本统计"><a class="header" href="#基本统计">基本统计</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let numbers = [1, 9, -2, 0, 23, 20, -7, 13, 37, 20, 56, -18, 20, 3];
+    let mut max: i32 = numbers[0];
+    let mut min: i32 = numbers[0];
+    let mut mean: f64 = 0.0;
+     for item in numbers.iter() {
+        mean += *item as f64; if *item &gt; max {
+            max = *item;
+        } if *item &lt; min {
+            min = *item;
+        }
+    }
+     mean /= numbers.len() as f64; 
+    assert_eq!(max, 56);
+    assert_eq!(min, -18);
+    assert_eq!(mean, 12.5); println!(&quot;Test passed!&quot;);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Test passed!
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="范围"><a class="header" href="#范围">范围</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+
+fn main() {
+    let planet = &quot;Dunya&quot;;
+    if true {
+        let planet = &quot;Jupiter&quot;;
+        println!(&quot;planet is {}&quot;, planet);
+    } 
+    println!(&quot;planet is {}&quot;, planet);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>planet is Jupiter
+planet is Dunya
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="变量可变性"><a class="header" href="#变量可变性">变量可变性</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let car = &quot;Mitsubishi&quot;;
+    println!(&quot;car is a {}&quot;, car); 
+    //代码块，有自己的范围 
+    {
+        // 变量遮罩，这里的car就跟上面的可以不一样
+        let car = 1;
+        println!(&quot;car is a {}&quot;, car);
+    } 
+    println!(&quot;car is a {}&quot;, car);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>car is a Mitsubishi
+car is a 1
+car is a Mitsubishi
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="堆内存和栈内存"><a class="header" href="#堆内存和栈内存">堆内存和栈内存</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+fn main() {
+    println!(&quot;=== STACK ====\n&quot;);
+    println!(&quot;- values stored in sequential order of insertion&quot;);
+    println!(&quot;- data added in LIFO (last in first out)&quot;);
+    println!(&quot;- stores variables - pushing values on the stack&quot;);
+    println!(&quot;- also holds info for function execution&quot;);
+    println!(
+        &quot;- stack have very fast access because no guessing where to put data, it will be on top&quot;
+    );
+    println!(&quot;- stacks are limited in size&quot;);
+    println!(&quot;- all data in stack must have a known fixed size\n&quot;);
+    func1();
+    println!(&quot;func1 done&quot;);
+    println!(&quot;pop variable y off the stack&quot;);
+    println!(&quot;pop variable z off the stack\n&quot;);println!(&quot;\n\n=== HEAP ====\n&quot;);
+    println!(&quot;- adding data to heap, search for large enough place in memory to store data&quot;);
+    println!(&quot;- marks memory spot as being used (allocating) and put data in it&quot;);
+    println!(&quot;- accessing data in heap is more complex than the stack because the stack allocates anywhere in available memory&quot;);
+    println!(&quot;- slower than stack&quot;);
+    println!(&quot;- dynamically add and remove data&quot;);
+    println!(&quot;\n\n=== POINTER ====\n&quot;);
+    println!(&quot;- data type that stores a memory address&quot;);
+    println!(&quot;- pointers have a fixed size so can be stored on the stack&quot;);
+    println!(&quot;- adding and accessing data on the heap is done through pointers (addresses in memory)&quot;);
+}
+fn func1() {
+    println!(&quot;func1 executing...&quot;);
+    let y = 3.11;
+    println!(&quot;push variable y = {} onto the stack&quot;, y);
+    let z = 5;
+    println!(&quot;push variable z = {} onto the stack&quot;, z);
+    func2();
+    println!(&quot;func2 done&quot;);
+    println!(&quot;pop variable arr off the stack&quot;);
+}
+fn func2() {
+    println!(&quot;func2 executing...&quot;);
+    let arr = [2, 3, 4];
+    println!(&quot;push variable arr = {:?} onto the stack&quot;, arr);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>=== STACK ====- 
+values stored in sequential order of insertion
+- data added in LIFO (last in first out)
+- stores variables - pushing values on the stack
+- also holds info for function execution
+- stack have very fast access because no guessing where to put data, it will be on top
+- stacks are limited in size
+- all data in stack must have a known fixed sizefunc1 executing...
+push variable y = 3.11 onto the stack
+push variable z = 5 onto the stack
+func2 executing...
+push variable arr = [2, 3, 4] onto the stack
+func2 done
+pop variable arr off the stack
+func1 done
+pop variable y off the stack
+pop variable z off the stack=== HEAP ====- adding data to heap, search for large enough place in memory to store data
+- marks memory spot as being used (allocating) and put data in it
+- accessing data in heap is more complex than the stack because the stack allocates anywhere in available memory
+- slower than stack
+- dynamically add and remove data=== POINTER ====- data type that stores a memory address
+- pointers have a fixed size so can be stored on the stack
+- adding and accessing data on the heap is done through pointers (addresses in memory)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="字符串"><a class="header" href="#字符串">字符串</a></h1>
+<p>Rust has two kinds of string types.</p>
+<pre><pre class="playground"><code class="language-rust">
+fn main() {
+    
+// 两种类型的字符串表示。
+
+    
+// - 字符串：硬编码到可执行文件中。
+    
+// 这些是不可改变的，在编译前必须知道。
+
+    
+// - 字符串类型：在堆上分配的数据，\n/tmutable，在运行时动态生成。
+// 存储在堆上的字符串字面意义 
+// String::from() 从一个字符串字面内容中创建一个字符串类型。
+//序列[m,a,r,s]将被存储在堆中。
+// 为了访问存储在堆中的字符串，程序在堆中持有一个指针（消息变量）。
+// 栈上的指针包括第一个字符的内存地址、字符串的长度和容量，这样你就知道在堆上为它分配了多少内存。
+let mut message = String::from(&quot;Jupiter&quot;);
+    println!(&quot;message is {}&quot;, message); 
+//将字符串附加到原始的字符串上 
+// 如果需要的内存大于容量，指针地址以及长度和容量就会更新，以反映内存中的新位置。
+ message.push_str(&quot; is smoke and mirrors&quot;);
+    println!(&quot;message is {}&quot;, message); 
+// 推送一个字符
+    message.push('!');
+    println!(&quot;message is {}&quot;, message); 
+// 获取长度
+   println!(&quot;message lenght is {}&quot;, message.len()); 
+// 获得以字节为单位的容量
+   println!(&quot;message capacity is {}&quot;, message.capacity()); 
+// 检查是否为空
+  println!(&quot;Is empty: {}&quot;, message.is_empty()); 
+// 字符串搜索
+  println!(&quot;Contains smoke: {}&quot;, message.contains(&quot;smoke&quot;)); 
+// 替换字符串
+  println!(&quot;message is {}&quot;, message.replace(&quot;smoke&quot;,&quot;gaz&quot;)); 
+// 循环处理字符串中的单词（用空白处分割）。
+  for word in message.split_whitespace() {
+    println!(&quot;word is {}&quot;, word);
+  } 
+//创建有容量的字符串
+ let mut s = String::with_capacity(4); 
+// 4个字节的容量
+  println!(&quot;s capacity is  {} bytes&quot;, s.capacity()); 
+// 消耗的是1个字节
+  
+// 拉丁字母通常有1个字节的大小
+  
+// 记住Unicode支持4字节的字符
+  s.push('Q'); s.push('W'); 
+// 消耗了1个字节
+  s.push_str(&quot;er&quot;); 
+// 消耗了2个字节 
+//超过了字符串的容量（自动增加并在内存中重新分配）。
+s.push('T'); 
+// 消耗1个字节
+  println!(&quot;s capacity is  now {} bytes&quot;, s.capacity());
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>message is Jupiter
+message is Jupiter is smoke and mirrors
+message is Jupiter is smoke and mirrors!
+message lenght is 29
+message capacity is 56
+Is empty: false
+Contains smoke: true
+message is Jupiter is gaz and mirrors!
+word is Jupiter
+word is is
+word is smoke
+word is and
+word is mirrors!
+s capacity is  4 bytes
+s capacity is  now 8 bytes
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="所有权"><a class="header" href="#所有权">所有权</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    /*需要清理不再需要的已分配内存块
+    在C/C++中：malloc()和free()用于手动管理内存。
+    另一种方法是垃圾收集，它是自动的 */ /*
+    Rust使用OWNERSHIP系统。
+       - 变量负责释放自己的资源
+       - 每个值在同一时间只能由一个变量拥有
+       - 当拥有的变量超出范围时，该值就会被丢弃。
+       - 有一些方法可以将一个值的所有权从一个变量转移到另一个变量。
+    */ 
+    let outer_planet: String;
+    let outer_galaxy: String;
+    let outer_planet_position: i32; 
+    // 内部代码块范围 
+    {
+        let inner_planet = String::from(&quot;Mercury&quot;);
+        println!(&quot;inner_planet is {}&quot;, inner_planet); 
+        /*
+        因为所有权规定每个值/数据只有一个所有者。
+         - inner_planet将不再指向堆上的String值。
+         - 在Rust中，将所有权从一个变量转移到另一个变量被称为 &quot;移动&quot;。
+         - 这意味着在Rust中没有存储在堆上的数据的浅层拷贝。
+            (浅层拷贝=多个变量指向内存中的相同数据)
+        */ 
+        // 转移所有权
+        outer_planet = inner_planet; 
+        // 在转移字符串数据的所有权后，不能再使用inner_planet变量了
+        // println! (&quot;inner_planet is {}&quot;, inner_planet); 
+        // =&gt; 会出现panic
+        let mut inner_galaxy = String::from(&quot;Milky Way&quot;);
+        println!(&quot;inner_galaxy is {}&quot;, inner_galaxy); 
+        //重复存储在堆上的数据，创建一个字符串数据的深度拷贝
+
+        outer_galaxy = inner_galaxy.clone(); 
+        inner_galaxy.clear();
+        println!(&quot;inner_galaxy is now: {}&quot;, inner_galaxy);
+        println!(&quot;outer_galaxy is {}&quot;, outer_galaxy); 
+        // 整数数据类型住在堆栈中。
+        let mut inner_planet_position = 1;
+        println!(&quot;inner_planet_position is {}&quot;, inner_planet_position);
+        /*
+        为 outer_planet_position 创建一个整数数据的副本。
+        - 所有权受到尊重（没有浅层拷贝--每次每个值只有一个变量）--通常STACK-ONLY数据类型（即固定大小）被隐式拷贝
+            当包含它们的变量被分配给另一个变量时 - 存储在堆栈中的数据类型实现了允许它们被复制而不是移动的特性
+        */ 
+        outer_planet_position = inner_planet_position;
+        inner_planet_position += 4; 
+        println!(&quot;inner_planet_position is {}&quot;, inner_planet_position); 
+        println!(&quot;outer_planet_position is {}&quot;, outer_planet_position); 
+    } 
+    println!(&quot;\nouter_planet is {}&quot;, outer_planet);
+    println!(&quot;outer_galaxy is {}&quot;, outer_galaxy);
+    println!(&quot;outer_planet_position is {}&quot;, outer_planet_position);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>inner_planet is Mercury
+inner_galaxy is Milky Way
+inner_galaxy is now:
+outer_galaxy is Milky Way
+inner_planet_position is 1
+inner_planet_position is 5
+outer_planet_position is 1
+</code></pre>
+<p>更多案例:</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let mut arr_1: [u8; 2] = [33, 66]; 
+    // ////////////////
+    // 固定长度的类型（存储在堆栈中）被COPIED。
+    // //////////////// 
+    let arr_2 = arr_1;
+    println!(&quot;arr_1 is {:?}&quot;, arr_1);
+    arr_1 = [1, 2];
+    println!(&quot;arr_1 is now {:?}&quot;, arr_1);
+    println!(&quot;arr_2 is {:?}&quot;, arr_2); 
+    // ////////////////
+    // 可变长度类型的值将所有权转移到新的变量上
+    // //////////////// 
+    let vec_1 = vec![3, 4];
+    let vec_2 = vec_1; 
+    //不能再使用所有权已被 &quot;转移 &quot;的变量了 
+    // 
+    println!(&quot;vec_1 is {:?}&quot;, vec_1); 
+    // =&gt; wll panic println! (&quot;vec_2 is {:?}&quot;, vec_2); 
+    // 借用一个变量所拥有的值而不移动所有权。
+    // 使用对该值的引用 
+    let vec_4 = vec![5, 6, 7]; 
+    //用一个引用来借取值（&amp;&lt;NAME&gt;）。
+    let vec_5 = &amp;vec_4;
+    println!(&quot;vec_4 is {:?}&quot;, vec_4);
+    println!(&quot;vec_5 is {:?}&quot;, vec_5);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>输出
+arr_1 is [33, 66]
+arr_1 is now [1, 2]
+arr_2 is [33, 66]
+vec_2 is [3, 4]
+vec_4 is [5, 6, 7]
+vec_5 is [5, 6, 7]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="转让所有权存储在stack上的数据"><a class="header" href="#转让所有权存储在stack上的数据">转让所有权（存储在STACK上的数据）</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let rocket_fuel = 1;
+    process_fuel(rocket_fuel);
+    println!(&quot;rocket_fuel is {}&quot;, rocket_fuel);
+}
+/*
+    - 因为推进剂是i32的，所以住在堆栈上。
+    作为参数传递的值在fn范围内被复制。
+    - 为了能够修改函数范围内的拷贝，请使用mut关键字
+*/
+fn process_fuel(mut propellant: i32) {
+    //副本被修改 
+    propellant += 2;
+    println!(&quot;Processing propellant {}&quot;, propellant);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Processing propellant 3
+rocket_fuel is 1
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="转让所有权存储在堆上的数据"><a class="header" href="#转让所有权存储在堆上的数据">转让所有权（存储在堆上的数据)</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let rocket_fuel = String::from(&quot;MU-RF&quot;);
+    process_fuel(rocket_fuel); 
+    //字符串的所有权已经转移到了推进剂变量上。
+
+    // 下面的代码会出现恐慌，因为火箭燃料的所有权已经被剥夺，所以你不能再使用这个变量。
+    println!(&quot;rocket_fuel is {}&quot;, rocket_fuel);
+}
+/*
+    - 因为推进剂是字符串，所以存在于HEAP中。
+    - 当作为参数传递给函数时，数据存储在堆中。
+    - 函数的局部变量得到一个指向所传递数据的指针
+    - 因此，本地函数变量获得了数据的所有权。
+*/
+fn process_fuel(propellant: String) {
+    //推进器对存储在堆上的字符串数据拥有所有权 
+    println!(&quot;Processing propellant {}&quot;, propellant);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Processing propellant MU-RF
+</code></pre>
+<blockquote>
+<p>注意：作为一个Node.js开发者，需要记住的是，与可变长度数据相关的变量（又称存储在堆上的变量）并不包含数据本身，而是一个指向内存中数据的指针。指针是对数据的引用，但也不是数据本身，它描述了数据以及如何检索它。</p>
+</blockquote>
+<p>为了保持Rocket_fuel变量对该字符串的所有权，你可以克隆该数据。</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let rocket_fuel = String::from(&quot;MU-RF&quot;); 
+    //字符串的所有权由rocket_fuel变量保存。
+    //字符串数据的克隆/拷贝作为参数被传递。
+    process_fuel( rocket_fuel.clone() );
+
+    // 没有panic，因为Rocket_fuel仍然拥有字符串数据。
+    println!(&quot;rocket_fuel is {}&quot;, rocket_fuel);
+}
+fn process_fuel(propellant: String) {
+    // 推进器对克隆的字符串数据拥有所有权 
+    // 克隆上的突变当然不会影响原始数据（但请记住，你需要在函数签名中声明突变）。
+    println!(&quot;Processing propellant {}&quot;, propellant);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Processing propellant MU-RF
+rocket_fuel is MU-RF
+</code></pre>
+<p>如果你不想复制数据，需要原始变量保持数据的所有权，那么你可以在函数完成后将所有权传回。</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let mut rocket_fuel = String::from(&quot;MU-RF&quot;); 
+    // 当然，你可以再次声明，而不需要Mut 
+    rocket_fuel = process_fuel(rocket_fuel); 
+    println!(&quot;rocket_fuel is {}&quot;, rocket_fuel);
+}
+// 注意参数声明中的 mut，以便能够对函数范围内传递的数据进行变异。
+// 注意字符串的返回类型和最后一行没有分号。
+fn process_fuel(mut propellant: String) -&gt; String {
+    println!(&quot;Processing propellant {}&quot;, propellant);
+
+    propellant.push_str(&quot;-super&quot;);
+
+    propellant
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Processing propellant MU-RF
+rocket_fuel is MU-RF-super
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="借用"><a class="header" href="#借用">借用</a></h1>
+<p>All this stuff about ownership is great but what if you don't need to transfer ownership, you just need the data:</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    
+// 借用：在不取得所有权的情况下访问数据 
+//创建一个你想借用的变量的引用
+    
+// 使用借用操作符&quot;&amp;&quot;。
+let rocket_fuel = String::from(&quot;MU-RF&quot;); 
+// 注意借用操作符来创建一个引用
+    
+// 该函数期望的是一个引用，而不是一个值 
+let length = process_fuel(&amp;rocket_fuel); 
+println!(&quot;rocket_fuel is {}, length: {}&quot;, rocket_fuel,length);
+}
+// 注意参数类型中的借用操作符
+
+// 我们希望propellant是对一个字符串的引用。
+
+// 而不是一个字符串值(/pointer to it...)
+fn process_fuel(propellant: &amp;String) -&gt; usize {
+    
+// propellant是指向字符串数据的变量的一个引用，用来借用数据。
+// 再说一遍，这里没有SHALLOW COPY，因为propellant借用了指针，它确实包含了指针本身（假设它是一个指向另一个指针的指针...）。
+println!(&quot;Processing propellant {}&quot;, propellant);
+    let length = propellant.len();
+    length 
+//当推进剂变量在函数结束时超出范围。
+    
+// 字符串数据仍然在堆中，因为它仍然属于原始变量（火箭燃料）。
+    }
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+Processing propellant MU-RF
+rocket_fuel is MU-RF, lenght: 5
+
+In Rust, data will most often be passed by reference (borrowed)than by value (ownership transfer). But you still need to know which variable really owns the data.
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="改变借用数据"><a class="header" href="#改变借用数据">改变借用数据</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    // 注意它是一个可变的变量 
+    let mut rocket_fuel = String::from(&quot;MU-RF&quot;); 
+    // 注意我们传递了一个可变的引用（&amp;mut &lt;TYPE&gt;）。
+    let length = process_fuel(&amp;mut rocket_fuel); 
+    println!(&quot;rocket_fuel is {}, length: {}&quot;, rocket_fuel, length);
+}
+// 注意参数列表中的&amp;mut
+// 我们希望propellant是一个对String的可变引用
+fn process_fuel(propellant: &amp;mut String) -&gt; usize {
+    println!(&quot;Processing propellant {}&quot;, propellant); 
+    //突变借来的数据 
+    propellant.push_str(&quot;333&quot;); 
+    let length = propellant.len();
+    length
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Processing propellant MU-RF
+rocket_fuel is MU-RF333, lenght: 8
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="借用的数据限制"><a class="header" href="#借用的数据限制">借用的数据限制</a></h1>
+<p>一旦你为一个变量创建了一个可变的引用，你就不能在同一范围内为它创建其他引用。</p>
+<p>这可以防止数据竞赛，因为当多个引用可以访问和变异相同的数据时，会发生数据竞赛。</p>
+<p>在编写处理多线程并发执行的程序时，数据竞赛是一个常见的问题
+（不管是什么编程语言---即使是使用Node.js的JavaScript[它应该是单线程的......但高级用例允许多处理和多线程......了解你的工具！] ）。]).</p>
+<p>这种限制允许Rust在编译时防止数据竞赛。</p>
+<p>总结一下（注意大括号表示不同的作用域）。</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    
+// IMMUTABLE引用 = 每个范围内你想要多少就有多少 
+    {
+        let something = String::from(&quot;a thing&quot;); 
+        let one_ref = &amp;something;
+        let another_ref = &amp;something;
+        let some_ither_ref = &amp;something; 
+        println!(&quot;{:?}&quot;, (one_ref, another_ref, some_ither_ref));
+    } 
+// MUTABLE引用 = 每个范围一个 
+    {
+        let mut something_changing = String::from(&quot;another thing&quot;); 
+        let the_one_and_only_ref = &amp;mut something_changing; 
+// 不能创建对 &quot;something_changing &quot;的其他引用。
+        
+// 不管是可变的还是不可变的 
+// 以下情况会使程序惊慌失措
+        
+// 
+        let trying_ref = &amp;something_changing;
+        
+// 
+        let trying_other_ref = &amp;mut something_changing; 
+        println!(&quot;It's only {}&quot;, the_one_and_only_ref);
+    }
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>(&quot;a thing&quot;, &quot;a thing&quot;, &quot;a thing&quot;)
+It's only another thing
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="未知引用"><a class="header" href="#未知引用">未知引用</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let everything = create_something(); 
+    // &quot;everything &quot;是一个陈旧的引用，指向什么都没有。
+    // 程序将无法编译 
+    println!(&quot;everything is {}&quot;, everything);
+}
+// notice the return type
+fn create_something() -&gt; &amp;String {
+    let new_thing = String::from(&quot;new in town&quot;); 
+    // 这是一个悬空的引用，因为。
+    因为: // new_thing在函数结束时已经超出了范围。
+    // 返回对该变量的引用是没有意义的
+    // 因为数据已经从内存中删除了，因为它不再属于一个变量了。
+    &amp;new_thing
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>程序将无法编译，因为存在悬空引用。解决办法是对创建的字符串而不是对它的引用。
+</code></pre>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let everything = create_something();
+    println!(&quot;everything is {}&quot;, everything);
+}
+fn create_something() -&gt; String {
+    let new_thing = String::from(&quot;new in town&quot;);
+    new_thing
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>everything is new in town
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="数据结构"><a class="header" href="#数据结构">数据结构</a></h1>
+<ul>
+<li>用来分组混合数据类型的多个相关项目</li>
+<li>元素被命名（与图元不同，图元是有顺序的</li>
+<li>两种结构（常规结构和元组结构</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">// tuple结构
+// 用于存储没有命名字段的混合数据集合
+// 用于区分为特定的类型
+// （不是普通的元组）结构 Signal(u8, bool, String)。
+// 常规结构
+// 结构名称被大写
+//像JavaScript和OOP中的类一样
+struct Car {
+    // 结构中的字段
+    model: String,
+    year: String,
+    used: bool,
+}
+// 方法：与结构相关的函数/子程序
+// 方法是在结构的上下文中定义的。
+// 方法的第一个参数是对一个结构实例的引用
+impl Car {
+    // construct car
+    fn new(m: &amp;str, y: &amp;str) -&gt; Car {
+        Car {
+            model: m.to_string(),
+            year: y.to_string(),
+            used: false,
+        }
+    } 
+    // self等同于JavaScript中的 &quot;this&quot;。
+    fn serialize(&amp;self) -&gt; String {
+        format!(
+            &quot;model: {} - year: {} - used: {}&quot;,
+            self.model, self.year, self.used
+        )
+    } 
+    // 变更状态
+    fn marked_used(&amp;mut self) {
+        self.used = true;
+    }
+}
+struct Position {
+  latitude: f64,
+  longitude: f64
+}
+fn print_signal(s: &amp;Signal) {
+    println!(&quot;s1 is {}, {}, {}&quot;, s.0, s.1, s.2);
+}
+fn main() {
+    let mut pos_1 = Position {
+        latitude: 27.299112,
+        longitude: 95.387110,
+    }; 
+    println!(
+      &quot;pos_1 is {:.3}, {:.3}&quot;,
+      pos_1.latitude,
+      pos_1.longitude
+    ); 
+    pos_1.latitude = 23.1111;
+    println!(
+      &quot;pos_1 is now {:.3}, {:.3}&quot;,
+      pos_1.latitude,
+      pos_1.longitude
+    ); 
+    let mut s1 = Signal(0, true, String::from(&quot;ok&quot;)); 
+    // 元组结构的字段可以像普通元组的值一样被访问。
+    // 使用它们的索引
+    // 记住元组结构没有命名的字段 
+    print_signal(&amp;s1); 
+    s1.0 = 23;
+    s1.1 = false;
+    s1.2 = String::from(&quot;NETERR&quot;); 
+    println!(&quot;s1 is now {}, {}, {}&quot;, s1.0, s1.1, s1.2); 
+    let car_1 = Car::new(&quot;QBC&quot;, &quot;2133&quot;);
+    println!(&quot;car_1 is a {} of {}&quot;, car_1.model, car_1.year); 
+    let is_used = if car_1.used == true {
+        &quot;used&quot;
+    } else {
+        &quot;brand new&quot;
+    };
+    println!(&quot;car_1 is {}&quot;, is_used);
+    println!(&quot;car_1 is {}&quot;, car_1.serialize()); 
+    let mut car_2 = Car::new(&quot;ZZ7&quot;, &quot;2042&quot;);
+    println!(&quot;car_2 is a {}&quot;, car_2.serialize()); 
+    car_2.marked_used();
+    println!(&quot;car_2 is now {}&quot;, car_2.serialize());
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>pos_1 is 27.299, 95.387
+pos_1 is now 23.111, 95.387
+s1 is 0, true, ok
+s1 is now 23, false, NETERR
+car_1 is a QBC of 2133
+car_1 is brand new
+car_1 is model: QBC - year: 2133 - used: false
+car_2 is a model: ZZ7 - year: 2042 - used: false
+car_2 is now model: ZZ7 - year: 2042 - used: true
+</code></pre>
+<p>更多结构的示例：</p>
+<pre><pre class="playground"><code class="language-rust">// 需要使用debug和clone traits
+// 能够用调试运算符打印结构体的实例
+// 能够克隆该结构的一个实例。
+// 以后会有更多关于特质的内容
+#[derive(Debug, Clone)]
+struct Spaceship {
+    name: String,
+    crew: u8,
+    propellant: f64,
+}
+// methods are defined within a impl block
+impl Spaceship {
+    fn get_name(&amp;self) -&gt; &amp;str {
+      //用借贷运算符将字符串转换为字符串片断 
+      &amp;self.name
+    } 
+    fn add_fuel(&amp;mut self, gallons: f64) {
+        self.propellant += gallons;
+    } 
+    // 这是一个关联函数
+    // 与结构数据类型相关联
+    // 与方法类似，但没有&amp;self引用
+    // 用于与该结构相关的一般函数。
+    // 而不是一个特定的实例
+    //（就像面向对象中的类静态方法）。
+    // 通常用于构建结构体的实例 
+    fn new(name: &amp;str) -&gt; Spaceship {
+      Spaceship {
+        name: String::from(name),
+        crew: 11,          // 默认值，所有实例都一样
+        propellant: 0.0    // 默认值，所有实例都一样
+      }
+    }
+}
+fn main() {
+    let mut spaceship1 = Spaceship {
+        name: String::from(&quot;spaceship1&quot;),
+        crew: 123,
+        propellant: 1234567.654,
+    }; 
+    //访问字段值 
+    println!(&quot;spaceship1 has {} members.&quot;, spaceship1.crew); 
+    spaceship1.crew = 99; 
+    println!(
+        &quot;After attack, spaceship1 has now {} members.&quot;,
+        spaceship1.crew
+    ); 
+    println!(&quot;spaceship1 is {:?}&quot;, spaceship1); 
+    // 默认情况下，结构数据被存储在 STACK 上。
+    // 如果结构包含HEAP存储的数据（如字符串）。
+    // 指针存储在STACK上，数据存储在HEAP上。
+    // 从其他实例的字段中创建结构实例
+    //（就像JS中的spread operator，但是是两个点而不是三个点）。
+    // 这就是所谓的结构更新语法
+    // 它允许创建新的实例
+    // 通过复制现有实例的字段值来创建新实例
+    //（除了在新实例中明确设置的字段）。
+    let spaceship2 = Spaceship {
+        name: String::from(&quot;Galactos&quot;),
+        ..spaceship1
+    }; 
+    println!(&quot;spaceship2 is {:?} members.&quot;, spaceship2); 
+    // 在修改复制的结构实例时
+    // 不会影响复制后的新实例。
+    //（与保留的JavaScript引用不同。
+    // 当用数组传播对象时......) 
+    spaceship1.name = String::from(&quot;Battlestar&quot;); 
+    spaceship1.crew = 78; 
+    assert_eq!(spaceship2.crew, 99); 
+    println!(&quot;spaceship1 is {:?}&quot;, spaceship1); 
+    println!(&quot;spaceship2 is {:?}&quot;, spaceship2); 
+    // 要复制所有字段，甚至是基于堆的字段。
+    // 你需要创建一个结构实例的副本。
+    // 否则，当使用结构更新语法时，会转移基于堆的数据的所有权
+    // 这意味着你不能再使用复制的实例中的相关字段。
+    let mut spaceship3 = Spaceship {
+        //需要手动实现克隆特性
+        //在结构定义中（见上文）。
+        ..spaceship1.clone()
+    }; 
+    println!(&quot;spaceship3 is {:?}&quot;, spaceship3); 
+    let name = spaceship3.get_name(); 
+    println!(&quot;name is {}&quot;, name); 
+    println!(&quot;spaceship3 propellant is {}&quot;, spaceship3.propellant);
+
+    spaceship3.add_fuel(4567.113);
+
+    println!(
+      &quot;After going to space refuel station, spaceship3 propellant is now {}&quot;,
+      spaceship3.propellant
+    ); 
+    //要调用一个指定的函数，请使用路径操作符（::）。
+    let spaceship4 = Spaceship::new(&quot;Serenity&quot;); 
+    assert_eq!(spaceship4.crew, 11);
+}
+</code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="枚举"><a class="header" href="#枚举">枚举</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+//定义了一个具有多种可能变体的数据类型
+enum Controller {
+    Turbo,
+    Up,
+    Down,
+    Left,
+    Right,
+    X,
+    Y,
+    A,
+    B,
+}
+fn push_button_notify(c: &amp;Controller) {
+    
+// 模式匹配（相当于JavaScript中的switch）。
+    match c {
+        Controller::Turbo =&gt; println!(&quot;Turbo button pushed.&quot;),
+        Controller::Up =&gt; println!(&quot;Up button pushed.&quot;),
+        Controller::Down =&gt; println!(&quot;Down button pushed.&quot;),
+        Controller::Left =&gt; println!(&quot;Left button pushed.&quot;),
+        Controller::Right =&gt; println!(&quot;Right button pushed.&quot;),
+        Controller::Y =&gt; println!(&quot;Y button pushed.&quot;),
+        Controller::X =&gt; println!(&quot;X button pushed.&quot;),
+        Controller::A =&gt; println!(&quot;A button pushed.&quot;),
+        Controller::B =&gt; println!(&quot;B button pushed.&quot;),
+    }
+}
+fn main() {
+    let secret_push_combo = [
+        Controller::Up,
+        Controller::Left,
+        Controller::A,
+        Controller::Turbo,
+        Controller::Y,
+        Controller::B,
+        Controller::Turbo,
+        Controller::Down,
+        Controller::Right,
+        Controller::X,
+    ];
+     for push in secret_push_combo.iter() {
+        push_button_notify(push);
+    }
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Up button pushed.
+Left button pushed.
+A button pushed.
+Turbo button pushed.
+Y button pushed.
+B button pushed.
+Turbo button pushed.
+Down button pushed.
+Right button pushed.
+X button pushed.
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="裁剪字符串"><a class="header" href="#裁剪字符串">裁剪字符串</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+fn main() {
+    let test1 = &quot;This is test1.        &quot;;
+    assert_eq!(trim_space(&amp;test1), &quot;This is test1.&quot;); let test2 = &quot;        This is test2.&quot;;
+    assert_eq!(trim_space(&amp;test2), &quot;This is test2.&quot;); let test3 = &quot;        This is test3.               &quot;;
+    assert_eq!(trim_space(&amp;test3), &quot;This is test3.&quot;); let test4 = &quot;This is test4.&quot;;
+    assert_eq!(trim_space(&amp;test4), &quot;This is test4.&quot;); let test5 = &quot;        &quot;;
+    assert_eq!(trim_space(&amp;test5), &quot;&quot;); let test6 = &quot;&quot;;
+    assert_eq!(trim_space(&amp;test6), &quot;&quot;); let test7 = &quot;    😸   &quot;;
+    assert_eq!(trim_space(&amp;test7), &quot;😸&quot;); let test8 = &quot;     😸😸 test8.   &quot;;
+    assert_eq!(trim_space(&amp;test8), &quot;😸😸 test8.&quot;); let test9 = &quot;     😸😸 test9. 😸😸   &quot;;
+    assert_eq!(trim_space(&amp;test9), &quot;😸😸 test9. 😸😸&quot;); 
+    // 注意：Rust中的字符串有一个trim()方法 
+    let test10 = &quot; 😸This is the last test😸.😸      &quot;;
+    let trimmed_message = test10.trim();
+    assert_eq!(trimmed_message, &quot;😸This is the last test😸.😸&quot;);
+}
+fn trim_space(s: &amp;str) -&gt; &amp;str {
+    let bytes = s.as_bytes();
+    let mut result = &quot;&quot;; 
+    //通过寻找第一个非空格字符来修剪前面的空格 
+    // 遍历字符串片段的字节表示法
+    // 我们这样做是因为我们使用了中间的字符串片断 
+    for (index, &amp;item) in bytes.iter().enumerate() {
+        if item != b' ' {
+            result = &amp;s[index..];
+            break;
+        }
+    } 
+    let bytes = result.as_bytes(); 
+    //通过查找最后一个非空格字符来修剪尾部的空格 
+    for t in bytes.iter().enumerate() {
+        let index = t.0;
+        let reverse_index = result.len() - index;
+        if bytes[reverse_index - 1] != b' ' {
+            result = &amp;result[..reverse_index];
+            break;
+        }
+    } 
+    result
+}
+</code></pre></pre>
+<p>其他解决方案:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn trim_space(s: &amp;str) -&gt; &amp;str {
+    let mut start = 0;
+    let mut end = 0; 
+    // 遍历字符串片断的字符 
+    for (index, character) in s.chars().enumerate() {
+        if character != ' ' {
+            start = index;
+            break;
+        }
+    } 
+    for (index, character) in s.chars().rev().enumerate() {
+        if character != ' ' {
+            end = s.len() - index;
+            break;
+        }
+    } 
+    &amp;s[start..end]
+}
+<span class="boring">}
+</span></code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="标准库"><a class="header" href="#标准库">标准库</a></h1>
+<ul>
+<li>文档: <a href="https://doc.rust-lang.org/std/">https://doc.rust-lang.org/std/</a></li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">
+// 使用声明是用来导入模块/库的。
+// 它把一个模块的路径带入程序的范围内
+// 标准库中的一些模块并不是Rust语言本身的一部分。
+// 意思是说，你需要导入它们--比如Node.js中的 &quot;fs &quot;模块--否则编译器将不知道它们是什么。
+// 否则编译器将不知道它们的含义)
+// 所有程序都默认使用标准库
+// [prelude](https://doc.rust-lang.org/std/prelude/index.html)是每个Rust程序都会自动导入的东西的列表。
+// 它并没有导入整个标准库（只有最常见的标准模块）。
+// 如果一个模块没有被包含在预演中，你需要手动将其导入。
+import ituse std::thread;
+fn main() {
+    let child = thread::spawn(move || 2 + 2);
+    let res = child.join(); 
+    println!(&quot;res is {}&quot;, res.unwrap());
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+res is 4
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="解析标准输入"><a class="header" href="#解析标准输入">解析标准输入</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+// 读取命令行的输入值
+std::io;
+fn main() {
+  let mut buffer = String::new();
+  println!(&quot;Enter your name:&quot;); 
+// ===== 访问stdin流 ===== 
+// read_line()函数将用输入的字符串更新缓冲区。
+  
+// read_line()函数阻止程序的执行，直到有人在命令行上输入东西为止 
+  let read_line_result = io::stdin().read_line(&amp;mut buffer);
+  println!(&quot;read_line_result is {:?}&quot;, read_line_result); 
+  println!(&quot;Welcome to Rust, {}&quot;, buffer); 
+// ===== 解析输入字符串 ======== 
+// 清除之前输入的缓冲区
+  buffer.clear(); 
+  println!(&quot;Enter the year when you started learning Rust:&quot;); 
+  let read_line_result = io::stdin().read_line(&amp;mut buffer);
+  println!(&quot;read_line_result is {:?}&quot;, read_line_result); 
+// 需要对输入的字符串进行修剪，因为在结尾处包含一个换行。
+  
+// 注意Turbofish操作符（::&lt;i32&gt;）表示要从输入字符串中解析的数据类型（这里是一个i32整数）。
+// parse()返回一个结果枚举。
+  
+// 结果枚举允许处理错误（后面会有更多介绍
+  
+// 使用unwrap函数来提取值 
+  let start_year = buffer.trim().parse::&lt;i32&gt;().unwrap();
+  println!(&quot;You started your Rust journey in {}&quot;, start_year); 
+//不使用turbofish操作符，将目标类型表示为变量类型 
+  let start_year: i32 = buffer.trim().parse().unwrap();
+  println!(&quot;You will be an expert in {}&quot;, start_year + 5);
+}
+</code></pre></pre>
+<p>输出 (&gt; 后面表示命令行输入)</p>
+<pre><code>Enter your name:
+&gt; Florian
+read_line_result is Ok(8)
+Welcome to Rust, FlorianEnter the year when you started learning Rust:
+&gt; 2021
+read_line_result is Ok(6)
+You started your Rust journey in 2021
+You will be an expert in 2026
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="crates"><a class="header" href="#crates">Crates</a></h1>
+<ul>
+<li>源代码文件的收集</li>
+<li>crates注册仓库。 <a href="https://crates.io/">crates.io</a>
+(相当于<a href="https://www.npmjs.com/">npmjs.com</a>的Node.js模块)</li>
+<li>两种类型。
+<ul>
+<li>二进制crate
+包含用于编译执行程序的源代码</li>
+<li>库crate
+包含用于执行其他程序的代码</li>
+</ul>
+</li>
+<li>要使用第三方程序箱，请在Cargo.toml文件的[dependencies]部分添加crate的名称和版本（外部crate）。</li>
+</ul>
+<pre><code class="language-yml">[package]
+name = &quot;crates&quot;
+version = &quot;0.1.0&quot;
+authors = [&quot;Florian GOTO &lt;&lt;you@example.com&gt;&gt;&quot;]
+edition = &quot;2018&quot;
+# 在&lt;https://doc.rust-lang.org/cargo/reference/manifest.html&gt;[dependencies]看到更多的键和它们的定义。
+# 添加随机数生成工具箱
+rand = &quot;0.8.3&quot;
+</code></pre>
+<ul>
+<li>Cargo will automatically download the crates in the [dependencies] section along with their own dependencies before compiling</li>
+<li>to use the downloaded crate</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">use rand;
+fn main() {
+  let random_number = rand::random::&lt;u8&gt;();
+  println!(&quot;random_number is {}&quot;, random_number);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>random_number is 97
+</code></pre>
+<ul>
+<li>如果你使用一个板块的特定函数，请在use语句中直接指定它（编译器会警告你与本地定义的代码发生名称冲突）。</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">// 只导入 rand 软件的 random() 函数 rand::random。
+// 从rand crate prelude中导入所有内容
+ use rand::prelude::*;
+ fn main() {
+  let random_number = random::&lt;u8&gt;();
+  println!(&quot;random_number is {}&quot;, random_number);
+}
+//不能在同一范围内有一个名为随机的局部函数
+
+// 由于名称冲突，如果添加以下代码，程序将无法编译
+ fn random() -&gt; u8 {
+
+//   123
+
+ }
+</code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="猜数游戏重构版"><a class="header" href="#猜数游戏重构版">猜数游戏重构版</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+use rand::prelude::*;
+use std::io;fn main() {
+    const MAX_RETRIES: i8 = 3;
+    //生成指定范围内的随机数
+    let random_number: i8 = thread_rng().gen_range(1..101);
+    let mut buffer = String::new();
+    let mut retry_count = 0; 
+    println!(&quot;Guess a number between 1 and 100:&quot;); 
+    while retry_count &lt; MAX_RETRIES {
+       //清除之前的猜测
+       buffer.clear(); 
+       io::stdin()
+            .read_line(&amp;mut buffer)
+            .expect(&quot;Failed to read line&quot;); 
+            // expect()等同于unwrap()
+       // 用于从结果枚举中获取值
+       // 当发生错误时，它允许打印一个自定义的信息 
+       let guess = buffer.trim()
+                         .parse::&lt;i8&gt;()
+                         .expect(&quot;Failed to parse number&quot;); 
+                         if guess &lt; random_number {
+            retry_count += 1;
+            println!(
+                &quot;too low. {}&quot;,
+                if retry_count &lt; MAX_RETRIES {
+                    &quot;Try again:&quot;
+                } else {
+                    &quot;&quot;
+                }
+            );
+        } 
+        if guess &gt; random_number {
+            retry_count += 1;
+            println!(
+                &quot;too high. {}&quot;,
+                if retry_count &lt; MAX_RETRIES {
+                    &quot;Try again:&quot;
+                } else {
+                    &quot;&quot;
+                }
+            );
+        } 
+        if guess == random_number {
+            println!(&quot;correct!&quot;);
+            return;
+        }
+    } 
+    println!(&quot;random_number was {}&quot;, random_number);
+}
+</code></pre></pre>
+<p>替代解决方案</p>
+<pre><pre class="playground"><code class="language-rust">use rand::prelude::*;
+use std::io;fn main() {
+    guess_with_infinite_retry();
+}
+fn guess_with_infinite_retry() {
+    let secret_number = thread_rng().gen_range(1..101);
+    println!(&quot;Guess a number between 1 and 100:&quot;); 
+    loop {
+        let mut guess = String::new(); io::stdin()
+            .read_line(&amp;mut guess)
+            .expect(&quot;Failed to read line&quot;); 
+        let guess: u32 = guess.trim()
+                              .parse()
+                              .expect(&quot;Failed to parse guess&quot;); 
+        if guess &lt; secret_number {
+            println!(&quot;guess too low, guess higher:&quot;);
+        } else if guess &gt; secret_number {
+            println!(&quot;guess too high, guess lower:&quot;);
+        } else {
+            println!(&quot;you found it!&quot;);
+            break;
+        }
+    }
+}
+</code></pre></pre>
+<p>替代方案，实现了 &quot;继续玩&quot;:</p>
+<pre><pre class="playground"><code class="language-rust">use rand::prelude::*;
+use std::io;fn main() {
+    guess_with_limited_retry(5);
+}
+fn guess_with_limited_retry(max_retries: i8) {
+    //生成指定范围内的随机数
+    let random_number: i8 = thread_rng().gen_range(1..101);
+    let mut buffer = String::new();
+    let mut new_game = true; while new_game == true {
+        println!(&quot;Guess a number between 1 and 100:&quot;);
+        let mut retry_count = 0; 
+        while retry_count &lt; max_retries {
+            buffer.clear(); 
+            io::stdin()
+                .read_line(&amp;mut buffer)
+                .expect(&quot;Failed to read line&quot;); 
+            let guess = buffer.trim()
+                              .parse::&lt;i8&gt;()
+                              .expect(&quot;Failed to parse number&quot;); 
+            if guess &lt; random_number {
+                retry_count += 1;
+                println!(
+                    &quot;too low. {}&quot;,
+                    if retry_count &lt; max_retries {
+                        &quot;Try again:&quot;
+                    } else {
+                        &quot;&quot;
+                    }
+                );
+            } 
+            if guess &gt; random_number {
+                retry_count += 1;
+                println!(
+                    &quot;too high. {}&quot;,
+                    if retry_count &lt; max_retries {
+                        &quot;Try again:&quot;
+                    } else {
+                        &quot;&quot;
+                    }
+                );
+            } 
+            if guess == random_number {
+                println!(&quot;correct!&quot;);
+                break;
+            }
+        }
+        println!(&quot;random_number was {}&quot;, random_number); 
+        println!(&quot;do you want to continue playing ? (y/n)&quot;);
+      let mut try_again = String::new(); 
+      io::stdin()
+         .read_line(&amp;mut try_again)
+         .expect(&quot;Failed to read line&quot;); 
+      let try_again: char = try_again
+         .trim()
+         .parse()
+         .expect(&quot;Failed to parse try again answer.&quot;); 
+      if try_again == 'y' {
+            new_game = true;
+      } else if try_again == 'n' {
+            new_game = false;
+      } else {
+            println!(&quot;answer with y or n.&quot;)
+      }
+    }
+}
+</code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="命令行参数"><a class="header" href="#命令行参数">命令行参数</a></h1>
+<pre><pre class="playground"><code class="language-rust">use std::env;
+fn main() {
+    // 检查所需的参数数量
+     if env::args().len() &lt;= 2 {
+        println!(&quot;this program requires at least two arguments&quot;);
+        return;
+    }
+     // args()返回传递给程序可执行二进制文件的参数的迭代器
+    // 使用enumerate()来获取输入参数和它们的索引
+    // 第一个参数是可执行路径（但不一定）。
+    for (index, arg) in env::args().enumerate() {
+        println!(&quot;argument {} is {}&quot;, index, arg);
+    }
+     //获得特定索引的参数 
+    let arg2 = env::args().nth(2).unwrap();
+    println!(&quot;\narg2 is {}&quot;, arg2);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>&gt; cargo run toto &quot;titi.txt&quot; --flag -targument 0 is target/debug/command_line_args
+argument 1 is toto
+argument 2 is titi.txt
+argument 3 is --flag
+argument 4 is -targ2 is titi.txt
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="自文件中读取内容"><a class="header" href="#自文件中读取内容">自文件中读取内容</a></h1>
+<ul>
+<li>在你的项目文件夹中创建一个 fruits.txt 文件，内容如下。</li>
+</ul>
+<pre><code>apple
+avocado
+banana
+cherry
+orange
+mango
+coconut
+pear
+lemon
+</code></pre>
+<hr />
+<pre><pre class="playground"><code class="language-rust">use std::fs;
+use std::path::Path;fn main() {
+    let path = Path::new(&quot;./fruits.txt&quot;); 
+    let contents = fs::read_to_string(path)
+                      .expect(&quot;Failed to read file.&quot;); 
+    println!(&quot;contents is: {}&quot;, contents); 
+    //处理每一行
+    for line in contents.lines() {
+        println!(&quot;line is {}&quot;, line);
+    } 
+    // 读取文件为字节
+    let contents: Vec&lt;u8&gt; = fs::read(path)
+                               .expect(&quot;Failed to read file.&quot;); 
+    println!(&quot;\ncontents is: {:?}&quot;, contents);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>contents is: apple
+avocado
+banana
+cherry
+orange
+mango
+coconut
+pear
+lemonline is apple
+line is avocado
+line is banana
+line is cherry
+line is orange
+line is mango
+line is coconut
+line is pear
+line is lemoncontents is: [97, 112, 112, 108, 101, 10, 97, 118, 111, 99, 97, 100, 111, 10, 98, 97, 110, 97, 110, 97, 10, 99, 104, 101, 114, 114, 121, 10, 111, 114, 97, 109, 103, 101, 10, 109, 97, 110, 103, 111, 10, 99, 111, 99, 111, 110, 117, 116, 10, 112, 101, 97, 114, 10, 108, 101, 109, 111, 110, 10]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="向文件中写入内容"><a class="header" href="#向文件中写入内容">向文件中写入内容</a></h1>
+<ul>
+<li>新建一个名为 fruits.txt的纯文本文件，内容如下：记得放在项目的目录下面。 </li>
+</ul>
+<pre><code>apple
+avocado
+banana
+cherry
+orange
+mango
+coconut
+pear
+lemon
+</code></pre>
+<pre><pre class="playground"><code class="language-rust">use std::fs;
+use std::path;
+// 导入写 特性，它位于Prelude 类里面，更多的特性在后面
+use std::io::prelude::*;
+fn main() {
+    let path = path::Path::new(&quot;./file.txt&quot;); 
+    let mut contents = String::new();
+    contents.push_str(&quot;this is line 1\n&quot;);
+    contents.push_str(&quot;this is line 2\n&quot;);
+    contents.push_str(&quot;this is line 3\n&quot;); 
+// === 写/替换文件 
+content === fs::write(path, contents)
+       .expect(&quot;Failed to write to file.&quot;); 
+// === 追加内容到文件  === 
+let path = path::Path::new(&quot;./fruits.txt&quot;); 
+// 初始化一个新的fs模块的 OpenOptions 选项
+
+let mut file = fs::OpenOptions::new()
+        .append(true)
+        .open(path)
+        .expect(&quot;Failed to open file.&quot;); 
+// 使用已导入的Wrie特性 
+// 期望参数是一个字节的数组
+// 注意字符串数据类型前面加b，表示转换成一个字节数组
+
+file.write(b&quot;\nolive\n&quot;)
+        .expect(&quot;Failed to write to file.&quot;);
+}
+</code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="水果查找器"><a class="header" href="#水果查找器">水果查找器</a></h1>
+<ul>
+<li>在你的项目文件夹中复制前几节的fruit.txt文件</li>
+<li>我们将创建一个程序来寻找列表中的水果</li>
+<li>如果一个水果在列表中，它将返回一条信息，说明它在列表中的位置</li>
+<li>如果没有找到，则将其添加到列表中</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">use std::env;
+use std::fs;
+use std::io::prelude::*;
+use std::path::Path;
+fn main() {
+    if env::args().len() != 3 {
+        println!(&quot;This programs takes two arguments&quot;);
+        std::process::exit(1);
+    } 
+    let file_path = env::args().nth(1).expect(&quot;Failed to get file path&quot;);
+    let search_name = env::args().nth(2).expect(&quot;Failed to get search name&quot;);
+    let path = Path::new(&amp;file_path);
+    let fruits = fs::read_to_string(path).expect(&quot;Failed to read file&quot;); 
+    for (index, fruit) in fruits.lines().enumerate() {
+        if fruit == search_name {
+            println!(
+                &quot;{} is the {}{} fruit in the list&quot;,
+                search_name,
+                index + 1,
+                if index == 0 {
+                    &quot;st&quot;
+                } else if index == 1 {
+                    &quot;nd&quot;
+                } else if index == 2 {
+                    &quot;rd&quot;
+                } else {
+                    &quot;th&quot;
+                }
+            );
+            return;
+        }
+    } 
+    println!(&quot;{} is not in the fruit list&quot;, search_name); 
+    let mut file = fs::OpenOptions::new()
+        .append(true)
+        .open(path)
+        .expect(&quot;Failed to open file.&quot;); 
+    let mut new_fruit = search_name.clone(); 
+    let fruits_bytes = fruits.as_bytes();
+    if fruits_bytes[fruits_bytes.len() - 1] != b'\n' {
+        // 在字符串的开头插入换行
+        new_fruit.insert(0, '\n');
+    }
+    new_fruit.push('\n'); 
+    file.write(new_fruit.as_bytes())
+        .expect(&quot;Failed to write to file.&quot;); 
+    println!(&quot;{} was added to fruit list&quot;, search_name);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>&gt; cat fruits.txt
+apple
+avocado
+banana
+cherry
+orange
+mango
+coconut
+pear
+lemon
+lime
+pineapple
+papaya
+grape
+guava
+kiwi
+elderberry
+raspberry
+tomato&gt; cargo run -q fruits.txt tomato
+tomato is the 18th fruit in the list&gt; cargo run -q fruits.txt avocado
+avocado is the 2nd fruit in the list&gt; cargo run -q fruits.txt peach
+peach is not in the fruit list
+peach was added to fruit listcargo run -q fruits.txt peach
+peach is the 19th fruit in the list
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="形状工厂"><a class="header" href="#形状工厂">形状工厂</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+struct Rectangle {
+    width: f64,
+    height: f64,
+}
+struct Circle {
+    radius: f64,
+}
+impl Rectangle {
+    fn new(width: f64, height: f64) -&gt; Rectangle {
+        // 注意这个速记符号
+        // 在创建结构体的实例时
+        // 因为方法参数的名称与结构字段的名称相同 
+        Rectangle { width, height }
+    } 
+    fn get_area(&amp;self) -&gt; f64 {
+        self.height * self.width
+    } 
+    fn scale(&amp;mut self, scalar: f64) {
+        self.width *= scalar;
+        self.height *= scalar;
+    }
+}
+impl Circle {
+    fn new(radius: f64) -&gt; Circle {
+        Circle { radius }
+    } 
+    fn get_area(&amp;self) -&gt; f64 {
+        std::f64::consts::PI * self.radius * self.radius
+    } 
+    fn get_diameter(&amp;self) -&gt; f64 {
+        self.radius * 2.0
+    }
+}
+fn main() {
+    let mut rect = Rectangle::new(1.2, 3.4);
+    assert_eq!(rect.get_area(), 4.08); 
+    rect.scale(0.5);
+    assert_eq!(rect.get_area(), 1.02); 
+    let expected = 16.0 * std::f64::consts::PI;
+    assert_eq!(circ.get_area(), expected); 
+    println!(&quot;Test passed!&quot;);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Test passed!
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="泛型数据结构体定义"><a class="header" href="#泛型数据结构体定义">泛型数据结构体定义</a></h1>
+<pre><pre class="playground"><code class="language-rust">// 具体数据类型或其他属性的抽象代名词
+// 可以与结构、函数、方法等一起使用，以帮助消除重复的代码
+// 赋予数据类型以灵活性
+// 用&lt;T&gt;定义（T：通用类型变量
+// 通用变量的名称是任意的，可以是&lt;Toto&gt;。
+// 类似于TypeScrypt中的泛型
+#[derive(Debug)]
+struct Rectangle&lt;T&gt; {
+    width: T,
+    height: T,
+}
+//多种通用类型
+#[derive(Debug)]
+struct Shape&lt;T, U&gt; {
+    width: T,
+    height: U,
+}
+fn main() {
+    //用f64数据创建矩形 
+    let rect = Rectangle {
+        width: 1.2,
+        height: 3.4,
+    }; 
+    println!(&quot;rect is {:?}&quot;, rect); 
+    // 用u32数据创建矩形 
+    let rect = Rectangle {
+        width: 5,
+        height: 11,
+    }; 
+    println!(&quot;rect is {:?}&quot;, rect); 
+    // 用u8数据创建矩形
+    //注意我们在数字后面加上了u8的后缀。
+    let rect = Rectangle {
+        width: 7u8,
+        height: 23u8,
+    }; 
+    println!(&quot;rect is {:?}&quot;, rect); 
+    // 用u16和f32数据创建形状 
+    let rect = Shape {
+        width: 456u16,
+        height: 78.54f32,
+    }; 
+    println!(&quot;rect is {:?}&quot;, rect);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>rect is Rectangle { width: 1.2, height: 3.4 }
+rect is Rectangle { width: 5, height: 11 }
+rect is Rectangle { width: 7, height: 23 }
+rect is Shape { width: 456, height: 78.54 }
+</code></pre>
+<ul>
+<li>泛型是一种零成本的抽象=在不降低运行时性能的情况下更容易编程</li>
+<li>Rust编译器对泛型使用单态化=用具体的数据类型代替占位符</li>
+<li>在编译时，代码将包括具体的数据类型，而不是泛型抽象=如果你用f64数据创建一个矩形，编译后的代码将有一个带有f64字段的矩形的结构定义，以及与创建结构实例时同样多的具体类型定义。</li>
+<li>源代码将使用通用数据类型，但编译后的代码将有具体的数据类型，因此不会影响运行时的性能（无需猜测数据类型）。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="泛型方法定义"><a class="header" href="#泛型方法定义">泛型方法定义</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+#[derive(Debug)]
+struct Rectangle&lt;T&gt; {
+    width: T,
+    height: T,
+}
+#[derive(Debug)]
+struct Shape&lt;T, U&gt; {
+    width: T,
+    height: U,
+}
+// 在 impl 关键字之后包括通用变量名称
+// 和结构标识符之后
+// impl&lt;T, U&gt;告诉编译器，通用结构定义的方法
+impl&lt;T, U&gt; Shape&lt;T, U&gt; {
+    fn get_width(&amp;self) -&gt; &amp;T {
+        // 需要返回一个引用
+        // 因为不知道&lt;T&gt;将被替换成哪种类型。
+        //记住固定/可变长度数据类型的所有权
+        //返回一个引用，对这两种类型都有效，无需转移所有权 &amp;self.width
+    }
+}
+//为特定的具体类型的Shape实现方法
+// 注意不要把通用类型放在 impl 关键字后面，这告诉编译器这些方法是为具体的结构定义服务的。
+impl Shape&lt;u8, u8&gt; {
+    fn get_perimeter(&amp;self) -&gt; u8 {
+        (self.height + self.width) * 2
+    }
+}
+fn main() {
+    let rect = Rectangle {
+        width: 1.2,
+        height: 3.4,
+    }; 
+    println!(&quot;rect is {:?}&quot;, rect); 
+    let rect = Rectangle {
+        width: 5,
+        height: 11,
+    }; 
+    println!(&quot;rect is {:?}&quot;, rect); 
+    let rect = Rectangle {
+        width: 7u8,
+        height: 23u8,
+    }; 
+    println!(&quot;rect is {:?}&quot;, rect); 
+    let rect = Shape {
+        width: 456u16,
+        height: 78.54f32,
+    }; 
+    println!(&quot;rect is {:?}&quot;, rect); 
+    println!(&quot;rect width is {:?}&quot;, rect.get_width()); 
+    let rect = Shape {
+        width: 54u8,
+        height: 32u8,
+    }; 
+    // get_perimeter()方法是在Shape的这个实例上定义的。
+    // 因为这两个字段都是u8数据
+    // 否则这个方法将无法被找到 
+    println!(&quot;rect perimter is {:?}&quot;, rect.get_perimeter());
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>rect is Rectangle { width: 1.2, height: 3.4 }
+rect is Rectangle { width: 5, height: 11 }
+rect is Rectangle { width: 7, height: 23 }
+rect is Shape { width: 456, height: 78.54 }
+rect width is 456
+rect perimter is 172
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="泛型函数定义"><a class="header" href="#泛型函数定义">泛型函数定义</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+
+//限制通用类型
+
+//限于那些实现了特质的类型，这些类型的值可以进行排序比较（PartialOrd）。
+
+// PartialOrd特性包含在std crate prelude中（不需要全路径）。
+
+// 否则，编译器怎么会知道具体类型是否可以使用&gt;进行比较？
+fn get_biggest&lt;T: PartialOrd&gt;(n1: T, n2: T) -&gt; T {
+    if n1 &gt; n2 {
+        n1
+    } else {
+        n2
+    }
+}
+fn main() {
+    println!(&quot;biggest is {}&quot;, get_biggest(23u8, 121u8));
+    println!(&quot;biggest is {}&quot;, get_biggest(12345, 121));
+    println!(&quot;biggest is {}&quot;, get_biggest(123.45, 1.21));
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>biggest is 121
+biggest is 12345
+biggest is 123.45
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="封箱数据类型"><a class="header" href="#封箱数据类型">封箱数据类型</a></h1>
+<pre><pre class="playground"><code class="language-rust">// Box&lt;T&gt;用于在堆上而不是在栈上存储数据
+// 它由堆栈上的一个指针组成
+// 指向堆上的一个内存块
+// 该内存块已被分配得足够大，可以容纳&lt;T&gt;数据。
+// 盒子被认为是智能指针
+// 提供了比引用更多的功能。
+// 盒子&lt;T&gt;对它所指向的数据有所有权
+// 当Box&lt;T&gt;超出范围时，会将堆中的内存删除。
+// Box数据类型被用来存储一个在编译时无法知道大小的类型
+// 但仍然需要一个尺寸
+// 例如：递归类型
+// 递归类型的例子：一个结构体包括另一个相同类型的结构体作为它的一个字段（想想迭代器--比如在JavaScript中）。
+// 在编译时，你不知道层的深度，因此不知道整个结构的大小。
+// 盒子的另一个用途是转移数据的所有权，而不是在堆栈中复制它。
+// 避免复制大量的堆栈数据
+// 通过将数据转移到堆中，可能会提高性能（因为有指针），可以更容易地转移数据。
+use std::mem;
+#[derive(Debug)]
+struct Team {
+    name: String,
+    size: u8,
+    capacity: f64,
+    domain: String,
+}
+fn main() {
+    // 记住结构体是在堆栈上的
+    // 除了长度可变的字段（例如：String）会留在堆上。
+    let lions = Team {
+        name: String::from(&quot;The lions&quot;),
+        size: 7,
+        capacity: 11.5,
+        domain: String::from(&quot;Authentication&quot;),
+    }; 
+    println!(&quot;lions is {:?}&quot;, lions); 
+    // mem::size_of_val()给出了给定参考值所指向的字节大小。
+    println!(
+      &quot;lions size is on stack {} bytes&quot;,
+      mem::size_of_val(&amp;lions)
+    ); 
+    // 这不是一个复制操作，所有权被转移了。
+    // 狮子变量失去了对该结构的所有权 
+    // 狮子变量不能再被使用了 
+    // 结构实例被转移到盒子分配的堆位置上。
+    // boxed_lions变量成为该结构的新主人
+    //通过住在堆栈上的盒子智能指针，成为结构的新主人。
+    let boxed_lions: Box&lt;Team&gt; = Box::new(lions); 
+    println!(&quot;boxed_lions is {:?}&quot;, boxed_lions); 
+    //打印盒子指针的大小（字节）。
+    println!(
+        &quot;boxed_lions size is on stack {} bytes&quot;,
+        mem::size_of_val(&amp;boxed_lions)
+    ); 
+    //打印结构实例的字节大小 
+    // 需要向mem::size_of_val()传递一个被解除引用的盒子指针（WTF...）的引用。
+    // 在盒子指针前使用解除引用操作符 &quot;*&quot;。
+    //引用一个指针将代表被指向的位置/数据。
+    // &amp;*boxed_lions是对堆上数据的引用，而不是对堆上指针的引用。
+    println!(
+        &quot;boxed_lions team size is on heap {} bytes&quot;,
+        mem::size_of_val(&amp;*boxed_lions)
+    ); 
+    //将结构实例移回堆栈中
+    //通过取消引用盒子的指针来实现 
+    let unboxed_lions: Team = *boxed_lions; 
+    println!(&quot;unboxed_lions is {:?}&quot;, unboxed_lions); 
+    println!(
+        &quot;unboxed_lions team size is on stack {} bytes&quot;,
+        mem::size_of_val(&amp;unboxed_lions)
+    );
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>lions is Team { name: &quot;The lions&quot;, size: 7, capacity: 11.5, domain: &quot;Authentication&quot; }
+lions size is on stack 64 bytes
+boxed_lions is Team { name: &quot;The lions&quot;, size: 7, capacity: 11.5, domain: &quot;Authentication&quot; }
+boxed_lions size is on stack 8 bytes
+boxed_lions team size is on heap 64 bytes
+unboxed_lions is Team { name: &quot;The lions&quot;, size: 7, capacity: 11.5, domain: &quot;Authentication&quot; }
+unboxed_lions team size is on stack 64 bytes
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="封箱求和"><a class="header" href="#封箱求和">封箱求和</a></h1>
+<pre><pre class="playground"><code class="language-rust">use std::ops::Add;
+//将通用类型T限制为实现Add特性的具体类型（如u32、f64等）。
+fn sum_boxes&lt;T: Add&lt;Output = T&gt;&gt;(b1: Box&lt;T&gt;, b2: Box&lt;T&gt;) -&gt; Box&lt;T&gt; {
+    let unboxed_b1 = *b1;
+    let unboxed_b2 = *b2;
+    let sum = unboxed_b1 + unboxed_b2;
+    Box::new(sum)
+}
+fn main() {
+    let box1 = Box::new(11);
+    let box2 = Box::new(44);
+    let sum_box = sum_boxes(box1, box2);
+    assert_eq!(*sum_box, 55); let box1 = Box::new(1.1);
+    let box2 = Box::new(4.4);
+    let sum_box = sum_boxes(box1, box2);
+    assert_eq!(*sum_box, 5.5); let box1 = Box::new(1.1f32);
+    let box2 = Box::new(4.4f32);
+    let sum_box = sum_boxes(box1, box2);
+    assert_eq!(*sum_box, 5.5f32); let box1 = Box::new(11u8);
+    let box2 = Box::new(44u8);
+    let sum_box = sum_boxes(box1, box2);
+    assert_eq!(*sum_box, 55u8); let box1 = Box::new(11u16);
+    let box2 = Box::new(44u16);
+    let sum_box = sum_boxes(box1, box2);
+    assert_eq!(*sum_box, 55u16); println!(&quot;tests passed!&quot;);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>test passed!
+</code></pre>
+<p>整合版本</p>
+<pre><pre class="playground"><code class="language-rust">use std::ops::Add;
+fn sum_boxes&lt;T: Add&lt;Output = T&gt;&gt;(b1: Box&lt;T&gt;, b2: Box&lt;T&gt;) -&gt; Box&lt;T&gt; {
+    Box::new(*b1 + *b2)
+}
+fn main() {
+    assert_eq!(*sum_boxes(Box::new(11), Box::new(44)), 55); 
+    assert_eq!(*sum_boxes(Box::new(1.1), Box::new(4.4)), 5.5); 
+    assert_eq!(*sum_boxes(Box::new(1.1f32), Box::new(4.4f32)), 5.5f32); 
+    assert_eq!(*sum_boxes(Box::new(11u8), Box::new(44u8)), 55u8); 
+    assert_eq!(*sum_boxes(Box::new(11u16), Box::new(44u16)), 55u16); 
+    println!(&quot;tests passed!&quot;);
+}
+</code></pre></pre>
+<p>更复杂的泛型类型限制</p>
+<pre><pre class="playground"><code class="language-rust">use std::ops::{Add, MulAssign};
+// 取消复制特性的限制，看看会发生什么。
+// 以后会有更多关于这个问题的内容
+fn sum_boxes&lt;T: Add&lt;Output = T&gt; + MulAssign + Copy&gt;(
+    mut b1: Box&lt;T&gt;,
+    b2: Box&lt;T&gt;
+) -&gt; Box&lt;T&gt; {
+    *b1 *= *b2;
+    Box::new(*b1 + *b2)
+}
+fn main() {
+    let box1 = Box::new(11);
+    let box2 = Box::new(44);
+    assert_eq!(*sum_boxes(box1, box2), 528); 
+    let box1 = Box::new(1.1);
+    let box2 = Box::new(4.4);
+    assert_eq!(*sum_boxes(box1, box2), 9.240000000000002); 
+    let box1 = Box::new(1.1f32);
+    let box2 = Box::new(4.4f32);
+    assert_eq!(*sum_boxes(box1, box2), 9.24f32); 
+    let box1 = Box::new(11u16);
+    let box2 = Box::new(44u16);
+    assert_eq!(*sum_boxes(box1, box2), 528u16); 
+    println!(&quot;tests passed!&quot;);
+}
+</code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="特性"><a class="header" href="#特性">特性</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+// 特质。
+
+// 用于定义特定数据类型功能的抽象方法
+// 方法的集合
+
+// 代表完成某些任务所需的一组行为
+// 数据类型可以实现一个特征。
+
+// 该类型实现了这些特定的方法，因此这些方法可以在它身上使用。
+// 泛型使用特质来指定未知数据类型的能力。
+
+// 特质作为一种约束，可以接受哪些具体类型。
+
+// 只要这些具体类型实现了这组方法
+// 与TypeScript和其他支持经典OOP的语言中的接口相似。
+// Rust带有默认的通用特征（参见std::prelude）。
+// 你可以定义你的自定义特征
+struct Car {
+    model: String,
+    brand: String,
+    velocity: u16, 
+// km/h
+}
+struct Plane {
+    name: String,
+    nick_name: String,
+    velocity: u16, 
+// km/h
+    crew: u8,
+    passengers: u16,
+    ceiling: u32,
+}
+// 自定义特质 
+trait Serialization {
+    
+// 方法签名
+    fn describe(&amp;self) -&gt; String;
+}
+// 实现一个特定的特性
+impl Serialization for Car {
+    fn describe(&amp;self) -&gt; String {
+        
+// format! 宏返回格式化的字符串 
+    format!(
+            &quot;{} from {} going at {} km/h.&quot;,
+            self.model, self.brand, self.velocity
+        )
+    }
+}
+// 为其他类型实现特性
+impl Serialization for Plane {
+    fn describe(&amp;self) -&gt; String {
+        format!(
+            &quot;{} ({}) going at {} km/h with a crew of {} and up to {} passengers at {} m above.&quot;,
+            self.name, self.nick_name, self.velocity, self.crew, self.passengers, self.ceiling
+        )
+    }
+}
+fn main() {
+    let gle_class_coupe = Car {
+        model: String::from(&quot;GLE-Class Coupe&quot;),
+        brand: String::from(&quot;Mercedes-Benz&quot;),
+        velocity: 280,
+    };
+     let g6 = Plane {
+        name: String::from(&quot;Gulfstream G650 &quot;),
+        nick_name: String::from(&quot;G6&quot;),
+        velocity: 956,
+        crew: 4,
+        passengers: 19,
+        ceiling: 15545,
+    };
+     println!(&quot;{}&quot;, gle_class_coupe.describe());
+    println!(&quot;{}&quot;, g6.describe());
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>GLE-Class Coupe from Mercedes-Benz going at 280 km/h.
+Gulfstream G650  (G6) going at 956 km/h with a crew of 4 and up to 19 passengers at 15545 m above.
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="默认特性实现"><a class="header" href="#默认特性实现">默认特性实现</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+struct Car {
+    model: String,
+    brand: String,
+    velocity: u16, // km/h
+}
+struct Plane {
+    name: String,
+    nick_name: String,
+    velocity: u16, // km/h
+    crew: u8,
+    passengers: u16,
+    ceiling: u32,
+}
+trait Serialization {
+    // 默认的特质实现
+    // 以避免为每个使用该特质的类型实现它。
+    fn describe(&amp;self) -&gt; String {
+        String::from(&quot;some kind of vehicle.&quot;)
+    }
+}
+impl Serialization for Car {
+    //为汽车结构提供具体的特质实现
+    // 覆盖默认实现 
+    fn describe(&amp;self) -&gt; String {
+        format!(
+            &quot;{} from {} going at {} km/h.&quot;,
+            self.model, self.brand, self.velocity
+        )
+    }
+}
+//将使用默认的特质实现，因为没有特定的特质。
+impl Serialization for Plane {}
+fn main() {
+    let gle_class_coupe = Car {
+        model: String::from(&quot;GLE-Class Coupe&quot;),
+        brand: String::from(&quot;Mercedes-Benz&quot;),
+        velocity: 280,
+    }; 
+    let g6 = Plane {
+        name: String::from(&quot;Gulfstream G650 &quot;),
+        nick_name: String::from(&quot;G6&quot;),
+        velocity: 956,
+        crew: 4,
+        passengers: 19,
+        ceiling: 15545,
+    }; 
+    println!(&quot;{}&quot;, gle_class_coupe.describe());
+    println!(&quot;{}&quot;, g6.describe());
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>GLE-Class Coupe from Mercedes-Benz going at 280 km/h.
+some kind of vehicle.
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="可衍生的特性"><a class="header" href="#可衍生的特性">可衍生的特性</a></h1>
+<pre><pre class="playground"><code class="language-rust">// 默认情况下，新结构不实现任何特质
+// 你作为程序员给它提供它所需要的特质
+// 可派生特质为常见特质提供了默认的实现方式
+//提供了对基本功能的访问
+// 而不需要实现自定义特征
+//当派生特性时，编译器会生成默认代码。
+// 编译器会生成所需方法的默认代码。
+// 可派生特质是（随着语言的发展会有变化）。
+// Eq
+// PartialEq
+// Ord
+// PartialOrd
+// Clone
+// Copy
+// Hash
+// Default - 创建一个数据类型的新实例 
+// Debug - 提供一个格式化的debug字符串 
+// 衍生性状。 #[ derive( trait_a, trait_b, ...) ] 。
+// PartialEq的默认实现要求两个结构的所有字段都相等，以返回true
+// (检查文档 std::cmp::PartialEq)
+// PartialOrd的默认实现是对字段的值进行比较。
+// 按照定义的顺序解析字段，并且
+// 一旦找到可以比较的字段。
+// 将返回比较的结果
+// 而不去看其他字段（查看文档 std::cmp::PartialOrd）。
+#[derive(PartialEq, PartialOrd, Debug)]
+struct Car {
+    model: String,
+    brand: String,
+    velocity: u16, // km/h
+}
+fn main() {
+    let gle_class_coupe = Car {
+        model: String::from(&quot;GLE-Class Coupe&quot;),
+        brand: String::from(&quot;Mercedes-Benz&quot;),
+        velocity: 280,
+    }; 
+    let gle_class = Car {
+        model: String::from(&quot;GLE-Class&quot;),
+        brand: String::from(&quot;Mercedes-Benz&quot;),
+        velocity: 218,
+    };
+     //由于派生的PartialEq特性而被允许。
+     println!(&quot;Are the cars equal: {}&quot;, gle_class_coupe == gle_class);
+      //由于派生的PartialOrd特性而被允许。
+    //在这里，名称字段被比较以断定哪一个更大
+     println!(
+        &quot;Is the coupe greater then the SUV: {}&quot;,
+        gle_class_coupe &gt; gle_class
+    );
+     //因为派生的Debug特性而被允许 
+     println!(&quot;{:?}&quot;, gle_class);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Are the cars equal: false
+Is the coupe greater then the SUV: true
+Car { model: &quot;GLE-Class&quot;, brand: &quot;Mercedes-Benz&quot;, velocity: 218 }
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="特性界限"><a class="header" href="#特性界限">特性界限</a></h1>
+<pre><pre class="playground"><code class="language-rust">// 当使用泛型时，我们可以使用特质。
+// 来规定具体类型必须实现哪些功能。
+// 特质的界限迫使泛型必须实现特定的特质。
+// 特质边界保证了泛型将拥有必要的行为，使用core::fmt::Debug。
+use std::any;
+// 为了能够打印一个项目，它必须实现 &quot;显示 &quot;特质。
+// 但由于不是所有的类型都实现了它，我们将使用Debug特性
+// 这是更常见的默认实现方式
+fn print_type&lt;T: Debug&gt;(it: T) {
+    // type_name()将一个类型的名称作为一个字符串片断返回
+    //通过将类型传递给turbofish操作符（::&lt;MY_TYPE&gt;）来实现。
+    println!(&quot;{:?} is a {}&quot;, it, any::type_name::&lt;T&gt;());
+}
+fn main() {
+    print_type(1);
+    print_type(1.2);
+    print_type([12, 34]);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>1 is a i32
+1.2 is a f64
+[12, 34] is a [i32; 2]
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="多重特质界限和where子句"><a class="header" href="#多重特质界限和where子句">多重特质界限和where子句</a></h1>
+<pre><pre class="playground"><code class="language-rust">use std::fmt::Display;
+// 多个特质边界用+运算符隔开
+
+// PartialEq/From/Copy是std库前奏的一部分，所以没有导入。
+//
+ //fn compare_and_print&lt;T: Display + PartialEq + From&lt;U&gt;, U: Display + PartialEq + Copy&gt;(a: T, b: U) {
+// 下面的函数签名与上面的函数签名是等价的
+
+// 但用were子句来声明特质的边界，更具有可读性
+fn compare_and_print&lt;T, U&gt;(a: T, b: U)
+where
+    T: Display + PartialEq + From&lt;U&gt;,
+    U: Display + PartialEq + Copy,
+{
+    
+// 
+T::from(b) =&gt; convert b to type T
+    
+// From trait允许一个类型
+    
+// 来定义如何从另一个类型创建自己。
+    
+// 例如：从字符串片断中创建一个字符串。
+    
+//      
+String::From(&quot;ttoto&quot;) if a == T::from(b) {
+        println!(&quot;{} is equal to {}&quot;, a, b);
+    } else {
+        println!(&quot;{} is not equal to {}&quot;, a, b);
+    }
+}
+fn main() {
+    compare_and_print(22, 55);
+    compare_and_print(2.2, 2.2);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>22 is not equal to 55
+2.2 is equal to 2.2
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="返回类型和特性实现"><a class="header" href="#返回类型和特性实现">返回类型和特性实现</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+use std::fmt::Display;
+// 返回值必须实现 &quot;Display &quot;特质。
+fn get_displayable() -&gt; impl Display {
+    1
+}
+fn main() {
+    println!(&quot;Display: {}&quot;, get_displayable());
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Display: 1
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="返回类型和特质的动态分派"><a class="header" href="#返回类型和特质的动态分派">返回类型和特质的动态分派</a></h1>
+<pre><pre class="playground"><code class="language-rust">use std::fmt::Display;
+// [动态调度](https://doc.rust-lang.org/stable/rust-by-example/trait/dyn.html)
+// 当运行时才知道retun的类型时
+
+// 注意 [dyn](https://doc.rust-lang.org/std/keyword.dyn.html) 关键字和盒式指针的使用
+// 返回一个实现了显示特性的值。
+
+// 但我们在编译时不知道是哪一个。
+fn get_dynamic_displayable(a: bool) -&gt; Box&lt;dyn Display&gt; {
+    if a {
+        
+        returns u32 Box::new(1)
+    } else {
+        
+     returns string slice Box::new(&quot;one&quot;)
+    }
+}
+fn main() {
+    println!(&quot;Display: {}&quot;, get_dynamic_displayable(false));
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Display: one
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="对比飞机"><a class="header" href="#对比飞机">对比飞机</a></h1>
+<pre><pre class="playground"><code class="language-rust">use std::cmp::*;
+use std::fmt;
+struct Jet {
+    name: String,
+    velocity: f64, 
+    // km/h
+}
+// 自主实现 [Display](https://doc.rust-lang.org/std/fmt/trait.Display.html#required-methods) 特性
+impl fmt::Display for Jet {
+    fn fmt(&amp;self, f: &amp;mut fmt::Formatter&lt;'_&gt;) -&gt; fmt::Result {
+        write!(f, &quot;{}, flying at {} km/h&quot;, self.name, self.velocity)
+    }
+}
+// 自主实现 [PartialOrd](https://doc.rust-lang.org/std/cmp/trait.PartialOrd.html#how-can-i-implement-partialord) 特性
+impl PartialOrd for Jet {
+    fn partial_cmp(&amp;self, other: &amp;Self) -&gt; Option&lt;Ordering&gt; {
+        self.velocity.partial_cmp(&amp;other.velocity)
+    }
+}
+// 自主实现 [PartialEq](https://doc.rust-lang.org/std/cmp/trait.PartialEq.html#how-can-i-implement-partialeq) 特性
+impl PartialEq for Jet {
+    fn eq(&amp;self, other: &amp;Self) -&gt; bool {
+        self.velocity == other.velocity
+    }
+}
+fn main() {
+    let g6 = Jet {
+        name: String::from(&quot;Gulfstream G650&quot;),
+        velocity: 956.0,
+    }; 
+    let g7 = Jet {
+        name: String::from(&quot;Gulfstream G700&quot;),
+        velocity: 937.0,
+    }; 
+    println!(&quot;G6 jet is {}&quot;, g6); 
+    println!(&quot;Does G6 velocity equal to G7's: {}&quot;, g6.eq(&amp;g7)); 
+    println!(&quot;Is G6 faster than G7: {}&quot;, g6.gt(&amp;g7));
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>G6 jet is Gulfstream G650, flying at 956 km/h
+Does G6 velocity equal to G7's: false
+Is G6 faster than G7: true
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="借用检查"><a class="header" href="#借用检查">借用检查</a></h1>
+<pre><pre class="playground"><code class="language-rust">// 借用检查器
+// 比较作用域以确定所有借用是否有效
+// 注释为&quot;'a'&quot;的变量的寿命（它的存活时间）。
+
+// 变量的寿命与它的作用域有关
+// Rust会分析变量所引用的值的范围/寿命。
+
+// 使用借用检查器
+fn main() {
+    let fuel; 
+// ========= START lifetime ('a) of fuel ========== 
+    {
+        let gasoil = String::from(&quot;gasoil&quot;); 
+// ===== START lifetime ('b) of gasoil ======= 
+        fuel = &amp;gasoil; 
+        println!(&quot;fuel is {}&quot;, fuel);
+    } 
+// ========= END lifetime of gasoil ================
+} 
+// ========= END lifetime of fuel ================
+</code></pre></pre>
+<p>借用检查器检测到的错误。</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let fuel; 
+// ========= START 'a ================ 
+    {
+
+        let gasoil = String::from(&quot;gasoil&quot;); 
+// ===== START 'b ===== 
+        fuel = &amp;gasoil; 
+    } 
+// ========= END 'b ================
+
+    
+// fuel存储了一个借来的对gasoil的引用。
+    
+// gasoil的生命周期已经结束
+    
+// fuel包含一个悬空的引用，程序将无法编译 
+    println!(&quot;fuel is {}&quot;, fuel);
+} 
+// ========= END 'a ================
+</code></pre></pre>
+<p>通过延长gasoil的使用寿命来修复寿命错误。</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let fuel; 
+// ========= START 'a ================ 
+    let gasoil = String::from(&quot;gasoil&quot;); 
+// ======= START 'b ======== 
+    {
+        fuel = &amp;gasoil;
+    }
+
+    println!(&quot;fuel is {}&quot;, fuel);
+} 
+// ========= END 'a and 'b ================
+
+</code></pre></pre>
+<p>输出</p>
+<pre><code>fuel is gasoil
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="生命周期注解"><a class="header" href="#生命周期注解">生命周期注解</a></h1>
+<pre><pre class="playground"><code class="language-rust">// 定义一个通用的寿命 'a
+// 明确地定义参数的通用寿命
+//被称为生命周期注解
+// 必须以撇号（'x'）开头。
+//惯例是使用单个小写字母（'a, 'b, 'c)
+// 但你可以自由地命名它（'a_lifetime, 'toto)
+// 注意寿命注释
+//在借贷操作符后面有一个空格，然后是类型。
+// 在这个例子中，通过对返回类型的注解。
+// 我们告诉编译器，返回的值与参数的寿命相同。
+// 如果有不同的生存期，编译器将选择最小的生存期。
+// 编译器将选择最小的 通过注释参数的寿命，
+//我们告诉编译器返回的值与参数的寿命相同。
+// 我们给借贷检查器提供信息来验证返回的引用。
+fn get_longest_name&lt;'a&gt;(x: &amp;'a str, y: &amp;'a str) -&gt; &amp;'a str {
+    if x.len() &gt; y.len() {
+        x
+    } else {
+        y
+    }
+}
+fn main() {
+    let result;
+    let name1 = String::from(&quot;Deep Space 9&quot;);
+    let name2 = String::from(&quot;Voyager&quot;);
+    result = get_longest_name(&amp;name1, &amp;name2);
+    println!(&quot;result is {}&quot;, result);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>result is Deep Space 9
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="多生命周期注解"><a class="header" href="#多生命周期注解">多生命周期注解</a></h1>
+<pre><pre class="playground"><code class="language-rust">// 注意这里，尽管返回类型与一个参数有相同的寿命
+// 我们必须为另一个参数注解另一个生命周期
+// 即使从未返回
+// 以避免任何混淆
+// 记住，这里的代码很简单
+// 但输入和返回的值可能来自于一个已编译的库。
+// 编译器不能接触到源代码。
+fn get_longest_name&lt;'a, 'b&gt;(x: &amp;'a str, y: &amp;'b str) -&gt; &amp;'a str {
+    if x.len() &gt; y.len() {
+        x
+    } else {
+        x
+    }
+}
+fn main() {
+    let result;
+    // START 'a
+    let name1 = String::from(&quot;Deep Space 9&quot;); {
+        // START 'b
+        let name2 = String::from(&quot;Voyager&quot;);
+        result = get_longest_name(&amp;name1, &amp;name2);
+    } // END 'b
+    println!(&quot;result is {}&quot;, result);
+} // END 'a
+</code></pre></pre>
+<p>输出</p>
+<pre><code>result is Deep Space 9
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="生命周期剥离规则"><a class="header" href="#生命周期剥离规则">生命周期剥离规则</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+// 寿命消除规则
+// 编译器分析引用寿命的一套规则。
+
+// 描述了不需要明确的寿命注释的情况
+// 如果有任何不明确的地方，就需要明确的寿命注释。
+// 目前，有3条寿命消除规则。
+// #1
+
+// 每个作为参考的输入参数都被分配了自己的生命周期
+// 
+//fn get_first_word&lt;'a&gt;(s: &amp;'a str) -&gt; &amp;str {
+// 寿命只适用于作为引用的参数。
+
+// 非引用参数不需要它们
+// fn get_first_word&lt;'a&gt;(s: &amp;'a str, t: i32) -&gt; &amp;str {
+// fn get_first_word&lt;'a, 'b&gt;(s: &amp;'a str, t: &amp;'b str) -&gt; &amp;str {
+
+// fn get_first_word&lt;'a, 'b, 'c&gt;(s: &amp;'a str, t: &amp;'b str, u: &amp;'c str) -&gt; &amp;str {
+// #2
+
+// 如果只有一个输入寿命。
+
+// 将其分配给所有的输出寿命
+
+// （输出寿命必须与输入寿命之一相匹配）。
+//符合删除的条件，因此可以省略寿命。
+
+// fn get_first_word&lt;'a&gt;(s: &amp;'a str) -&gt; &amp;'a str {
+
+// ==&gt;``fn get_first_word(s: &amp;str) -&gt; &amp;str {
+// #3
+
+// 如果有一个&amp;self或&amp;mut self输入参数。
+
+// 它的寿命将被分配给所有的输出寿命
+// fn do_stuff(&amp;self, input: &amp;str) -&gt; &amp;str {
+
+// rule #1 ==&gt; fn do_stuff&lt;'a,'b&gt;(&amp;'a self, input: &amp;'b str) -&gt; &amp;str {
+
+// rule #3 ==&gt; fn do_stuff&lt;'a,'b&gt;(&amp;'a self, input: &amp;'b str) -&gt; &amp;'a str {
+// 这些删除规则是为编译器准备的
+
+// 但知道什么时候可以省略寿命是很好的。
+fn main() {
+    let message = String::from(&quot;Hi there&quot;);
+    let first_word = get_first_word(&amp;message);
+    println!(&quot;first_word is {}&quot;, first_word);
+}
+fn get_first_word(s: &amp;str) -&gt; &amp;str {
+    let bytes = s.as_bytes(); 
+    for (index, &amp;item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &amp;s[..index]; 
+// 有空格
+        }
+    } 
+    &amp;s 
+// 无空格，所以输入的字符串是一个完整的单词
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>first_word is Hi
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="结构体生命周期注解"><a class="header" href="#结构体生命周期注解">结构体生命周期注解</a></h1>
+<pre><pre class="playground"><code class="language-rust">struct Spaceship&lt;'a&gt; {
+    
+// 该结构拥有该字符串的所有权
+    
+// 当该结构超出范围时。
+    
+// 该字符串数据将被丢弃并从堆中删除 
+    name: String, 
+//该结构并不拥有该字段所引用的数据
+    
+// 如果该结构仍然可以使用该引用，就会出现模糊不清的情况
+    
+// 需要添加明确的生命周期注解 
+    nickname: &amp;'a str,
+}
+//将生命期注释为impl。
+impl&lt;'a, 'b&gt; Spaceship&lt;'a&gt; {
+    
+//因为寿命消除规则#3。
+    
+// 不需要明确的生命期注解
+    
+// 输出的寿命将作为&amp;self参数的寿命。
+    fn send_transmission(&amp;self, msg: &amp;str) -&gt; (&amp;str, &amp;str) {
+        println!(&quot;Transmitting message: {}&quot;, msg);
+        (&amp;self.name, self.nickname)
+    } 
+// 在这里，因为输出寿命与&amp;self输入寿命不同。
+    
+// 需要明确的寿命注解 
+    fn test_send_transmission(&amp;'a self, msg: &amp;'b str) -&gt; &amp;'b str {
+        println!(&quot;Transmitting message: {}&quot;, msg);
+        msg
+    }
+}
+fn main() {
+    let saucer = Spaceship {
+        name: String::from(&quot;TR95 MCC Enterprise 9&quot;),
+        nickname: &quot;TR95&quot;,
+    }; 
+    let sender = saucer.send_transmission(&quot;All aboard!&quot;);
+    println!(&quot;sender is {}&quot;, sender.1); 
+    let test_msg = saucer.test_send_transmission(&quot;this is a test&quot;);
+    println!(&quot;test_msg is {}&quot;, test_msg);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>Transmitting message: All aboard!
+sender is TR95
+Transmitting message: this is a test
+test_msg is this is a test
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="静态生命周期"><a class="header" href="#静态生命周期">静态生命周期</a></h1>
+<pre><pre class="playground"><code class="language-rust">// '静态寿命
+// 表示在程序的整个持续时间内都可以引用。
+// 例如：一个字符串字头被存储在程序的二进制文件中。
+// 所以它永远不会消失
+// 数据从开始到结束都是可用的
+// 所有的字符串字头都有一个静态寿命。
+// let literal: &amp;'static str = &quot;I am a string slice&quot;;
+// 将永远不会失效，并且比其他寿命长。
+// '静态寿命是一个特性的约束
+// 确保数据类型只包含 &quot;静态元素&quot;。
+// 这样，接收者就可以抓住它
+// 并一直使用它，因为他们知道它将永远不会失效。
+// &lt;T: Display + 'static&gt;
+fn get_toto&lt;'a&gt;() -&gt; &amp;'a str {
+    &quot;toto here&quot;
+}
+fn main() {
+  let toto: &amp;'static str = get_toto();
+  println!(&quot;toto is {}&quot;, toto);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>toto is toto here
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="更多枚举值"><a class="header" href="#更多枚举值">更多枚举值</a></h1>
+<pre><pre class="playground"><code class="language-rust">#[derive(Debug)]
+enum Shape {
+    //用枚举存储数据，定义参数数据类型
+    Triangle(f64, f64, f64), 
+// 边 a, b, c
+    Rectangle(f64, f64),     
+// 长, 宽
+    Circle(f64),             
+// 半径
+}
+fn main() {
+    let a_shape = Shape::Triangle(1.1, 2.2, 3.3);
+    println!(&quot;a_shape is {:?}&quot;, a_shape); 
+    let a_shape = Shape::Rectangle(1.3, 5.7);
+    println!(&quot;a_shape is {:?}&quot;, a_shape);
+    let a_shape = Shape::Circle(1.13);
+    println!(&quot;a_shape is {:?}&quot;, a_shape); 
+// 匹配运算符
+    
+// 将一个值与一系列模式进行比较
+    
+// 来决定执行哪段代码
+    
+// 与其他语言中的switch语句相似 
+// 匹配表达式用于控制程序的流程 
+    match a_shape {
+        
+// 枚举所有可能的值 
+// 捕获存储的数据
+        
+// 使用一个位置参数名（a, b, c）。
+        
+//当匹配时要执行的逻辑是在&quot;=&gt;&quot;之后。
+        Shape::Triangle(a, b, c) =&gt; println!(
+            &quot;a_shape is a triangle with sides a = {}, b = {}, c = {}&quot;,
+            a, b, c
+        ),
+        Shape::Rectangle(width, height) =&gt; println!(
+            &quot;a_shape is a rectangle with width = {} and height = {}&quot;,
+            width, height
+        ),
+        Shape::Circle(radius) =&gt; println!(&quot;a_shape is a circle with radius {}&quot;, radius),
+    }
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>a_shape is Triangle(1.1, 2.2, 3.3)
+a_shape is Rectangle(1.3, 5.7)
+a_shape is Circle(1.13)
+a_shape is a circle with radius 1.13
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="扩展匹配模式"><a class="header" href="#扩展匹配模式">扩展匹配模式</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let number = 123u8; 
+    // 匹配表达式根据情况返回数值
+    // 匹配臂从上到下依次评估 
+    let result: &amp;str = match number {
+        // 匹配臂
+        0 =&gt; &quot;zero&quot;, 
+        // 匹配臂
+        1 =&gt; &quot;one&quot;, 
+        // 匹配臂
+        2 =&gt; &quot;two&quot;, 
+        // 通配符模式(默认情况下)
+        // 用下划线符号（_）表示
+        // 应该最后使用。
+        // 否则，将不会对下面的部分进行评估。
+        // 当你不想明确地定义所有可能的匹配臂时，这一点很有用。
+        // （或者仅仅是因为存在大量或无限的可能性）。
+        // 注意代码块，当超过一行的时候 
+        _ =&gt; {
+            println!(&quot;{} did not match any arm&quot;, number);
+            &quot;unmatched&quot;
+        }
+    }; 
+    println!(&quot;result is {}&quot;, result);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+123 did not match any arm
+result is unmatched
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="枚举方法"><a class="header" href="#枚举方法">枚举方法</a></h1>
+<pre><pre class="playground"><code class="language-rust">#[derive(Debug)]
+enum Shape {
+    Triangle(f64, f64, f64), // 边 a, b, c
+    Rectangle(f64, f64),     // 宽, 高
+    Circle(f64),             // 半径
+}
+impl Shape {
+    fn get_perimeter(&amp;self) -&gt; f64 {
+        // 不需要解除对自变量的引用
+        // 编译器将自动引用/解除引用匹配表达式中的模式
+        // match *self { 
+        match self {
+            Shape::Rectangle(width, height) =&gt; (width + height) * 2.0,
+            Shape::Triangle(a, b, c) =&gt; a + b + c,
+            Shape::Circle(radius) =&gt; radius * 2.0 * std::f64::consts::PI,
+        }
+    }
+}
+fn main() {
+    let a_shape = Shape::Triangle(1.1, 2.2, 3.3);
+    println!(&quot;a_shape is {:?}&quot;, a_shape);
+    println!(&quot;a_shape perimeter is {}&quot;, a_shape.get_perimeter()); 
+    let a_shape = Shape::Rectangle(1.3, 5.7);
+    println!(&quot;a_shape is {:?}&quot;, a_shape);
+    println!(&quot;a_shape perimeter is {}&quot;, a_shape.get_perimeter()); 
+    let a_shape = Shape::Circle(1.13);
+    println!(&quot;a_shape is {:?}&quot;, a_shape);
+    println!(&quot;a_shape perimeter is {:.2}&quot;, a_shape.get_perimeter());
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+a_shape is Triangle(1.1, 2.2, 3.3)
+a_shape perimeter is 6.6
+a_shape is Rectangle(1.3, 5.7)
+a_shape perimeter is 14
+a_shape is Circle(1.13)
+a_shape perimeter is 7.10
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="可选枚举"><a class="header" href="#可选枚举">可选枚举</a></h1>
+<pre><pre class="playground"><code class="language-rust">// 在许多语言中。
+// 当在非空值的上下文中使用空值时，会发生错误。
+// Rust没有一个传统的空值
+// 相反，Rust使用一个名为Option的通用枚举。
+// 的通用枚举，它可以有两种变体。
+// 枚举Option&lt;T&gt; {
+// Some(T)。
+// None
+// }
+// 1) Some: 表示有一个值
+// 2) None : 表示没有值
+// Option枚举被包含在前缀中
+fn main() {
+    // 实例化一个选项枚举
+    let someone: Option&lt;i32&gt; = Some(1);
+    println!(&quot;someone is {:?}&quot;, someone);
+     let something: Option&lt;&amp;str&gt; = Some(&quot;thing&quot;);
+    println!(&quot;something is {:?}&quot;, something); 
+    let nothing: Option&lt;i32&gt; = None;
+    println!(&quot;nothing is {:?}&quot;, nothing); 
+    let countdown = [5, 4, 3, 2, 1]; 
+    //在切片上使用get()来获取一个选项枚举。
+    // 对指定索引处的值的一个引用
+    let item = countdown.get(5);
+    println!(&quot;item is {:?}&quot;, item); 
+    let item = countdown.get(0);
+    println!(&quot;item is {:?}&quot;, item);
+     let item = countdown.get(2);
+    let item = item.unwrap_or(&amp;0) + 1;
+    println!(&quot;item is {:?}&quot;, item); 
+    let item = countdown.get(20); 
+    // unwrap_or(&amp;default_value)。
+    // 如果变量是Option::Some，返回存储的数据
+    // 如果变量是Option::None，则使用传递的参数。
+    // 注意，该参数是一个引用 
+    let item = item.unwrap_or(&amp;0) + 1;
+    println!(&quot;item is {:?}&quot;, item);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>someone is Some(1)
+something is Some(&quot;thing&quot;)
+nothing is None
+item is None
+item is Some(5)
+item is 4
+item is 1
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="匹配选项"><a class="header" href="#匹配选项">匹配选项</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let countdown = [5, 4, 3, 2, 1]; 
+    let item = countdown.get(5);
+    println!(&quot;item is {:?}&quot;, item); 
+    let item = countdown.get(0);
+    println!(&quot;item is {:?}&quot;, item); 
+    let item = countdown.get(3); 
+    // 使用匹配表达式来返回值
+    let item = match item {
+        Some(value) =&gt; value + 1,
+        None =&gt; 0,
+    };
+    println!(&quot;item is {:?}&quot;, item); 
+    let item = countdown.get(20);
+    let item = match item {
+        Some(value) =&gt; value + 1,
+        None =&gt; 0,
+    };
+    println!(&quot;item is {:?}&quot;, item);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+item is None
+item is Some(5)
+item is 3
+item is 0
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="if-let-匹配"><a class="header" href="#if-let-匹配">if let 匹配</a></h1>
+<pre><pre class="playground"><code class="language-rust"> 
+// if let 格式
+// 用于只匹配一个值
+fn main() {
+    let number = Some(1); 
+// 注意这个写法：
+    
+// if let PATTERN = VALUE {} 
+    if let Some(1) = number {
+        println!(&quot;You are the one&quot;);
+    }
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+You are the one
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="定位枚举"><a class="header" href="#定位枚举">定位枚举</a></h1>
+<pre><pre class="playground"><code class="language-rust">use std::fmt;
+enum Location {
+    Unknown,
+    Anonymous,
+    Known(f64, f64), 
+    // 纬度、经度
+}
+impl fmt::Display for Location {
+    fn fmt(&amp;self, f: &amp;mut fmt::Formatter&lt;'_&gt;) -&gt; fmt::Result {
+        match self {
+            Location::Anonymous =&gt; write!(f, &quot;Location is anonymous&quot;),
+            Location::Unknown =&gt; write!(f, &quot;Location is unknown&quot;),
+            Location::Known(latitude, longitude) =&gt; {
+                write!(f, &quot;latitude: {} longitude: {}&quot;, latitude, longitude)
+            }
+        }
+    }
+}
+fn main() {
+    let address = Location::Anonymous;
+    println!(&quot;address is {}&quot;, address);
+    let address = Location::Unknown;
+    println!(&quot;address is {}&quot;, address);
+    let address = Location::Known(123.4, 456.7);
+    println!(&quot;address is {}&quot;, address);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+address is Location is anonymous
+address is Location is unknown
+address is latitude: 123.4 longitude: 456.7
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="不能恢复的错误"><a class="header" href="#不能恢复的错误">不能恢复的错误</a></h1>
+<pre><pre class="playground"><code class="language-rust">// Rust中的两类运行时错误
+// 可恢复的（例如：未找到文件错误）。
+// 不可恢复的（例如：索引超出了数组的界限）。
+// 大多数语言对这些错误不加区分
+// 并使用异常来处理所有这些错误
+// Rust没有传统的Exceptions。
+// Rust使用Result&lt;T, E&gt;枚举类型来处理可恢复错误。
+// Rust使用panics来处理不可恢复的错误。
+fn main() {
+    // panic! 宏
+    // 立即终止程序
+    // 并向程序的调用者提供反馈 
+    // panic!(&quot;Something went wrong.&quot;); 
+    let countdown: [i32; 4] = [3, 2, 1, 0];
+    for left in countdown.iter() {
+        println!(&quot;T-minus {}&quot;, left); 
+         // 当除值为零时，程序会panic q = 1 / left;
+        println!(&quot;q is {}&quot;, q);
+    }
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+T-minus 3
+q is 0
+T-minus 2
+q is 0
+T-minus 1
+q is 1
+T-minus 0
+thread 'main' panicked at 'attempt to divide by zero', /home/&lt;USER&gt;/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:474:1
+</code></pre>
+<p>注意：使用<code>RUST_BACKTRACE=1</code>环境变量运行，以显示回溯。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="可恢复的错误"><a class="header" href="#可恢复的错误">可恢复的错误</a></h1>
+<pre><pre class="playground"><code class="language-rust">// 可恢复的错误
+// 不会导致程序失败的错误
+// 并且可以被纠正的错误
+// Rust使用Result&lt;T,E&gt;枚举类型来处理可恢复错误
+// enum Result&lt;T, E&gt; {
+// Ok(T),
+// Err(E),
+// }
+// Ok变量存储的是成功操作的值
+// Err变体存储错误的值
+// 结果枚举被包含在前奏中，使用std::fs;
+use std::io;
+fn main() {
+    // read_to_string() 返回一个 Result&lt;T, E&gt; 枚举。
+    // 在项目文件夹的根部创建一个名为file.txt的文件。
+    // $ echo 42 &gt; file.txt 
+    let content: Result&lt;String, io::Error&gt; = fs::read_to_string(&quot;file.txt&quot;)。
+    // 避免使用unwrap()方法
+    // 因为如果这是 Result 枚举的 Err 变体，会引起panic 
+    println!(&quot;content is {:?}&quot;, content.unwrap() )。
+    // 对于自定义的错误信息，使用 expect()
+    // 这不是处理可恢复错误的最好方法。
+    let content: Result&lt;String, io::Error&gt; = fs::read_to_string(&quot;file-x.txt&quot;); 
+    println!(&quot;content is {:?}&quot;, content.expect(&quot;failed reading file&quot;));
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+content is &quot;42\n&quot;
+thread 'main' panicked at 'failed reading file: Os { code: 2, kind: NotFound, message: &quot;No such file or directory&quot; }', src/main.rs:35:41
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="匹配resultte枚举错误处理"><a class="header" href="#匹配resultte枚举错误处理">匹配Result&lt;T,E&gt;枚举错误处理</a></h1>
+<pre><pre class="playground"><code class="language-rust">use std::fs;
+use std::io;
+fn main() {
+    let result = fs::read_to_string(&quot;does-not-exist.txt&quot;); 
+    let content = match result {
+        Ok(text) =&gt; text,  
+        //根据类型，处理 I/O 错误
+        Err(error) =&gt; match error.kind() {
+            io::ErrorKind::NotFound =&gt; String::from(&quot;File not found&quot;), 
+            io::ErrorKind::PermissionDenied =&gt; {
+              String::from(&quot;Permission denied&quot;)
+            }, 
+            _ =&gt; error.to_string(),
+        },
+    }; 
+    println!(&quot;content is \&quot;{}\&quot;&quot;, content);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>content is &quot;File not found&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="传播的错误"><a class="header" href="#传播的错误">传播的错误</a></h1>
+<pre><pre class="playground"><code class="language-rust">use std::fs;
+use std::io;
+fn read_and_combine(f1: &amp;str, f2: &amp;str) -&gt; Result&lt;String, io::Error&gt; {
+    let mut s1 = match fs::read_to_string(f1) {
+        Ok(s) =&gt; s,
+        //将错误传播给调用者
+        Err(e) =&gt; return Err(e),
+    }; 
+    // Rust提供了一种用于传播错误的速记语法
+    // 移除匹配表达式
+    // 并在结果枚举后面加上一个问号（?）。
+    // 这等同于上面的语法
+    //&quot;？&quot;只能用于返回结果枚举的函数。
+    let s2 = fs::read_to_string(f2)?; 
+    s1.push('\n');
+    s1.push_str(&amp;s2);
+    Ok(s1)
+}
+fn main() {
+    match read_and_combine(&quot;file1.txt&quot;, &quot;file2.txt&quot;) {
+        Ok(text_result) =&gt; println!(&quot;result is:\n{}&quot;, text_result),
+        Err(e) =&gt; println!(&quot;Got error: {}&quot;, e),
+    };
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+Got error: No such file or directory (os error 2)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="猜数游戏错误处理重构"><a class="header" href="#猜数游戏错误处理重构">猜数游戏错误处理重构</a></h1>
+<pre><pre class="playground"><code class="language-rust">use rand::prelude::*;
+use std::io;
+fn main() {
+    guess_with_infinite_retry();
+}
+fn guess_with_infinite_retry() {
+    let secret_number = thread_rng().gen_range(1..101);
+    let mut invalid_numberretry_limit = 0;
+    println!(&quot;Guess a number between 1 and 100:&quot;); 
+    loop {
+        let mut buffer = String::new();
+        let guess = match io::stdin().read_line(&amp;mut buffer) {
+            Ok(_) =&gt; match buffer.trim().parse::&lt;u32&gt;() {
+                Ok(number) =&gt; number,
+                Err(e) =&gt; {
+                    invalid_numberretry_limit += 1;
+                    if invalid_numberretry_limit == 3 {
+                        panic!(&quot;Too many invalid numbers entered&quot;);
+                    } println!(&quot;Failed to parse guess: {}&quot;, e);
+                    println!(&quot;Please enter a valid number:&quot;);
+                    continue;
+                }
+            },
+            Err(e) =&gt; {
+                println!(&quot;Failed to read line: {}&quot;, e);
+                continue;
+            }
+        }; 
+        if guess &lt; secret_number {
+            println!(&quot;guess too low, guess higher:&quot;);
+        } else if guess &gt; secret_number {
+            println!(&quot;guess too high, guess lower:&quot;);
+        } else {
+            println!(&quot;you found it!&quot;);
+            break;
+        }
+    }
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>
+Guess a number between 1 and 100:Failed to parse guess: cannot parse integer from empty string
+Please enter a valid number:Failed to parse guess: cannot parse integer from empty string
+Please enter a valid number:thread 'main' panicked at 'Too many invalid numbers entered', src/main.rs:19:25
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</code></pre>
+<p>或者</p>
+<pre><code>
+Guess a number between 1 and 100:
+44
+guess too low, guess higher:
+77
+guess too low, guess higher:
+99
+guess too high, guess lower:
+88
+guess too high, guess lower:
+80
+you found it!
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="矢量错误处理"><a class="header" href="#矢量错误处理">矢量错误处理</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    
+    // 新建一个空向量
+    let mut presidents: Vec&lt;String&gt; = Vec::new(); 
+    presidents.push(String::from(&quot;Chirac&quot;));
+    presidents.push(String::from(&quot;Sarkozy&quot;));
+    presidents.push(String::from(&quot;Hollande&quot;));
+    presidents.push(String::from(&quot;Macron&quot;)); 
+    println!(&quot;presidents are {:?}&quot;, presidents); 
+    let last = match presidents.pop() {
+        Some(president) =&gt; president,
+        None =&gt; &quot;not found&quot;.to_string(),
+    }; 
+    println!(&quot;last is {}&quot;, last);
+     let fourth = match presidents.get(3) {
+        Some(president) =&gt; president,
+        None =&gt; &quot;not found&quot;,
+    };
+    println!(&quot;fourth president is {}&quot;, fourth); 
+    // 基于 vec![] 宏建立一个新向量 
+    let countdown = vec![4, 3, 2, 1];
+    println!(&quot;countdown is {:?}&quot;, countdown);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>presidents are [&quot;Chirac&quot;, &quot;Sarkozy&quot;, &quot;Hollande&quot;, &quot;Macron&quot;]
+last is Macron
+fourth president is not found
+countdown is [4, 3, 2, 1]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="哈希表数据类型"><a class="header" href="#哈希表数据类型">哈希表数据类型</a></h1>
+<pre><pre class="playground"><code class="language-rust">// 保存数据为 键值对 格式
+// 根据key，可以找到对应的值
+// 键 -&gt; 值 单向映射
+// Rust 用一个hash方法检测如何存储数据
+// 键，值可以是不同的数据类型
+// 所有的键必须是一样的数据类型
+// 所有的值必须是同样的数据类型
+// 每个键只有一个值
+//你需要导入一个类型，更新 哈希表的时候:
+// #1. 覆写已有的键值对
+// #2. 插入一个新的值，当键值对不存在的时候
+// #3. 修改已有的值，基于它当前的值
+use std::collections::HashMap;
+fn main() {
+    let mut missions = HashMap::new(); 
+    missions.insert(&quot;Toto&quot;, 23);
+     // HashMap&lt;&amp;str, i32&gt;
+    missions.insert(&quot;Toto&quot;, 33); 
+    // #1 update missions.insert(&quot;Titi&quot;, 45);
+    missions.insert(&quot;Tata&quot;, 67); missions.entry(&quot;Tutu&quot;).or_insert(77); 
+    // #2 update 
+    // #3 update 
+    let tyty = missions.entry(&quot;Titi&quot;).or_insert(0);
+    *tyty += 1; 
+    println!(&quot;missions is {:?}&quot;, missions.clone()); 
+    let toto_missions = match missions.get(&quot;Toto&quot;) {
+        Some(value) =&gt; value,
+        None =&gt; &amp;0,
+    }; 
+    println!(&quot;Toto_missions is {}&quot;, toto_missions);
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code>missions is {&quot;Tata&quot;: 67, &quot;Titi&quot;: 46, &quot;Toto&quot;: 33, &quot;Tutu&quot;: 77}
+Toto_missions is 33
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="字数统计"><a class="header" href="#字数统计">字数统计</a></h1>
+<p>创建一个名为 &quot;lorem.txt &quot;的文件，内容如下。</p>
+<pre><code class="language-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta velit quis mattis bibendum. Fusce sed nulla eget arcu lacinia placerat ac eget dui. Nam a ante tellus. Aliquam varius tincidunt nisi a efficitur. Donec non malesuada odio. Donec vitae arcu eu magna efficitur pulvinar. Proin feugiat, erat et congue aliquet, ipsum turpis volutpat ante, a ullamcorper magna elit nec libero. Maecenas lacus magna, gravida id tristique at, lobortis sit amet libero.Donec vel nunc ac sapien tempus vehicula. Aenean vulputate quam eget felis elementum suscipit. Aliquam vehicula odio dui, id varius lectus gravida consequat. Maecenas sit amet dolor erat. Duis rhoncus mollis nulla. Etiam pellentesque arcu sed pretium fermentum. Phasellus metus velit, dapibus eu pellentesque eu, pulvinar eu nunc. In posuere massa non elementum varius. Donec et vehicula urna, id dignissim ex.Nunc vitae sem volutpat, malesuada odio vel, ornare arcu. Nunc dictum tincidunt turpis, sed tristique tellus hendrerit at. In ac tempor lacus. Pellentesque tempus velit eu pharetra consectetur. Integer ultricies sem sem, a tincidunt urna tempus quis. Nullam porttitor turpis ut lacus mollis dignissim nec vel ipsum. Integer volutpat quam et enim pellentesque, ut imperdiet nibh faucibus. Vestibulum varius, libero eget porta congue, enim risus porttitor lacus, at pretium mauris ligula sit amet ligula.Donec at pharetra elit. Sed nulla dui, consectetur sollicitudin magna a, consequat maximus erat. Maecenas ultricies libero orci, a cursus justo blandit non. Vivamus non fringilla ante. In cursus finibus elit quis cursus. Maecenas at arcu id ex consectetur eleifend. Aenean nec purus eget odio commodo ullamcorper. Integer maximus quis turpis id finibus. Etiam mi nunc, fringilla eget diam non, gravida blandit nisl. Curabitur finibus bibendum consequat. Nunc eleifend aliquam risus a iaculis.Nullam id lacus sem. Suspendisse a nunc facilisis, rutrum purus aliquet, pulvinar libero. Etiam ornare, enim at egestas varius, mi justo feugiat purus, eget congue nisi nibh vitae mauris. Integer malesuada, diam et placerat mollis, purus nulla molestie lacus, in egestas nisl lacus et odio. Fusce feugiat odio eget justo lacinia placerat. In rutrum et quam sed gravida. Vivamus vel blandit metus, sed imperdiet turpis. Sed facilisis ipsum ipsum, egestas mattis dolor tempus at. Morbi eu scelerisque ante.
+</code></pre>
+<p>源代码</p>
+<pre><pre class="playground"><code class="language-rust">use std::collections::HashMap;
+use std::env;
+use std::fmt;
+use std::fs;#[derive(Debug)]
+struct MostCommonWord {
+    value: String,
+    occurrence: u32,
+}impl fmt::Display for MostCommonWord {
+    fn fmt(&amp;self, f: &amp;mut fmt::Formatter&lt;'_&gt;) -&gt; fmt::Result {
+        write!(
+            f,
+            &quot;\&quot;{}\&quot; is the most common word with {} occurrences&quot;,
+            self.value, self.occurrence
+        )
+    }
+}
+impl MostCommonWord {
+    fn new(value: &amp;str, occurrence: u32) -&gt; MostCommonWord {
+        MostCommonWord {
+            value: value.to_string(),
+            occurrence,
+        }
+    }
+}
+fn main() {
+    if env::args().len() != 2 {
+        println!(&quot;this program requires one argument&quot;);
+        return;
+    } 
+    let filepath = match env::args().nth(1) {
+        Some(text) =&gt; text,
+        None =&gt; panic!(&quot;Failed to get file path&quot;),
+    }; 
+    println!(&quot;filepath is {}&quot;, filepath);
+      let file_content = match fs::read_to_string(filepath) {
+        Ok(content) =&gt; content,
+        Err(e) =&gt; panic!(&quot;Err: {}&quot;, e),
+    }; 
+    println!(&quot;file_content is:\n {}&quot;, file_content);
+    let mut word_count: HashMap&lt;String, u32&gt; = HashMap::new();
+    for word in file_content.split_whitespace() {
+        let lowercase_word = word.to_lowercase(); 
+        match word_count.get(&amp;lowercase_word) {
+            Some(count) =&gt; {
+                let increment = *count + 1;
+                word_count.insert(lowercase_word, increment);
+            }
+            None =&gt; {
+                word_count.insert(lowercase_word, 1);
+            }
+        };
+    }
+    let mut most_common = MostCommonWord::new(&quot;&quot;, 0);
+    let mut most_common_words = vec![]; 
+    for (word, count) in &amp;word_count {
+        if most_common.occurrence &lt; *count {
+            most_common.value = word.to_string();
+            most_common.occurrence = *count;
+        }
+    } 
+    most_common_words.push(most_common);
+    for (word, count) in &amp;word_count {
+        if most_common_words[0].value != word.to_string()
+            &amp;&amp; most_common_words[0].occurrence == *count
+        {
+            let other_most_common = MostCommonWord::new(word, *count);
+            most_common_words.push(other_most_common);
+        }
+    }
+    if most_common_words.len() &gt; 1 {
+        println!(&quot;The most common words in the text are;&quot;);
+        for most_common in most_common_words {
+            println!(
+                &quot;\&quot;{}\&quot; with {} occurrences&quot;,
+                most_common.value, most_common.occurrence
+            );
+        }
+    } else if most_common_words.len() == 1 {
+        println!(&quot;{}&quot;, most_common_words[0]);
+    }
+}
+</code></pre></pre>
+<p>输出</p>
+<pre><code class="language-bash">$ cargo run lorem.txt
+&quot;eget&quot; is the most common word with 8 occurrences
+</code></pre>
+<p>替代实现</p>
+<pre><pre class="playground"><code class="language-rust">use std::env;
+use std::fs;
+use std::collections::HashMap;fn main() {
+    // 读取文件并建立单个单词的向量
+    let contents = match env::args().nth(1) {
+        Some(f) =&gt; match fs::read_to_string(f) {
+            Ok(s) =&gt; s.to_lowercase(),
+            Err(e) =&gt; {
+                eprintln!(&quot;Could not read file: {}&quot;, e);
+                std::process::exit(1);
+            }
+        },
+        None =&gt; {
+            eprintln!(&quot;Program requires an argument: &lt;file path&gt;&quot;);
+            std::process::exit(2);
+        }
+    }; 
+    let all_words = contents.split_whitespace().collect::&lt;Vec&lt;&amp;str&gt;&gt;(); 
+    // 计算每个独特的词出现了多少次 
+    let mut word_counts: HashMap&lt;&amp;str, u32&gt; = HashMap::new(); 
+    for word in all_words.iter() {
+        *word_counts.entry(word).or_insert(1) += 1;
+    }
+
+    // 确定最常使用的单词
+     let mut top_count = 0u32; 
+     let mut top_words: Vec&lt;&amp;str&gt; = Vec::new(); 
+     for (&amp;key, &amp;val) in word_counts.iter() {
+        if val &gt; top_count {
+            top_count = val;
+            top_words.clear();
+            top_words.push(key);
+        } else if val == top_count {
+            top_words.push(key);
+        }
+    } 
+    // 显示结果
+    println!(&quot;Top word(s) occurred {} times:&quot;, top_count);
+    for word in top_words.iter() {
+        println!(&quot;{}&quot;, word);
+    }
+}
+</code></pre></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </body>
+</html>
