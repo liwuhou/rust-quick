@@ -1,6 +1,8 @@
 # 目录
 
 - [前言](./01-intro/intro.md)
+- [Cargo 教程](./cargo/readme.md)
+  - [安装](./cargo/install.md)
 - [Rust语言教程](./docs/readme.md)
     - [创建一个Rust项目](./docs/create-project.md)
     - [打印输出](./docs/printing.md)
