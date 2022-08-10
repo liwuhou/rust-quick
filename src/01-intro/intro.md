@@ -2,13 +2,11 @@
 
 本教程，是为了快速让你上手Rust 编程，所以我们主要是快速过一下Rust 语言的各种特性
  
-
-
-官方文档: [https://doc.rust-lang.org/book/](https://doc.rust-lang.org/book/)
-
-目录优化版文档：[https://cnmade.github.io/book/](https://cnmade.github.io/book/)
-
-中文文档: [https://infobsmi.github.io/cn-rust-book/](https://infobsmi.github.io/cn-rust-book/)
+|||
+|--|--|
+|官方文档:| [https://doc.rust-lang.org/book/](https://doc.rust-lang.org/book/)|
+|目录优化版文档：|[https://cnmade.github.io/book/](https://cnmade.github.io/book/)|
+|中文文档:|[https://infobsmi.github.io/cn-rust-book/](https://infobsmi.github.io/cn-rust-book/)|
 
 
 
