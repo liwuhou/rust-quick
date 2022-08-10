@@ -4,6 +4,14 @@
  
 
 
+官方文档: [https://doc.rust-lang.org/book/](https://doc.rust-lang.org/book/)
+
+目录优化版文档：[https://cnmade.github.io/book/](https://cnmade.github.io/book/)
+
+中文文档: [https://infobsmi.github.io/cn-rust-book/](https://infobsmi.github.io/cn-rust-book/)
+
+
+
 代码采用AGPL-3.0 发布。
 
 欢迎Fork, 欢迎贡献。欢迎勘误，欢迎报告问题。
