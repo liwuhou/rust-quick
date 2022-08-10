@@ -12,6 +12,13 @@ Buy me a cup of coffee for $3
 不管你是否有Rust编程基础，这份指南，都能帮助你快速学习Rust。
 
 
+官方文档: [https://doc.rust-lang.org/book/](https://doc.rust-lang.org/book/)
+
+目录优化版文档：[https://cnmade.github.io/book/](https://cnmade.github.io/book/)
+
+中文文档: [https://infobsmi.github.io/cn-rust-book/](https://infobsmi.github.io/cn-rust-book/)
+
+
 如果有问题，可以到github 仓库提交问题报告。
 
 [https://github.com/cnmade/rust-quick](https://github.com/cnmade/rust-quick)
